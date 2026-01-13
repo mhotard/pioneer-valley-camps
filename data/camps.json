@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-01-13",
   "version": "1.0.0",
-  "totalCamps": 57,
+  "totalCamps": 67,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -2111,6 +2111,339 @@
         "lastVerified": "2026-01-13"
       },
       "incomplete": ["cost", "hours", "weeks"]
+    },
+    {
+      "id": "bement-day-camp",
+      "name": "Bement Day Camp",
+      "organization": "The Bement School",
+      "location": {
+        "town": "Deerfield",
+        "address": "94 Old Main St",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 15
+      },
+      "dates": {
+        "weeks": ["2026-06-15", "2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-08-03"],
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:30pm",
+        "extendedCare": "Before care 8:00-9:00am, After care 3:30-4:30pm"
+      },
+      "cost": {
+        "perWeek": 470,
+        "notes": "Includes lunch. $50 off per session if paid by March 2. Register 6 weeks get 7th free.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-01-23",
+        "deadline": null,
+        "url": "https://www.bement.org/community/summer-programs/summer-camp"
+      },
+      "category": ["general", "outdoor"],
+      "description": "Day camp on beautiful 30-acre campus for grades K-9. Jr Day Camp for K-3, Day Camp for grades 4-9. Activities include swimming, sports, arts, and outdoor adventures. Nut-free lunch included.",
+      "source": {
+        "url": "https://www.bement.org/community/summer-programs",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "bement-enrichment-camps",
+      "name": "Bement Enrichment Camps",
+      "organization": "The Bement School",
+      "location": {
+        "town": "Deerfield",
+        "address": "94 Old Main St",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "Varies by program",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 500,
+        "notes": "CIT Camp $500, PE Games $350, Visual Arts $500, Mountain Biking $1000",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-01-23",
+        "deadline": null,
+        "url": "https://www.bement.org/community/summer-programs/enrichmentcamps"
+      },
+      "category": ["specialty", "sports", "arts"],
+      "description": "Specialty camps including CIT training (CPR/First Aid certification), PE Games, Visual Arts, Band Camp, and Mountain Biking. Various age ranges by program.",
+      "source": {
+        "url": "https://www.bement.org/community/summer-programs/enrichmentcamps",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["weeks"]
+    },
+    {
+      "id": "hilltown-sleddogs-camp",
+      "name": "Hilltown Sleddogs Summer Camp",
+      "organization": "Hilltown Sleddogs",
+      "location": {
+        "town": "Chesterfield",
+        "address": "27 Mt Rd, West Chesterfield",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 17
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": "Overnight options available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Day and overnight options. Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "Early 2026",
+        "deadline": null,
+        "url": "https://www.hilltownsleddogs.com/camps"
+      },
+      "category": ["outdoor", "adventure", "specialty"],
+      "description": "Unique sled dog camp! Kids choose an Alaskan Husky for the week and learn to care for and train sled dogs. Activities include mushing, scootering, biking with dogs, swimming. Overnight camp includes wilderness skills and campfire activities.",
+      "source": {
+        "url": "https://www.hilltownsleddogs.com/camps",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks"]
+    },
+    {
+      "id": "forest-park-zoo-camp",
+      "name": "Forest Park Zoo Camp",
+      "organization": "The Zoo in Forest Park",
+      "location": {
+        "town": "Springfield",
+        "address": "293 Sumner Ave",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 6,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact zoo for 2026 pricing",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.forestparkzoo.org/"
+      },
+      "category": ["outdoor", "stem"],
+      "description": "Zoo camp for ages 6-13 to explore nature, discover wildlife and meet exotic creatures. Educational programs at the Zoo in Forest Park, a 735-acre woodland park.",
+      "source": {
+        "url": "https://www.forestparkzoo.org/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks", "registration"]
+    },
+    {
+      "id": "stoneleigh-burnham-horsemanship",
+      "name": "Stoneleigh-Burnham Horsemanship Camp",
+      "organization": "Stoneleigh-Burnham School",
+      "location": {
+        "town": "Greenfield",
+        "address": "574 Bernardston Road",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 9,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:00am-4:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact school for 2026 pricing",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://sbschool.org/summer-programs/horsemanship-day-camp"
+      },
+      "category": ["specialty", "outdoor"],
+      "description": "Coed horsemanship day camp for beginner riders ages 9-12. Learn grooming, handling, tacking, feeding and beginner riding skills on beautiful 100-acre campus.",
+      "source": {
+        "url": "https://sbschool.org/summer-programs",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "weeks", "registration"]
+    },
+    {
+      "id": "stoneleigh-burnham-sports",
+      "name": "Stoneleigh-Burnham Sports Camp",
+      "organization": "Stoneleigh-Burnham School",
+      "location": {
+        "town": "Greenfield",
+        "address": "574 Bernardston Road",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 6,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact school for 2026 pricing",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://sbschool.org/summer-programs/sports-camp"
+      },
+      "category": ["sports", "aquatics"],
+      "description": "Coed sports camp with swimming in outdoor pool, soccer, basketball, handball, plus indoor and outdoor games. Perfect for active campers who enjoy variety.",
+      "source": {
+        "url": "https://sbschool.org/summer-programs",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks", "registration"]
+    },
+    {
+      "id": "camp-wilder-adventure",
+      "name": "Camp Wilder Adventure Camps",
+      "organization": "Camp Wilder",
+      "location": {
+        "town": "Southampton",
+        "address": "19 Rattle Hill Rd",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.campwilder.com/"
+      },
+      "category": ["outdoor", "adventure"],
+      "description": "Adventure day camps in Southampton with outdoor activities and nature exploration.",
+      "source": {
+        "url": "https://springfield.macaronikid.com/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks", "registration"]
+    },
+    {
+      "id": "springfield-museums-camp",
+      "name": "Springfield Museums Camp",
+      "organization": "Springfield Museums",
+      "location": {
+        "town": "Springfield",
+        "address": "21 Edwards St",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfieldmuseums.org/"
+      },
+      "category": ["arts", "stem", "academic"],
+      "description": "Summer camps at the Springfield Museums complex featuring art, science, and history activities. Home to the Dr. Seuss Museum and other world-class exhibits.",
+      "source": {
+        "url": "https://springfield.macaronikid.com/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks", "registration"]
+    },
+    {
+      "id": "stony-brook-acres-camp",
+      "name": "Stony Brook Acres Camp",
+      "organization": "Stony Brook Acres",
+      "location": {
+        "town": "Wilbraham",
+        "address": "1004 Stony Hill Road",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://stonybrookacres.com/"
+      },
+      "category": ["outdoor", "general"],
+      "description": "Day camp in Wilbraham offering outdoor activities and summer fun.",
+      "source": {
+        "url": "https://springfield.macaronikid.com/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks", "registration"]
     }
   ]
 }
