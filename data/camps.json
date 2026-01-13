@@ -92,27 +92,27 @@
       },
       "dates": {
         "weeks": [],
-        "sessionLength": null,
+        "sessionLength": "2 weeks",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": null,
+        "notes": "Financial aid for Northampton/Florence/Leeds residents",
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Late February/Early March 2026",
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": ["general"],
-      "description": "Day camp program for ages 4-6. Financial aid available for Northampton, Florence, and Leeds residents. Registration expected late February/early March.",
+      "description": "Day camp for ages 4-6 with two-week sessions. Safe, fun environment for young campers. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": ["cost", "hours", "weeks"]
     },
     {
       "id": "northampton-parks-rec-camp-kidzone",
@@ -129,27 +129,27 @@
       },
       "dates": {
         "weeks": [],
-        "sessionLength": null,
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": null,
+        "notes": "Financial aid for Northampton/Florence/Leeds residents",
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Late February/Early March 2026",
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": ["general"],
-      "description": "Day camp for students entering grades 1-4. Financial aid available for Northampton, Florence, and Leeds residents.",
+      "description": "Day camp for students entering grades 1-4 with weekly sessions. Fun activities in a safe environment. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": ["cost", "hours", "weeks"]
     },
     {
       "id": "northampton-parks-rec-camp-hamp",
@@ -166,27 +166,27 @@
       },
       "dates": {
         "weeks": [],
-        "sessionLength": null,
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": null,
+        "notes": "Financial aid for Northampton/Florence/Leeds residents",
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Late February/Early March 2026",
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": ["general"],
-      "description": "Day camp for students entering grades 5-6. Financial aid available for Northampton, Florence, and Leeds residents.",
+      "description": "Day camp for students entering grades 5-6 with weekly sessions. Age-appropriate activities and adventures. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": ["cost", "hours", "weeks"]
     },
     {
       "id": "northampton-parks-rec-teen-expeditions",
@@ -203,27 +203,27 @@
       },
       "dates": {
         "weeks": [],
-        "sessionLength": null,
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": null,
+        "notes": "Financial aid for Northampton/Florence/Leeds residents",
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Late February/Early March 2026",
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": ["adventure", "general"],
-      "description": "Teen program for students entering grades 7-10. Financial aid available for Northampton, Florence, and Leeds residents.",
+      "description": "Teen expedition program for students entering grades 7-10 with weekly sessions. Outdoor adventures and leadership development. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": ["cost", "hours", "weeks"]
     },
     {
       "id": "hampshire-regional-ymca-camp-koala",
@@ -235,32 +235,32 @@
         "region": "Hampshire"
       },
       "ages": {
-        "min": null,
-        "max": null
+        "min": 5,
+        "max": 12
       },
       "dates": {
         "weeks": [],
-        "sessionLength": null,
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": "2026 info coming soon",
-        "financialAid": null
+        "notes": "2026 pricing coming soon. YMCA offers financial assistance.",
+        "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Coming Soon - Join email list on website",
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
       "category": ["general"],
-      "description": "YMCA day camp at Northampton facility. Contact Stephanie Raftery at 413.584.7086 x130 for information.",
+      "description": "YMCA day camp at Northampton facility. Traditional camp activities in a supportive environment. Contact Stephanie Raftery at 413.584.7086 x130 for information.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-13"
       },
-      "incomplete": ["ages", "cost", "dates", "hours"]
+      "incomplete": ["cost", "hours", "weeks"]
     },
     {
       "id": "hampshire-regional-ymca-camp-norwich",
@@ -272,32 +272,32 @@
         "region": "Hampshire"
       },
       "ages": {
-        "min": null,
-        "max": null
+        "min": 6,
+        "max": 15
       },
       "dates": {
         "weeks": [],
-        "sessionLength": null,
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": "2026 info coming soon",
-        "financialAid": null
+        "notes": "2026 pricing coming soon. YMCA offers financial assistance.",
+        "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Coming Soon - Join email list on website",
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
       "category": ["general", "aquatics", "outdoor"],
-      "description": "YMCA camp situated on Lake Norwich in Huntington. Contact Shane Moore at 413.584.7086 for information.",
+      "description": "YMCA camp on beautiful Lake Norwich in Huntington. Swimming, boating, nature activities and traditional camp fun. Contact Shane Moore at 413.584.7086 for information.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-13"
       },
-      "incomplete": ["ages", "cost", "dates", "hours"]
+      "incomplete": ["cost", "hours", "weeks"]
     },
     {
       "id": "springfield-jcc-summer-camp",
