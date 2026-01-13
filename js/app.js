@@ -408,15 +408,22 @@ function createModalContent(camp) {
 
     // Build dates section
     let datesHtml = '';
+    if (camp.dates?.weeks?.length > 0) {
+        const weeks = camp.dates.weeks.map(w => {
+            const start = new Date(w + 'T00:00:00');
+            const end = new Date(start);
+            end.setDate(end.getDate() + 4); // Mon-Fri
+            const startStr = start.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            const endStr = end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            return `${startStr} - ${endStr}`;
+        });
+        datesHtml += `<li><strong>2026 Sessions:</strong></li>`;
+        datesHtml += `<ul>${weeks.map(w => `<li>${w}</li>`).join('')}</ul>`;
+    } else {
+        datesHtml += `<li><strong>2026 Sessions:</strong> Check website for dates</li>`;
+    }
     if (camp.dates?.sessionLength) {
         datesHtml += `<li><strong>Session length:</strong> ${escapeHtml(camp.dates.sessionLength)}</li>`;
-    }
-    if (camp.dates?.weeks?.length > 0) {
-        const weekDates = camp.dates.weeks.map(w => {
-            const d = new Date(w + 'T00:00:00');
-            return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        }).join(', ');
-        datesHtml += `<li><strong>2026 sessions:</strong> ${weekDates}</li>`;
     }
 
     // Build registration section
@@ -477,12 +484,10 @@ function createModalContent(camp) {
         </div>
         ` : ''}
 
-        ${datesHtml ? `
-        <div class="modal-section">
+                <div class="modal-section">
             <h3>Dates</h3>
             <ul>${datesHtml}</ul>
         </div>
-        ` : ''}
 
         ${regHtml ? `
         <div class="modal-section">
