@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-01-13",
   "version": "1.0.0",
-  "totalCamps": 54,
+  "totalCamps": 57,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -2000,6 +2000,117 @@
         "lastVerified": "2026-01-13"
       },
       "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "montessori-school-northampton-summer",
+      "name": "Montessori School of Northampton Summer Programs",
+      "organization": "Montessori School of Northampton",
+      "location": {
+        "town": "Northampton",
+        "address": "51 Bates Street",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 2,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Various programs available. Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "Early 2026",
+        "deadline": null,
+        "url": "https://msn.coursestorm.com/"
+      },
+      "category": ["general", "arts", "stem"],
+      "description": "Montessori-inspired summer programs for ages 18 months to 14 years. Theme-based sessions include LEGO Engineering, art classes, camping & foraging. Toddler, Preschool, Elementary, and Middle School tracks available.",
+      "source": {
+        "url": "https://northamptonmontessori.org/programs/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks"]
+    },
+    {
+      "id": "cushman-scott-summer",
+      "name": "Cushman Scott Summer Program",
+      "organization": "Cushman Scott Children's Center",
+      "location": {
+        "town": "Northampton",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 1,
+        "max": 5
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "5 weeks",
+        "hours": "Pickup options: 1pm, 3:30pm, or 4:30pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Flexible enrollment - minimum 3 days/week",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "Early 2026",
+        "deadline": null,
+        "url": "https://www.cushmanscott.org/summer-program"
+      },
+      "category": ["general"],
+      "description": "Five-week summer program for children 15 months to 5.9 years. Features outdoor time, daily water play, trips to the woods, and rest time after lunch. Flexible scheduling with minimum 3 days/week.",
+      "source": {
+        "url": "https://www.cushmanscott.org/summer-program",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "weeks"]
+    },
+    {
+      "id": "childrens-ballet-movement-summer",
+      "name": "Children's Ballet & Movement Summer Camp",
+      "organization": "The Children's Ballet & Movement Co.",
+      "location": {
+        "town": "Hadley",
+        "address": "47 East Street",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 3,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Payment plans available. No refunds policy.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "January 2026",
+        "deadline": null,
+        "url": "http://www.childrensballetmovement.com/summercamp"
+      },
+      "category": ["performing-arts", "arts"],
+      "description": "Dance camp offering a variety of styles in a nurturing environment. Students learn fundamentals of movement including ballet and creative dance. Monthly payment plans available upon request.",
+      "source": {
+        "url": "http://www.childrensballetmovement.com/summercamp",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours", "weeks"]
     }
   ]
 }
