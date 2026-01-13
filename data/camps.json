@@ -1,0 +1,2005 @@
+{
+  "lastUpdated": "2026-01-12",
+  "version": "1.0.0",
+  "totalCamps": 54,
+  "camps": [
+    {
+      "id": "hitchcock-center-nature-camp",
+      "name": "Hitchcock Center Nature Camp",
+      "organization": "Hitchcock Center for the Environment",
+      "location": {
+        "town": "Amherst",
+        "address": "845 West St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 15
+      },
+      "dates": {
+        "weeks": ["2026-06-29", "2026-07-06", "2026-07-20", "2026-07-27", "2026-08-10"],
+        "sessionLength": "1-2 weeks",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 395,
+        "notes": "Tiered pricing $395-$560/week; Chickadee (half-day) $305-$435",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "2026-01-28",
+        "deadline": "2026-04-03",
+        "url": "https://www.hitchcockcenter.org/camp-programs/"
+      },
+      "category": ["outdoor", "stem"],
+      "description": "Nature-based summer camp with sessions for grades K-6 and a Leadership Training program for grades 7-9. Chickadee Camp offers half-day option for youngest campers.",
+      "source": {
+        "url": "https://www.hitchcockcenter.org/camp-programs/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "arcadia-nature-camp",
+      "name": "Arcadia Nature Camp",
+      "organization": "Mass Audubon",
+      "location": {
+        "town": "Easthampton",
+        "address": "127 Combs Rd",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Sliding scale pricing based on family income",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "2026-01-28",
+        "deadline": null,
+        "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp"
+      },
+      "category": ["outdoor"],
+      "description": "Nature camp at the 734-acre Arcadia Wildlife Sanctuary. Children explore the outdoors, connect with nature, and develop confidence. Max 4 weeks per camper.",
+      "source": {
+        "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "northampton-parks-rec-safety-village",
+      "name": "Safety Village",
+      "organization": "Northampton Parks & Recreation",
+      "location": {
+        "town": "Northampton",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 4,
+        "max": 6
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
+      },
+      "category": ["general"],
+      "description": "Day camp program for ages 4-6. Financial aid available for Northampton, Florence, and Leeds residents. Registration expected late February/early March.",
+      "source": {
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "northampton-parks-rec-camp-kidzone",
+      "name": "Camp KidZone",
+      "organization": "Northampton Parks & Recreation",
+      "location": {
+        "town": "Northampton",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 10
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
+      },
+      "category": ["general"],
+      "description": "Day camp for students entering grades 1-4. Financial aid available for Northampton, Florence, and Leeds residents.",
+      "source": {
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "northampton-parks-rec-camp-hamp",
+      "name": "Camp Hamp",
+      "organization": "Northampton Parks & Recreation",
+      "location": {
+        "town": "Northampton",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 10,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
+      },
+      "category": ["general"],
+      "description": "Day camp for students entering grades 5-6. Financial aid available for Northampton, Florence, and Leeds residents.",
+      "source": {
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "northampton-parks-rec-teen-expeditions",
+      "name": "Teen Expeditions",
+      "organization": "Northampton Parks & Recreation",
+      "location": {
+        "town": "Northampton",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 12,
+        "max": 16
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
+      },
+      "category": ["adventure", "general"],
+      "description": "Teen program for students entering grades 7-10. Financial aid available for Northampton, Florence, and Leeds residents.",
+      "source": {
+        "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "hampshire-regional-ymca-camp-koala",
+      "name": "Camp Koala",
+      "organization": "Hampshire Regional YMCA",
+      "location": {
+        "town": "Northampton",
+        "address": "286 Prospect St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 info coming soon",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.hrymca.org/summer-camp/"
+      },
+      "category": ["general"],
+      "description": "YMCA day camp at Northampton facility. Contact Stephanie Raftery at 413.584.7086 x130 for information.",
+      "source": {
+        "url": "https://www.hrymca.org/summer-camp/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["ages", "cost", "dates", "hours"]
+    },
+    {
+      "id": "hampshire-regional-ymca-camp-norwich",
+      "name": "Camp Norwich",
+      "organization": "Hampshire Regional YMCA",
+      "location": {
+        "town": "Huntington",
+        "address": "Lake Norwich",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 info coming soon",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.hrymca.org/summer-camp/"
+      },
+      "category": ["general", "aquatics", "outdoor"],
+      "description": "YMCA camp situated on Lake Norwich in Huntington. Contact Shane Moore at 413.584.7086 for information.",
+      "source": {
+        "url": "https://www.hrymca.org/summer-camp/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["ages", "cost", "dates", "hours"]
+    },
+    {
+      "id": "springfield-jcc-summer-camp",
+      "name": "Springfield JCC Summer Camp",
+      "organization": "Springfield Jewish Community Center",
+      "location": {
+        "town": "Springfield",
+        "address": "1160 Dickinson St",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 16
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week minimum",
+        "hours": null,
+        "extendedCare": "Pre- and post-camp hours available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Flexible scheduling - book from just one week",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "2026-01-01",
+        "deadline": null,
+        "url": "https://www.springfieldjcc.org/camp/"
+      },
+      "category": ["general"],
+      "description": "Day camp for grades K-8 plus Leaders-in-Training for grades 9-10. Inclusion camp available. Accepts Seven Hills state assistance vouchers.",
+      "source": {
+        "url": "https://www.springfieldjcc.org/camp/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "camp-massasoit",
+      "name": "Camp Massasoit",
+      "organization": "Springfield College",
+      "location": {
+        "town": "Springfield",
+        "address": "701 Wilbraham Rd",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfield.edu/about/east-campus/camp-massasoit"
+      },
+      "category": ["general", "sports"],
+      "description": "Developmentally appropriate programs balancing skill development and enjoyment. Theme of respect practiced throughout the day. Contact: (413) 748-4020.",
+      "source": {
+        "url": "https://springfield.edu/about/east-campus/camp-massasoit",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "boys-girls-club-springfield",
+      "name": "Boys & Girls Club Summer Day Camp",
+      "organization": "Boys & Girls Club of Springfield",
+      "location": {
+        "town": "Springfield",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 17
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "7:30am-5:30pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 55,
+        "notes": "Youth $55/week + $10 membership fee; Teens FREE + $10 membership",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "2026-03-01",
+        "deadline": null,
+        "url": "https://www.bgclubspringfield.org/membership/summer-camp"
+      },
+      "category": ["general"],
+      "description": "Affordable day camp at Henderson, Stalnaker, and Musgrave locations. Scholarships for free/reduced lunch families. Teen camp (13-17) is free.",
+      "source": {
+        "url": "https://www.bgclubspringfield.org/membership/summer-camp",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "camp-keewanee",
+      "name": "Camp Kee-wanee",
+      "organization": "Camp Kee-wanee",
+      "location": {
+        "town": "Greenfield",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": ["2026-07-06", "2026-07-27"],
+        "sessionLength": "3 or 6 weeks",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 220,
+        "notes": "$660 for 3 weeks, $1320 for 6 weeks. Free bus transportation included.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.campkeewanee.com/"
+      },
+      "category": ["arts", "general"],
+      "description": "Nonprofit arts-focused day camp since 1924. Emphasizes creativity, inclusivity, and self-esteem. Sessions: July 6-24 and July 27-Aug 13.",
+      "source": {
+        "url": "https://www.campkeewanee.com/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["ages", "hours"]
+    },
+    {
+      "id": "greenfield-recreation-discovery-camp",
+      "name": "Discovery Camp",
+      "organization": "Greenfield Recreation Department",
+      "location": {
+        "town": "Greenfield",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 8
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Early care 7:30am-9:00am ($30), Late care 4:00pm-5:30pm ($30)"
+      },
+      "cost": {
+        "perWeek": 200,
+        "notes": "$200 residents, $210 non-residents. 8-week discount: 1 week free if paid by June 1",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.greenfieldrecreation.com/camp.html"
+      },
+      "category": ["general"],
+      "description": "Day camp for grades K-2. Activities include playground time, swimming, games, and arts & crafts. Daily lunch and morning snack provided.",
+      "source": {
+        "url": "https://www.greenfieldrecreation.com/camp.html",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "greenfield-recreation-sizzlers-camp",
+      "name": "Sizzlers Camp",
+      "organization": "Greenfield Recreation Department",
+      "location": {
+        "town": "Greenfield",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 8,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Early care 7:30am-9:00am ($30), Late care 4:00pm-5:30pm ($30)"
+      },
+      "cost": {
+        "perWeek": 200,
+        "notes": "$200 residents, $210 non-residents. Field trips available ($30 extra). 8-week discount available.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.greenfieldrecreation.com/camp.html"
+      },
+      "category": ["general"],
+      "description": "Day camp for grades 3-6. Activities include playground time, swimming, games, and arts & crafts. Daily lunch and morning snack provided.",
+      "source": {
+        "url": "https://www.greenfieldrecreation.com/camp.html",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "franklin-county-ymca-camp-apex",
+      "name": "Camp Apex",
+      "organization": "Franklin County YMCA",
+      "location": {
+        "town": "Shelburne",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 6,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "7:00am-6:00pm (included free)"
+      },
+      "cost": {
+        "perWeek": 260,
+        "notes": "$260 members, $305 non-members. $40 deposit per week at registration.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://your-y.org/camps/"
+      },
+      "category": ["outdoor", "general"],
+      "description": "Traditional day camp on 30+ acres. Activities include group games, songs, swimming, obstacle course, gaga ball, and arts & crafts.",
+      "source": {
+        "url": "https://your-y.org/camps/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "franklin-county-ymca-gymnastics-camp",
+      "name": "Gymnastics & Ninja Camp",
+      "organization": "Franklin County YMCA",
+      "location": {
+        "town": "Greenfield",
+        "address": "Main Street facility",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:30am-4:00pm",
+        "extendedCare": "7:00am-6:00pm (included free)"
+      },
+      "cost": {
+        "perWeek": 260,
+        "notes": "$260 members, $305 non-members",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://your-y.org/camps/"
+      },
+      "category": ["sports", "specialty"],
+      "description": "Indoor camp for kids who love to flip, tumble, balance, and swing. Held at Main Street facility in Greenfield.",
+      "source": {
+        "url": "https://your-y.org/camps/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "franklin-county-ymca-lil-flippers",
+      "name": "Lil' Flippers Mini Camp",
+      "organization": "Franklin County YMCA",
+      "location": {
+        "town": "Greenfield",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 3,
+        "max": 5
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-1:00pm",
+        "extendedCare": "Early drop-off at 7:00am available"
+      },
+      "cost": {
+        "perWeek": 165,
+        "notes": "$165 members, $210 non-members. Must be potty trained.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://your-y.org/camps/"
+      },
+      "category": ["general"],
+      "description": "Half-day camp for preschoolers ages 3.5-5. Must be potty trained to attend.",
+      "source": {
+        "url": "https://your-y.org/camps/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "holyoke-ymca-summer-program",
+      "name": "Holyoke YMCA Summer Program",
+      "organization": "Holyoke YMCA",
+      "location": {
+        "town": "Holyoke",
+        "address": "171 Pine St",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://holyokeymca.org/Programs-Summer-Program"
+      },
+      "category": ["general"],
+      "description": "Weekly themed activities with field trips. Kids learn responsibility, teamwork, and problem-solving. Contact: 413-534-5631.",
+      "source": {
+        "url": "https://holyokeymca.org/Programs-Summer-Program",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["ages", "cost", "dates", "hours"]
+    },
+    {
+      "id": "boys-girls-club-chicopee",
+      "name": "Boys & Girls Club Summer Fun",
+      "organization": "Boys & Girls Club of Chicopee",
+      "location": {
+        "town": "Chicopee",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://bgcchicopee.org/summer-camp/"
+      },
+      "category": ["general"],
+      "description": "Activities include LEGO, sports, STEM, arts & crafts, bounce houses, spray park, and library visits. Contact Abigail at 413-206-4108.",
+      "source": {
+        "url": "https://bgcchicopee.org/summer-camp/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "brains-motion-umass-stem",
+      "name": "Brains & Motion STEM Camp",
+      "organization": "Brains & Motion Education",
+      "location": {
+        "town": "Amherst",
+        "address": "667 N Pleasant St (UMass)",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 14
+      },
+      "dates": {
+        "weeks": ["2026-06-15", "2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20"],
+        "sessionLength": "4-5 days",
+        "hours": "8:30am-3:00pm",
+        "extendedCare": "After-care 3:00pm-6:00pm available"
+      },
+      "cost": {
+        "perWeek": 475,
+        "notes": "$475-$595 depending on program. Robotics, coding, Minecraft, engineering courses available.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts"
+      },
+      "category": ["stem", "specialty"],
+      "description": "STEM camps at UMass featuring robotics, coding, Minecraft, and engineering. Courses for grades 2-8 with hands-on projects and outdoor activities.",
+      "source": {
+        "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "nike-basketball-amherst-college",
+      "name": "Nike Basketball Camp",
+      "organization": "Amherst College Athletics",
+      "location": {
+        "town": "Amherst",
+        "address": "Amherst College",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 8,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Group discounts: $25 off for 5+, $40 off for 10+",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.ussportscamps.com/basketball/nike/nike-basketball-camp-at-amherst-college"
+      },
+      "category": ["sports"],
+      "description": "Complete Skills and Elite basketball camps for boys ages 8-18. Led by Amherst College head coach Marlon Sears. Contact: 413-542-2069.",
+      "source": {
+        "url": "https://athletics.amherst.edu/sports/2020/6/15/information-camps-clinics-copy.aspx",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "amherst-tennis-camp",
+      "name": "Amherst Tennis Camp",
+      "organization": "Amherst College Athletics",
+      "location": {
+        "town": "Amherst",
+        "address": "Amherst College",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 8,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Overnight and commuter options available",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://wilsontenniscamps.com/amherst-college"
+      },
+      "category": ["sports"],
+      "description": "One of the longest-running tennis camps in the US. Directed by coach Todd Doebler. Overnight or commuter options. Contact: 413-542-8559.",
+      "source": {
+        "url": "https://athletics.amherst.edu/sports/2020/6/15/information-camps-clinics-copy.aspx",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "common-school-summerfun",
+      "name": "Common School SummerFun",
+      "organization": "The Common School",
+      "location": {
+        "town": "Amherst",
+        "address": "521 S Pleasant St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 3,
+        "max": 13
+      },
+      "dates": {
+        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27"],
+        "sessionLength": "1 week",
+        "hours": "8:30am-3:00pm",
+        "extendedCare": "Early bird 7:30am-8:30am available"
+      },
+      "cost": {
+        "perWeek": 475,
+        "notes": "$475/week full day, $315/week half day. Limited financial aid available.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.commonschool.org/summer-aux-programs"
+      },
+      "category": ["general", "outdoor", "arts"],
+      "description": "Multiple programs: Down on the Farm (ages 3-4), Forest Adventures (age 5), Ecosystem Exploration (6-7), D&D, Magic the Gathering, STEAM, Clay, and more for ages 8-13.",
+      "source": {
+        "url": "https://www.commonschool.org/summer-aux-programs",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "nike-swim-camp-mount-holyoke",
+      "name": "Nike Swim Camp",
+      "organization": "Mount Holyoke College",
+      "location": {
+        "town": "South Hadley",
+        "address": "50 College St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 10,
+        "max": 18
+      },
+      "dates": {
+        "weeks": ["2026-06-28", "2026-07-05"],
+        "sessionLength": "4 days",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 691,
+        "notes": "$691 extended day, $791 overnight. Optional Starts & Turns clinic $150.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.ussportscamps.com/swim/nike/nike-swim-camp-at-williston-northampton-school"
+      },
+      "category": ["aquatics", "sports"],
+      "description": "Competitive swim camp focusing on stroke refinement. Led by Mount Holyoke coach Dave Allen. Recommended for swimmers with experience in all four strokes.",
+      "source": {
+        "url": "https://www.ussportscamps.com/swim/nike/nike-swim-camp-at-williston-northampton-school",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["hours"]
+    },
+    {
+      "id": "hartsbrook-farm-camp",
+      "name": "Hartsbrook Farm Camp",
+      "organization": "Hartsbrook School",
+      "location": {
+        "town": "Hadley",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 4,
+        "max": 12
+      },
+      "dates": {
+        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27"],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early bird 7:30am-8:45am available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Scholarship available",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "2026-01-28",
+        "deadline": null,
+        "url": "https://www.hartsbrook.org/summer-programs/"
+      },
+      "category": ["outdoor", "general"],
+      "description": "Farm-based camp with animal chores (feeding goats, collecting eggs), farm crafts like wool work and cheese-making. Sprouts program for Pre-K to 1st grade.",
+      "source": {
+        "url": "https://www.hartsbrook.org/summer-programs/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost"]
+    },
+    {
+      "id": "hartsbrook-creativity-camp",
+      "name": "Hartsbrook Creativity Camp",
+      "organization": "Hartsbrook School",
+      "location": {
+        "town": "Hadley",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early bird 7:30am-8:45am available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-01-28",
+        "deadline": null,
+        "url": "https://www.hartsbrook.org/summer-programs/"
+      },
+      "category": ["arts"],
+      "description": "Weekly themed artmaking with open-ended creative expression. Each week has unique themed focus with showcase for families at end.",
+      "source": {
+        "url": "https://www.hartsbrook.org/summer-programs/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "hartsbrook-fiddle-camp",
+      "name": "Hartsbrook Fiddle Camp",
+      "organization": "Hartsbrook School",
+      "location": {
+        "town": "Hadley",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 9,
+        "max": 16
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early bird 7:30am-8:45am available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-01-28",
+        "deadline": null,
+        "url": "https://www.hartsbrook.org/summer-programs/"
+      },
+      "category": ["performing-arts", "specialty"],
+      "description": "Traditional fiddle instruction by ear from Ireland, Scotland, Louisiana, and Appalachia. Welcomes multiple string instruments.",
+      "source": {
+        "url": "https://www.hartsbrook.org/summer-programs/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "hartsbrook-cooking-camp",
+      "name": "Hartsbrook Cooking & Baking Camp",
+      "organization": "Hartsbrook School",
+      "location": {
+        "town": "Hadley",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early bird 7:30am-8:45am available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-01-28",
+        "deadline": null,
+        "url": "https://www.hartsbrook.org/summer-programs/"
+      },
+      "category": ["specialty"],
+      "description": "Children prepare simple, nourishing foods alongside crafts and writing projects.",
+      "source": {
+        "url": "https://www.hartsbrook.org/summer-programs/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "roots-vacation-camps",
+      "name": "Roots Vacation Camps",
+      "organization": "Roots Learning Center",
+      "location": {
+        "town": "East Longmeadow",
+        "address": "129 Industrial Dr",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Before care 7:30am, after care to 5:00pm (+$50/week)"
+      },
+      "cost": {
+        "perWeek": 325,
+        "notes": "$325 ages 7-12, $360 ages 5-6. 10% sibling discount. Also has Westfield location.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.rootsvacation.com/summercamp"
+      },
+      "category": ["general", "sports", "aquatics"],
+      "description": "Full-day camp with swimming, gymnastics, soccer, turf sports, water slide, trampoline, and crafts. CIT program for ages 13-15.",
+      "source": {
+        "url": "https://www.rootsvacation.com/summercamp",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["dates"]
+    },
+    {
+      "id": "westfield-adventure-zone",
+      "name": "Adventure Zone",
+      "organization": "City of Westfield",
+      "location": {
+        "town": "Westfield",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Affordable childcare option for working parents",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.cityofwestfield.org/305/Adventure-Zone"
+      },
+      "category": ["general"],
+      "description": "Full-day camp with arts & crafts, sports, field trips, weekly swimming at Agawam State Pool, spray parks, and environmental activities. Contact: 413-572-6263.",
+      "source": {
+        "url": "https://www.cityofwestfield.org/305/Adventure-Zone",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "kamp-for-kids-westfield",
+      "name": "Kamp for Kids",
+      "organization": "Behavioral Health Network",
+      "location": {
+        "town": "Westfield",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 3,
+        "max": 22
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.bhninc.org/kamp-kids"
+      },
+      "category": ["special-needs", "general"],
+      "description": "Fully inclusive summer camp serving children and young adults ages 3-22, with and without disabilities. Contact Anne Benoit at 413-562-5678.",
+      "source": {
+        "url": "https://www.bhninc.org/kamp-kids",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "camp-howe",
+      "name": "Camp Howe",
+      "organization": "4-H Camp Howe",
+      "location": {
+        "town": "Goshen",
+        "address": "PO Box 326",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 17
+      },
+      "dates": {
+        "weeks": ["2026-06-21", "2026-06-28", "2026-07-05", "2026-07-19", "2026-07-26", "2026-08-02"],
+        "sessionLength": "1-2 weeks",
+        "hours": "8:30am-5:30pm (day camp)",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 450,
+        "notes": "Day camp $450/week. Sleepaway: Juniors $695, Teens $725, Echo $1000. Two-week options available.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.camphowe.com/dates-rates"
+      },
+      "category": ["outdoor", "general", "special-needs", "overnight"],
+      "description": "Day and overnight camp with Echo program for youth with disabilities. About 140 campers per session. CIT program available. Contact: 413-549-3969.",
+      "source": {
+        "url": "https://www.camphowe.com/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "pioneer-athletic-center-camps",
+      "name": "Pioneer Athletic Center Camps",
+      "organization": "Pioneer Athletic Center",
+      "location": {
+        "town": "East Longmeadow",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 4,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.pioneerathleticcenter.com/camps/"
+      },
+      "category": ["sports", "general"],
+      "description": "Gymnastics and Ninja camps with themed weeks (Unicorn & Slime, Swiftie Week, Ninja Warrior). Rotating activities include gymnastics, ninja obstacles, and activity room.",
+      "source": {
+        "url": "https://www.pioneerathleticcenter.com/camps/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "pioneer-gymnastics-east-longmeadow",
+      "name": "Pioneer Gymnastics Camp",
+      "organization": "Pioneer Gymnastics",
+      "location": {
+        "town": "East Longmeadow",
+        "address": "21 Baldwin St",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.pioneergymnastics.com/"
+      },
+      "category": ["sports"],
+      "description": "Premier gymnastics program since 1966. Offers dance, gymnastics, and taekwondo. Low student-to-teacher ratio with certified instructors. Contact: 413-525-1291.",
+      "source": {
+        "url": "https://www.pioneergymnastics.com/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["ages", "cost", "dates", "hours"]
+    },
+    {
+      "id": "western-ma-pioneers-soccer",
+      "name": "Western MA Pioneers Soccer Camp",
+      "organization": "Western MA Pioneers",
+      "location": {
+        "town": "Ludlow",
+        "address": "Lusitano Stadium",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "varies",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "30% off for Western United Pioneers players and Gremio Lusitano members",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://wmpioneers.com/camps/"
+      },
+      "category": ["sports"],
+      "description": "Soccer camps for ages 5-12 (full day and half day) plus high school programs. Full day includes morning training and afternoon activities/scrimmages.",
+      "source": {
+        "url": "https://wmpioneers.com/camps/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "nike-girls-lacrosse-smith",
+      "name": "Nike Girls Lacrosse Camp",
+      "organization": "US Sports Camps / Smith College",
+      "location": {
+        "town": "Northampton",
+        "address": "Smith College",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 10,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Extended overnight sessions available",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.ussportscamps.com/lacrosse/nike/girls-lacrosse-camp-williston-northampton-school"
+      },
+      "category": ["sports"],
+      "description": "Intensive lacrosse training led by Nike Camp Director Stacey Freda. Moving to Smith College in 2026. Join priority list for updates.",
+      "source": {
+        "url": "https://www.ussportscamps.com/lacrosse/nike/girls-lacrosse-camp-williston-northampton-school",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "bonnie-castle-riding-camp",
+      "name": "Bonnie Castle Riding Camp",
+      "organization": "Stoneleigh-Burnham School",
+      "location": {
+        "town": "Greenfield",
+        "address": "Stoneleigh-Burnham School",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 8,
+        "max": 16
+      },
+      "dates": {
+        "weeks": ["2026-06-21", "2026-07-05", "2026-07-19"],
+        "sessionLength": "2 weeks",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 1975,
+        "notes": "$3,950 per 2-week session + $700 horse boarding. Intermediate/advanced riders only.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://sbschool.org/summer-programs/bonnie-castle-riding-camp"
+      },
+      "category": ["specialty", "overnight"],
+      "description": "Overnight equestrian camp for intermediate/advanced riders. Ride twice daily (flat + jumping). 30+ years running. Hunters, jumpers, dressage, combined training.",
+      "source": {
+        "url": "https://sbschool.org/summer-programs/bonnie-castle-riding-camp",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["hours"]
+    },
+    {
+      "id": "academy-of-music-youth",
+      "name": "Academy of Music Youth Productions",
+      "organization": "Academy of Music Theatre",
+      "location": {
+        "town": "Northampton",
+        "address": "274 Main St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 17
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "seasonal productions",
+        "hours": "5:00pm-7:00pm (rehearsals)",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Year-round productions, not summer camp format",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://aomtheatre.com/youth-programs/"
+      },
+      "category": ["performing-arts"],
+      "description": "Theater productions for ages 6-17 with rehearsals twice weekly. 2026: Frozen Jr (ages 9-16), Legally Blonde Jr (12-17), My Friend Pinocchio (6-10). Contact: education@aomtheatre.com.",
+      "source": {
+        "url": "https://aomtheatre.com/youth-programs/",
+        "lastVerified": "2026-01-12"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "amherst-rec-fun-in-the-sun-early-adventures",
+      "name": "Fun in the Sun: Early Adventures",
+      "organization": "Amherst Recreation Department",
+      "location": {
+        "town": "Amherst",
+        "address": "Amherst Regional Middle School",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 6
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:30am-4:00pm",
+        "extendedCare": "Extended Day 4:00pm-5:00pm (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted yet. 2025 rate was $280/week; extended day was $30/week. Seven Hills vouchers accepted.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://secured.amherstma.gov/wbwsc/webtrac.wsc/splash.html"
+      },
+      "category": ["general"],
+      "description": "Town-run day camp (Fun in the Sun) for younger kids. Activities include games, crafts, and outdoor play at Amherst Regional Middle School.",
+      "source": {
+        "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "amherst-rec-fun-in-the-sun-epic-explorers",
+      "name": "Fun in the Sun: Epic Explorers",
+      "organization": "Amherst Recreation Department",
+      "location": {
+        "town": "Amherst",
+        "address": "Amherst Regional Middle School",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 11
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:30am-4:00pm",
+        "extendedCare": "Extended Day 4:00pm-5:00pm (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted yet. 2025 rate was $250/week; extended day was $30/week. Seven Hills vouchers accepted.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://secured.amherstma.gov/wbwsc/webtrac.wsc/splash.html"
+      },
+      "category": ["general"],
+      "description": "Town-run day camp (Fun in the Sun) for older kids. Activities include sports, games, crafts, outdoor play, and themed weeks at Amherst Regional Middle School.",
+      "source": {
+        "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "easthampton-rec-camp-nonotuck",
+      "name": "Camp Nonotuck",
+      "organization": "Easthampton Parks & Recreation",
+      "location": {
+        "town": "Easthampton",
+        "address": "Nonotuck Park",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:30pm",
+        "extendedCare": "Extended Day option 8:00am-4:00pm (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted yet. 2025 was $200/week (Regular) or $225/week (Extended Day). Scholarships available.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://clubs.bluesombrero.com/easthamptonparksandrec"
+      },
+      "category": ["general", "outdoor"],
+      "description": "Weekly day camp at Nonotuck Park with Junior and Senior groups. Activities include outdoor play, games, crafts, and field trips.",
+      "source": {
+        "url": "https://www.easthamptonma.gov/509/Camp-Nonotuck",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "belchertown-rec-summer-days",
+      "name": "Summer D.A.Y.S. Program",
+      "organization": "Belchertown Recreation Department",
+      "location": {
+        "town": "Belchertown",
+        "address": "Belchertown High School",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:00am-4:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted yet. 2025 was $150/week residents, $160/week non-residents.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://belchertownma.myrec.com/info/activities/program_details.aspx?ProgramID=29810"
+      },
+      "category": ["general"],
+      "description": "Town recreation program for grades 1-7 with themed activities and field trips.",
+      "source": {
+        "url": "https://belchertownma.myrec.com/info/activities/program_details.aspx?ProgramID=29810",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "chicopee-rec-opee-summer-adventures",
+      "name": "OPEE Summer Adventures",
+      "organization": "Chicopee Parks & Recreation",
+      "location": {
+        "town": "Chicopee",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": "Pre-program option starting 7:45am (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted yet. Check registration portal for pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://chicopeema.myrec.com/info/activities/program_details.aspx?ProgramID=29871"
+      },
+      "category": ["general"],
+      "description": "City-run summer day program. Registration and details in Chicopee Parks & Recreation portal.",
+      "source": {
+        "url": "https://chicopeema.myrec.com/info/activities/program_details.aspx?ProgramID=29871",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "springfield-parks-rec-summer-programs",
+      "name": "Springfield Parks & Recreation Summer Programs",
+      "organization": "City of Springfield Parks & Recreation",
+      "location": {
+        "town": "Springfield",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Summer 2026 details expected mid-April 2026.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.springfield-ma.gov/park/after-school-program"
+      },
+      "category": ["general"],
+      "description": "City-run summer programming. Check Springfield Parks & Recreation for Summer 2026 release.",
+      "source": {
+        "url": "https://www.springfield-ma.gov/park/after-school-program",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["ages", "cost", "dates", "hours"]
+    },
+    {
+      "id": "west-springfield-rec-tiny-tots",
+      "name": "Tiny Tots (Centrum)",
+      "organization": "West Springfield Park & Recreation",
+      "location": {
+        "town": "West Springfield",
+        "address": "West Springfield Middle School",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 4,
+        "max": 5
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Pre-camp 8:00am-9:00am, post-camp 4:00pm-5:00pm (additional fees)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted. 2025 was $130/week residents, $185/week non-residents. Breakfast and lunch included.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://web1.myvscloud.com/wbwsc/mawestspringfieldwt.wsc/splash.html"
+      },
+      "category": ["general"],
+      "description": "Town camp for ages 4-5 with crafts, science, nature, sports, swimming, and field trips.",
+      "source": {
+        "url": "https://www.townofwestspringfield.org/files/content/town/v/288/community-resources/park-recreation-department/summer-camps-booklet-2025-final.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "west-springfield-rec-centrum-playground",
+      "name": "Centrum Playground",
+      "organization": "West Springfield Park & Recreation",
+      "location": {
+        "town": "West Springfield",
+        "address": "West Springfield Middle School",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Pre-camp 8:00am-9:00am, post-camp 4:00pm-5:00pm (additional fees)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted. 2025 was $130/week residents, $185/week non-residents. Breakfast and lunch included.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://web1.myvscloud.com/wbwsc/mawestspringfieldwt.wsc/splash.html"
+      },
+      "category": ["general"],
+      "description": "Town day camp for ages 6-12 with arts & crafts, science, nature, sports, swimming, and field trips.",
+      "source": {
+        "url": "https://www.townofwestspringfield.org/files/content/town/v/288/community-resources/park-recreation-department/summer-camps-booklet-2025-final.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "west-springfield-rec-step-teen",
+      "name": "Centrum S.T.E.P. (Teen Camp)",
+      "organization": "West Springfield Park & Recreation",
+      "location": {
+        "town": "West Springfield",
+        "address": "West Springfield Middle School",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 13,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Pre-camp 8:00am-9:00am, post-camp 4:00pm-5:00pm (additional fees)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2026 rates not posted. 2025 was $130/week residents, $185/week non-residents.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://web1.myvscloud.com/wbwsc/mawestspringfieldwt.wsc/splash.html"
+      },
+      "category": ["general"],
+      "description": "Teen summer program with swimming, field trips, and leadership development.",
+      "source": {
+        "url": "https://www.townofwestspringfield.org/files/content/town/v/288/community-resources/park-recreation-department/summer-camps-booklet-2025-final.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "ymca-greater-springfield-camp-weber",
+      "name": "Camp Weber",
+      "organization": "YMCA of Greater Springfield",
+      "location": {
+        "town": "West Springfield",
+        "address": "Dewey Street",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": "Early Riser 6:00am-7:30am (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2025 was $245/session (members), $280 (non-members) + $15 maintenance fee. $50 deposit required. Transportation fee $90 if needed.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfieldy.org/camps/"
+      },
+      "category": ["general", "outdoor"],
+      "description": "YMCA day camp on wooded property with swimming and outdoor activities. Bus transportation available.",
+      "source": {
+        "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "ymca-greater-springfield-stony-brook-acres",
+      "name": "Stony Brook Acres",
+      "organization": "YMCA of Greater Springfield",
+      "location": {
+        "town": "Wilbraham",
+        "address": "1004 Stony Hill Rd",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2025 was $245/session (members), $280 (non-members) + $15 maintenance fee. $50 deposit required.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfieldy.org/camps/"
+      },
+      "category": ["general", "outdoor"],
+      "description": "Outdoor YMCA day camp in Wilbraham with swimming, sports, nature, archery, and arts & crafts.",
+      "source": {
+        "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "ymca-greater-springfield-fun-city",
+      "name": "Fun City Summer Day Program",
+      "organization": "YMCA of Greater Springfield",
+      "location": {
+        "town": "Springfield",
+        "address": "1500 Main St (YMCA Learning Center)",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": "Early Riser 6:00am-7:30am (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2025 was $245/session (members), $280 (non-members) + $15 maintenance fee. $50 deposit required.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfieldy.org/camps/"
+      },
+      "category": ["general"],
+      "description": "YMCA summer day program at Downtown Springfield Learning Center with indoor and outdoor activities.",
+      "source": {
+        "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "ymca-greater-springfield-small-fry",
+      "name": "Small Fry Summer Day Program",
+      "organization": "YMCA of Greater Springfield",
+      "location": {
+        "town": "Springfield",
+        "address": "1500 Main St (YMCA Learning Center)",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 5
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:00am-4:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2025 was $245/session (members), $280 (non-members) + $15 maintenance fee. $50 deposit required.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfieldy.org/camps/"
+      },
+      "category": ["general"],
+      "description": "YMCA program for 5-year-olds entering kindergarten. Must be toilet trained. Includes games, science, sports, and arts & crafts.",
+      "source": {
+        "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates"]
+    },
+    {
+      "id": "ymca-greater-springfield-teen-camp",
+      "name": "YMCA Teen Camp",
+      "organization": "YMCA of Greater Springfield",
+      "location": {
+        "town": "West Springfield",
+        "address": "Camp Weber / Stony Brook Acres",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 13,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "2025 was $120/session (members and non-members) + deposit/maintenance fees.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://springfieldy.org/camps/"
+      },
+      "category": ["general", "outdoor"],
+      "description": "Teen program with camp activities, field trips, and leadership development at Camp Weber and Stony Brook Acres.",
+      "source": {
+        "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    },
+    {
+      "id": "ymca-westfield-camp-shepard",
+      "name": "Camp Shepard Day Camp",
+      "organization": "YMCA of Greater Westfield",
+      "location": {
+        "town": "Westfield",
+        "address": "370 Northwest Rd",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 4,
+        "max": 14
+      },
+      "dates": {
+        "weeks": ["2026-06-29", "2026-07-13", "2026-07-27", "2026-08-10"],
+        "sessionLength": "2 weeks",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "$75 non-refundable deposit per session required. Balance due one week before each session.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.westfieldymca.org/camp-shepard/"
+      },
+      "category": ["general", "outdoor"],
+      "description": "Outdoor YMCA day camp on 155+ acres of woodlands in Westfield.",
+      "source": {
+        "url": "https://www.westfieldymca.org/camp-shepard/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "hours"]
+    },
+    {
+      "id": "montague-parks-rec-summer-camp",
+      "name": "Montague Summer Camp",
+      "organization": "Montague Parks & Recreation",
+      "location": {
+        "town": "Montague",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Registration typically opens in March for residents. Check site for 2026 details.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://montagueparksandrec.com/summer-camp-26/"
+      },
+      "category": ["general"],
+      "description": "Town-run summer camp for elementary-age kids.",
+      "source": {
+        "url": "https://montagueparksandrec.com/summer-camp-26/",
+        "lastVerified": "2026-01-13"
+      },
+      "incomplete": ["cost", "dates", "hours"]
+    }
+  ]
+}

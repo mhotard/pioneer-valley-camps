@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "outdoor",
+      "name": "Outdoor/Nature",
+      "description": "Nature exploration, hiking, environmental education"
+    },
+    {
+      "id": "arts",
+      "name": "Arts & Crafts",
+      "description": "Visual arts, crafts, creative projects"
+    },
+    {
+      "id": "performing-arts",
+      "name": "Performing Arts",
+      "description": "Theater, dance, music, drama"
+    },
+    {
+      "id": "stem",
+      "name": "STEM",
+      "description": "Science, technology, engineering, math"
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "description": "Athletics, team sports, fitness"
+    },
+    {
+      "id": "aquatics",
+      "name": "Aquatics",
+      "description": "Swimming, water sports, lifeguard training"
+    },
+    {
+      "id": "adventure",
+      "name": "Adventure",
+      "description": "Ropes courses, climbing, wilderness skills"
+    },
+    {
+      "id": "academic",
+      "name": "Academic",
+      "description": "Educational enrichment, tutoring, test prep"
+    },
+    {
+      "id": "specialty",
+      "name": "Specialty",
+      "description": "Focused skills like coding, cooking, photography"
+    },
+    {
+      "id": "general",
+      "name": "General/Multi-Activity",
+      "description": "Traditional day camp with variety of activities"
+    },
+    {
+      "id": "special-needs",
+      "name": "Special Needs",
+      "description": "Programs designed for children with disabilities"
+    },
+    {
+      "id": "overnight",
+      "name": "Overnight/Residential",
+      "description": "Sleep-away camp programs"
+    }
+  ]
+}

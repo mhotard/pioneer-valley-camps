@@ -1,0 +1,60 @@
+{
+  "centerPoint": {
+    "town": "Amherst",
+    "state": "MA"
+  },
+  "radius": "45 minutes",
+  "counties": {
+    "Hampshire": [
+      "Amherst",
+      "Northampton",
+      "Easthampton",
+      "Hadley",
+      "South Hadley",
+      "Granby",
+      "Belchertown",
+      "Ware",
+      "Williamsburg",
+      "Hatfield",
+      "Whately",
+      "Pelham",
+      "Goshen",
+      "Chesterfield",
+      "Huntington",
+      "Westhampton"
+    ],
+    "Franklin": [
+      "Greenfield",
+      "Deerfield",
+      "Montague",
+      "Sunderland",
+      "Leverett",
+      "Shutesbury",
+      "Wendell",
+      "Erving",
+      "Gill",
+      "Northfield",
+      "Bernardston",
+      "Colrain",
+      "Shelburne",
+      "Conway",
+      "Ashfield"
+    ],
+    "Hampden": [
+      "Springfield",
+      "Holyoke",
+      "Chicopee",
+      "West Springfield",
+      "Westfield",
+      "Agawam",
+      "Longmeadow",
+      "East Longmeadow",
+      "Wilbraham",
+      "Ludlow",
+      "Palmer",
+      "Monson",
+      "Hampden",
+      "Southampton"
+    ]
+  }
+}
