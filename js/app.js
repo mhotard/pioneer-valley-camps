@@ -429,10 +429,12 @@ function createModalContent(camp) {
     // Build registration section
     let regHtml = '';
     if (camp.registration?.opens) {
-        regHtml += `<li><strong>Registration opens:</strong> ${camp.registration.opens}</li>`;
+        const opensFormatted = formatDate(camp.registration.opens);
+        regHtml += `<li><strong>Registration opens:</strong> ${opensFormatted}</li>`;
     }
     if (camp.registration?.deadline) {
-        regHtml += `<li><strong>Deadline:</strong> ${camp.registration.deadline}</li>`;
+        const deadlineFormatted = formatDate(camp.registration.deadline);
+        regHtml += `<li><strong>Deadline:</strong> ${deadlineFormatted}</li>`;
     }
 
     // Location
@@ -522,6 +524,17 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function formatDate(dateStr) {
+    if (!dateStr) return '';
+    // If it looks like YYYY-MM-DD, format it nicely
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+        const d = new Date(dateStr + 'T00:00:00');
+        return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    // Otherwise return as-is (supports "February 2026", "Early January", etc.)
+    return dateStr;
 }
 
 // Start the app

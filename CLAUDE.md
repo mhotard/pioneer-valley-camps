@@ -23,10 +23,18 @@ Each camp in `camps.json` has:
 - `ages`: { min, max }
 - `dates`: { weeks[], sessionLength, hours, extendedCare }
 - `cost`: { perWeek, notes, financialAid }
-- `registration`: { opens, deadline, url }
+- `registration`: { opens (flexible format), deadline, url }
 - `category`: array of category IDs
 - `description`, `source`: { url, lastVerified }
 - `incomplete`: array of missing fields
+
+## Registration Date Formats
+
+The `registration.opens` field accepts flexible formats:
+- Full date: `2026-02-01` (displays as "February 1, 2026")
+- Month/year: `February 2026`
+- Approximate: `Early January`, `Mid-February`
+- Descriptive: `Rolling admission`
 
 ## Common Tasks
 
