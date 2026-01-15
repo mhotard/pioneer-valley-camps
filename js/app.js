@@ -158,20 +158,19 @@ function hasEarlyDropoff(camp) {
     const hours = camp.dates?.hours || '';
     const combined = (extendedCare + ' ' + hours).toLowerCase();
 
-    // Check for early times (before 8:30am typically)
-    const earlyPatterns = [
-        /early/i,
-        /before/i,
-        /pre-camp/i,
-        /pre-program/i,
-        /drop.?off/i,
-        /6:\d{2}\s*am/i,
-        /7:\d{2}\s*am/i,
-        /8:00\s*am/i,
-        /8:15\s*am/i
-    ];
+    // Look for AM times and check if any are before 8:30am
+    const amTimes = combined.match(/(\d{1,2}):?(\d{2})?\s*am/gi) || [];
+    for (const match of amTimes) {
+        const timeMatch = match.match(/(\d{1,2}):?(\d{2})?/);
+        if (timeMatch) {
+            const hour = parseInt(timeMatch[1]);
+            const minute = timeMatch[2] ? parseInt(timeMatch[2]) : 0;
+            // Consider anything before 8:30am as early drop-off
+            if (hour < 8 || (hour === 8 && minute < 30)) return true;
+        }
+    }
 
-    return earlyPatterns.some(pattern => pattern.test(combined));
+    return false;
 }
 
 function hasLatePickup(camp) {
@@ -240,7 +239,7 @@ function applyFilters() {
         }
 
         // Cost filter
-        if (costMax !== null && camp.cost?.perWeek && camp.cost.perWeek > costMax) {
+        if (costMax !== null && (!camp.cost?.perWeek || camp.cost.perWeek > costMax)) {
             return false;
         }
 
