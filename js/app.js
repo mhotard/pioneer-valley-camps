@@ -179,30 +179,20 @@ function hasLatePickup(camp) {
     const hours = camp.dates?.hours || '';
     const combined = (extendedCare + ' ' + hours).toLowerCase();
 
-    // Check for late times (5pm or later)
-    const latePatterns = [
-        /5:\d{2}\s*pm/i,
-        /6:\d{2}\s*pm/i,
-        /17:\d{2}/,
-        /18:\d{2}/,
-        /after.?care/i,
-        /post.?camp/i,
-        /late/i
-    ];
-
-    // Also check if main hours end at 5pm+
-    const fivepmMatch = combined.match(/(\d{1,2}):?(\d{2})?\s*(pm|PM)/g);
-    if (fivepmMatch) {
-        for (const match of fivepmMatch) {
-            const hourMatch = match.match(/(\d{1,2})/);
-            if (hourMatch) {
-                const hour = parseInt(hourMatch[1]);
-                if (hour >= 5 && hour < 12) return true;
-            }
+    // Look for PM times and check if any are 5pm or later
+    const pmTimes = combined.match(/(\d{1,2}):?(\d{2})?\s*pm/gi) || [];
+    for (const match of pmTimes) {
+        const hourMatch = match.match(/(\d{1,2})/);
+        if (hourMatch) {
+            const hour = parseInt(hourMatch[1]);
+            if (hour >= 5 && hour < 12) return true;
         }
     }
 
-    return latePatterns.some(pattern => pattern.test(combined));
+    // Check 24-hour format (17:00, 18:00, etc.)
+    if (/1[7-9]:\d{2}|2[0-3]:\d{2}/.test(combined)) return true;
+
+    return false;
 }
 
 function applyFilters() {
