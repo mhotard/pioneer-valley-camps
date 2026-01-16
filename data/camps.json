@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-01-15",
+  "lastUpdated": "2026-01-16",
   "version": "1.0.0",
-  "totalCamps": 68,
+  "totalCamps": 67,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -17,7 +17,13 @@
         "max": 15
       },
       "dates": {
-        "weeks": ["2026-06-29", "2026-07-06", "2026-07-20", "2026-07-27", "2026-08-10"],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-10"
+        ],
         "sessionLength": "1-2 weeks",
         "hours": "8:45am-3:00pm",
         "extendedCare": null
@@ -32,7 +38,10 @@
         "deadline": "2026-04-03",
         "url": "https://www.hitchcockcenter.org/camp-programs/"
       },
-      "category": ["outdoor", "stem"],
+      "category": [
+        "outdoor",
+        "stem"
+      ],
       "description": "Nature-based summer camp with sessions for grades K-6 and a Leadership Training program for grades 7-9. Chickadee Camp offers half-day option for youngest campers.",
       "source": {
         "url": "https://www.hitchcockcenter.org/camp-programs/",
@@ -69,13 +78,19 @@
         "deadline": null,
         "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp"
       },
-      "category": ["outdoor"],
+      "category": [
+        "outdoor"
+      ],
       "description": "Nature camp at the 734-acre Arcadia Wildlife Sanctuary. Children explore the outdoors, connect with nature, and develop confidence. Max 4 weeks per camper.",
       "source": {
         "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "northampton-parks-rec-safety-village",
@@ -106,13 +121,19 @@
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Day camp for ages 4-6 with two-week sessions. Safe, fun environment for young campers. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "northampton-parks-rec-camp-kidzone",
@@ -143,13 +164,19 @@
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Day camp for students entering grades 1-4 with weekly sessions. Fun activities in a safe environment. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "northampton-parks-rec-camp-hamp",
@@ -180,13 +207,19 @@
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Day camp for students entering grades 5-6 with weekly sessions. Age-appropriate activities and adventures. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "northampton-parks-rec-teen-expeditions",
@@ -217,13 +250,20 @@
         "deadline": null,
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
-      "category": ["adventure", "general"],
+      "category": [
+        "adventure",
+        "general"
+      ],
       "description": "Teen expedition program for students entering grades 7-10 with weekly sessions. Outdoor adventures and leadership development. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "hampshire-regional-ymca-camp-koala",
@@ -239,7 +279,18 @@
         "max": 5
       },
       "dates": {
-        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27", "2026-08-03", "2026-08-10", "2026-08-17", "2026-08-24"],
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17",
+          "2026-08-24"
+        ],
         "sessionLength": "1 week",
         "hours": "8:30am-4:30pm (full-day) or 8:30am-1:30pm (half-day)",
         "extendedCare": null
@@ -254,7 +305,9 @@
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Preschool day camp - ideal introduction to summer camp! Theme-based activities including swimming, art, singing, sports, and outdoor play. Children must be fully toilet trained to attend.",
       "notes": "Children must be fully toilet trained. Camp info session Feb 1, 11am-12:30pm at YMCA.",
       "source": {
@@ -277,7 +330,18 @@
         "max": 14
       },
       "dates": {
-        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27", "2026-08-03", "2026-08-10", "2026-08-17", "2026-08-24"],
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17",
+          "2026-08-24"
+        ],
         "sessionLength": "1 week",
         "hours": "9:00am-5:00pm",
         "extendedCare": "Morning care 8:00am-9:00am available (+$43/week)"
@@ -292,7 +356,11 @@
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
-      "category": ["general", "sports", "aquatics"],
+      "category": [
+        "general",
+        "sports",
+        "aquatics"
+      ],
       "description": "Day camp featuring camp games, physical challenges, swimming, arts and crafts, and sports at various ability levels. Includes Ninja Warrior obstacle course with balance, agility, climbing activities, and an 8-foot Warp Wall. Weekly themes keep activities fresh and engaging.",
       "notes": "Features Ninja Warrior obstacle course and Warp Wall. Camp info session Feb 1, 11am-12:30pm at YMCA.",
       "source": {
@@ -315,7 +383,13 @@
         "max": 15
       },
       "dates": {
-        "weeks": ["2026-06-29", "2026-07-13", "2026-07-27", "2026-08-10", "2026-08-24"],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-13",
+          "2026-07-27",
+          "2026-08-10",
+          "2026-08-24"
+        ],
         "sessionLength": "2 weeks (Sessions 1-4), 1 week (Session 5)",
         "hours": "9:00am-4:00pm",
         "extendedCare": null
@@ -330,7 +404,12 @@
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
-      "category": ["general", "aquatics", "outdoor", "adventure"],
+      "category": [
+        "general",
+        "aquatics",
+        "outdoor",
+        "adventure"
+      ],
       "description": "Classic YMCA camp on beautiful 175-acre Lake Norwich property in the Berkshire foothills. Swimming, boating, archery, fishing, arts & crafts, performing arts, nature study, team activities, outdoor cooking, and low ropes course. Age groups: Explorers (K-2), Adventurers (3-5), Trailblazers (6-8). 139 years of quality programming.",
       "notes": "Bus transportation available from Northampton, Florence, Hadley, Southampton, and Westhampton ($140/2-week session). Open house May 30, 10am-2pm.",
       "source": {
@@ -368,13 +447,19 @@
         "deadline": null,
         "url": "https://www.springfieldjcc.org/camp/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Day camp for grades K-8 plus Leaders-in-Training for grades 9-10. Inclusion camp available. Accepts Seven Hills state assistance vouchers.",
       "source": {
         "url": "https://www.springfieldjcc.org/camp/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "camp-massasoit",
@@ -405,13 +490,20 @@
         "deadline": null,
         "url": "https://springfield.edu/about/east-campus/camp-massasoit"
       },
-      "category": ["general", "sports"],
+      "category": [
+        "general",
+        "sports"
+      ],
       "description": "Developmentally appropriate programs balancing skill development and enjoyment. Theme of respect practiced throughout the day. Contact: (413) 748-4020.",
       "source": {
         "url": "https://springfield.edu/about/east-campus/camp-massasoit",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "boys-girls-club-springfield",
@@ -442,13 +534,17 @@
         "deadline": null,
         "url": "https://www.bgclubspringfield.org/membership/summer-camp"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Affordable day camp at Henderson, Stalnaker, and Musgrave locations. Scholarships for free/reduced lunch families. Teen camp (13-17) is free.",
       "source": {
         "url": "https://www.bgclubspringfield.org/membership/summer-camp",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "camp-keewanee",
@@ -464,7 +560,10 @@
         "max": null
       },
       "dates": {
-        "weeks": ["2026-07-06", "2026-07-27"],
+        "weeks": [
+          "2026-07-06",
+          "2026-07-27"
+        ],
         "sessionLength": "3 or 6 weeks",
         "hours": null,
         "extendedCare": null
@@ -479,13 +578,19 @@
         "deadline": null,
         "url": "https://www.campkeewanee.com/"
       },
-      "category": ["arts", "general"],
+      "category": [
+        "arts",
+        "general"
+      ],
       "description": "Nonprofit arts-focused day camp since 1924. Emphasizes creativity, inclusivity, and self-esteem. Sessions: July 6-24 and July 27-Aug 13.",
       "source": {
         "url": "https://www.campkeewanee.com/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["ages", "hours"]
+      "incomplete": [
+        "ages",
+        "hours"
+      ]
     },
     {
       "id": "greenfield-recreation-discovery-camp",
@@ -516,13 +621,17 @@
         "deadline": null,
         "url": "https://www.greenfieldrecreation.com/camp.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Day camp for grades K-2. Activities include playground time, swimming, games, and arts & crafts. Daily lunch and morning snack provided.",
       "source": {
         "url": "https://www.greenfieldrecreation.com/camp.html",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "greenfield-recreation-sizzlers-camp",
@@ -553,13 +662,17 @@
         "deadline": null,
         "url": "https://www.greenfieldrecreation.com/camp.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Day camp for grades 3-6. Activities include playground time, swimming, games, and arts & crafts. Daily lunch and morning snack provided.",
       "source": {
         "url": "https://www.greenfieldrecreation.com/camp.html",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "franklin-county-ymca-camp-apex",
@@ -590,13 +703,18 @@
         "deadline": null,
         "url": "https://your-y.org/camps/"
       },
-      "category": ["outdoor", "general"],
+      "category": [
+        "outdoor",
+        "general"
+      ],
       "description": "Traditional day camp on 30+ acres. Activities include group games, songs, swimming, obstacle course, gaga ball, and arts & crafts.",
       "source": {
         "url": "https://your-y.org/camps/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "franklin-county-ymca-gymnastics-camp",
@@ -627,13 +745,18 @@
         "deadline": null,
         "url": "https://your-y.org/camps/"
       },
-      "category": ["sports", "specialty"],
+      "category": [
+        "sports",
+        "specialty"
+      ],
       "description": "Indoor camp for kids who love to flip, tumble, balance, and swing. Held at Main Street facility in Greenfield.",
       "source": {
         "url": "https://your-y.org/camps/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "franklin-county-ymca-lil-flippers",
@@ -664,13 +787,17 @@
         "deadline": null,
         "url": "https://your-y.org/camps/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Half-day camp for preschoolers ages 3.5-5. Must be potty trained to attend.",
       "source": {
         "url": "https://your-y.org/camps/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "holyoke-ymca-summer-program",
@@ -701,13 +828,20 @@
         "deadline": null,
         "url": "https://holyokeymca.org/Programs-Summer-Program"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Weekly themed activities with field trips. Kids learn responsibility, teamwork, and problem-solving. Contact: 413-534-5631.",
       "source": {
         "url": "https://holyokeymca.org/Programs-Summer-Program",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["ages", "cost", "dates", "hours"]
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "boys-girls-club-chicopee",
@@ -738,13 +872,19 @@
         "deadline": null,
         "url": "https://bgcchicopee.org/summer-camp/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Activities include LEGO, sports, STEM, arts & crafts, bounce houses, spray park, and library visits. Contact Abigail at 413-206-4108.",
       "source": {
         "url": "https://bgcchicopee.org/summer-camp/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "brains-motion-umass-stem",
@@ -760,7 +900,14 @@
         "max": 14
       },
       "dates": {
-        "weeks": ["2026-06-15", "2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20"],
+        "weeks": [
+          "2026-06-15",
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20"
+        ],
         "sessionLength": "4-5 days",
         "hours": "8:30am-3:00pm",
         "extendedCare": "After-care 3:00pm-6:00pm available"
@@ -775,7 +922,10 @@
         "deadline": null,
         "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts"
       },
-      "category": ["stem", "specialty"],
+      "category": [
+        "stem",
+        "specialty"
+      ],
       "description": "STEM camps at UMass featuring robotics, coding, Minecraft, and engineering. Courses for grades 2-8 with hands-on projects and outdoor activities.",
       "source": {
         "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts",
@@ -812,13 +962,19 @@
         "deadline": null,
         "url": "https://www.ussportscamps.com/basketball/nike/nike-basketball-camp-at-amherst-college"
       },
-      "category": ["sports"],
+      "category": [
+        "sports"
+      ],
       "description": "Complete Skills and Elite basketball camps for boys ages 8-18. Led by Amherst College head coach Marlon Sears. Contact: 413-542-2069.",
       "source": {
         "url": "https://athletics.amherst.edu/sports/2020/6/15/information-camps-clinics-copy.aspx",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "amherst-tennis-camp",
@@ -849,13 +1005,19 @@
         "deadline": null,
         "url": "https://wilsontenniscamps.com/amherst-college"
       },
-      "category": ["sports"],
+      "category": [
+        "sports"
+      ],
       "description": "One of the longest-running tennis camps in the US. Directed by coach Todd Doebler. Overnight or commuter options. Contact: 413-542-8559.",
       "source": {
         "url": "https://athletics.amherst.edu/sports/2020/6/15/information-camps-clinics-copy.aspx",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "common-school-summerfun",
@@ -871,9 +1033,16 @@
         "max": 13
       },
       "dates": {
-        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27"],
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ],
         "sessionLength": "1 week",
-        "hours": "8:30am-3:00pm",
+        "hours": "8:30am-3:30pm",
         "extendedCare": "Early bird 7:30am-8:30am available"
       },
       "cost": {
@@ -882,15 +1051,20 @@
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "2026-01-16",
         "deadline": null,
         "url": "https://www.commonschool.org/summer-aux-programs"
       },
-      "category": ["general", "outdoor", "arts"],
+      "category": [
+        "general",
+        "outdoor",
+        "arts",
+        "stem"
+      ],
       "description": "Multiple programs: Down on the Farm (ages 3-4), Forest Adventures (age 5), Ecosystem Exploration (6-7), D&D, Magic the Gathering, STEAM, Clay, and more for ages 8-13.",
       "source": {
         "url": "https://www.commonschool.org/summer-aux-programs",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-15"
       },
       "incomplete": []
     },
@@ -908,7 +1082,10 @@
         "max": 18
       },
       "dates": {
-        "weeks": ["2026-06-28", "2026-07-05"],
+        "weeks": [
+          "2026-06-28",
+          "2026-07-05"
+        ],
         "sessionLength": "4 days",
         "hours": null,
         "extendedCare": null
@@ -923,13 +1100,18 @@
         "deadline": null,
         "url": "https://www.ussportscamps.com/swim/nike/nike-swim-camp-at-williston-northampton-school"
       },
-      "category": ["aquatics", "sports"],
+      "category": [
+        "aquatics",
+        "sports"
+      ],
       "description": "Competitive swim camp focusing on stroke refinement. Led by Mount Holyoke coach Dave Allen. Recommended for swimmers with experience in all four strokes.",
       "source": {
         "url": "https://www.ussportscamps.com/swim/nike/nike-swim-camp-at-williston-northampton-school",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["hours"]
+      "incomplete": [
+        "hours"
+      ]
     },
     {
       "id": "hartsbrook-farm-camp",
@@ -945,7 +1127,14 @@
         "max": 12
       },
       "dates": {
-        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27"],
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ],
         "sessionLength": "1 week",
         "hours": "8:45am-3:00pm",
         "extendedCare": "Early bird 7:30am-8:45am available"
@@ -960,13 +1149,18 @@
         "deadline": null,
         "url": "https://www.hartsbrook.org/summer-programs/"
       },
-      "category": ["outdoor", "general"],
+      "category": [
+        "outdoor",
+        "general"
+      ],
       "description": "Farm-based camp with animal chores (feeding goats, collecting eggs), farm crafts like wool work and cheese-making. Sprouts program for Pre-K to 1st grade.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost"]
+      "incomplete": [
+        "cost"
+      ]
     },
     {
       "id": "hartsbrook-creativity-camp",
@@ -997,13 +1191,18 @@
         "deadline": null,
         "url": "https://www.hartsbrook.org/summer-programs/"
       },
-      "category": ["arts"],
+      "category": [
+        "arts"
+      ],
       "description": "Weekly themed artmaking with open-ended creative expression. Each week has unique themed focus with showcase for families at end.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "hartsbrook-fiddle-camp",
@@ -1034,13 +1233,19 @@
         "deadline": null,
         "url": "https://www.hartsbrook.org/summer-programs/"
       },
-      "category": ["performing-arts", "specialty"],
+      "category": [
+        "performing-arts",
+        "specialty"
+      ],
       "description": "Traditional fiddle instruction by ear from Ireland, Scotland, Louisiana, and Appalachia. Welcomes multiple string instruments.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "hartsbrook-cooking-camp",
@@ -1071,13 +1276,18 @@
         "deadline": null,
         "url": "https://www.hartsbrook.org/summer-programs/"
       },
-      "category": ["specialty"],
+      "category": [
+        "specialty"
+      ],
       "description": "Children prepare simple, nourishing foods alongside crafts and writing projects.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "roots-vacation-camps",
@@ -1108,13 +1318,19 @@
         "deadline": null,
         "url": "https://www.rootsvacation.com/summercamp"
       },
-      "category": ["general", "sports", "aquatics"],
+      "category": [
+        "general",
+        "sports",
+        "aquatics"
+      ],
       "description": "Full-day camp with swimming, gymnastics, soccer, turf sports, water slide, trampoline, and crafts. CIT program for ages 13-15.",
       "source": {
         "url": "https://www.rootsvacation.com/summercamp",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["dates"]
+      "incomplete": [
+        "dates"
+      ]
     },
     {
       "id": "westfield-adventure-zone",
@@ -1145,13 +1361,19 @@
         "deadline": null,
         "url": "https://www.cityofwestfield.org/305/Adventure-Zone"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Full-day camp with arts & crafts, sports, field trips, weekly swimming at Agawam State Pool, spray parks, and environmental activities. Contact: 413-572-6263.",
       "source": {
         "url": "https://www.cityofwestfield.org/305/Adventure-Zone",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "kamp-for-kids-westfield",
@@ -1182,13 +1404,20 @@
         "deadline": null,
         "url": "https://www.bhninc.org/kamp-kids"
       },
-      "category": ["special-needs", "general"],
+      "category": [
+        "special-needs",
+        "general"
+      ],
       "description": "Fully inclusive summer camp serving children and young adults ages 3-22, with and without disabilities. Contact Anne Benoit at 413-562-5678.",
       "source": {
         "url": "https://www.bhninc.org/kamp-kids",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "camp-howe",
@@ -1204,7 +1433,14 @@
         "max": 17
       },
       "dates": {
-        "weeks": ["2026-06-21", "2026-06-28", "2026-07-05", "2026-07-19", "2026-07-26", "2026-08-02"],
+        "weeks": [
+          "2026-06-21",
+          "2026-06-28",
+          "2026-07-05",
+          "2026-07-19",
+          "2026-07-26",
+          "2026-08-02"
+        ],
         "sessionLength": "1-2 weeks",
         "hours": "8:30am-5:30pm (day camp)",
         "extendedCare": null
@@ -1219,7 +1455,12 @@
         "deadline": null,
         "url": "https://www.camphowe.com/dates-rates"
       },
-      "category": ["outdoor", "general", "special-needs", "overnight"],
+      "category": [
+        "outdoor",
+        "general",
+        "special-needs",
+        "overnight"
+      ],
       "description": "Day and overnight camp with Echo program for youth with disabilities. About 140 campers per session. CIT program available. Contact: 413-549-3969.",
       "source": {
         "url": "https://www.camphowe.com/",
@@ -1256,13 +1497,20 @@
         "deadline": null,
         "url": "https://www.pioneerathleticcenter.com/camps/"
       },
-      "category": ["sports", "general"],
+      "category": [
+        "sports",
+        "general"
+      ],
       "description": "Gymnastics and Ninja camps with themed weeks (Unicorn & Slime, Swiftie Week, Ninja Warrior). Rotating activities include gymnastics, ninja obstacles, and activity room.",
       "source": {
         "url": "https://www.pioneerathleticcenter.com/camps/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "pioneer-gymnastics-east-longmeadow",
@@ -1293,13 +1541,20 @@
         "deadline": null,
         "url": "https://www.pioneergymnastics.com/"
       },
-      "category": ["sports"],
+      "category": [
+        "sports"
+      ],
       "description": "Premier gymnastics program since 1966. Offers dance, gymnastics, and taekwondo. Low student-to-teacher ratio with certified instructors. Contact: 413-525-1291.",
       "source": {
         "url": "https://www.pioneergymnastics.com/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["ages", "cost", "dates", "hours"]
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "western-ma-pioneers-soccer",
@@ -1330,13 +1585,19 @@
         "deadline": null,
         "url": "https://wmpioneers.com/camps/"
       },
-      "category": ["sports"],
+      "category": [
+        "sports"
+      ],
       "description": "Soccer camps for ages 5-12 (full day and half day) plus high school programs. Full day includes morning training and afternoon activities/scrimmages.",
       "source": {
         "url": "https://wmpioneers.com/camps/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "nike-girls-lacrosse-smith",
@@ -1367,13 +1628,19 @@
         "deadline": null,
         "url": "https://www.ussportscamps.com/lacrosse/nike/girls-lacrosse-camp-williston-northampton-school"
       },
-      "category": ["sports"],
+      "category": [
+        "sports"
+      ],
       "description": "Intensive lacrosse training led by Nike Camp Director Stacey Freda. Moving to Smith College in 2026. Join priority list for updates.",
       "source": {
         "url": "https://www.ussportscamps.com/lacrosse/nike/girls-lacrosse-camp-williston-northampton-school",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "bonnie-castle-riding-camp",
@@ -1389,7 +1656,11 @@
         "max": 16
       },
       "dates": {
-        "weeks": ["2026-06-21", "2026-07-05", "2026-07-19"],
+        "weeks": [
+          "2026-06-21",
+          "2026-07-05",
+          "2026-07-19"
+        ],
         "sessionLength": "2 weeks",
         "hours": null,
         "extendedCare": null
@@ -1404,13 +1675,18 @@
         "deadline": null,
         "url": "https://sbschool.org/summer-programs/bonnie-castle-riding-camp"
       },
-      "category": ["specialty", "overnight"],
+      "category": [
+        "specialty",
+        "overnight"
+      ],
       "description": "Overnight equestrian camp for intermediate/advanced riders. Ride twice daily (flat + jumping). 30+ years running. Hunters, jumpers, dressage, combined training.",
       "source": {
         "url": "https://sbschool.org/summer-programs/bonnie-castle-riding-camp",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["hours"]
+      "incomplete": [
+        "hours"
+      ]
     },
     {
       "id": "academy-of-music-youth",
@@ -1441,13 +1717,18 @@
         "deadline": null,
         "url": "https://aomtheatre.com/youth-programs/"
       },
-      "category": ["performing-arts"],
+      "category": [
+        "performing-arts"
+      ],
       "description": "Theater productions for ages 6-17 with rehearsals twice weekly. 2026: Frozen Jr (ages 9-16), Legally Blonde Jr (12-17), My Friend Pinocchio (6-10). Contact: education@aomtheatre.com.",
       "source": {
         "url": "https://aomtheatre.com/youth-programs/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "amherst-rec-fun-in-the-sun-early-adventures",
@@ -1474,17 +1755,22 @@
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "Mid-February",
         "deadline": null,
         "url": "https://secured.amherstma.gov/wbwsc/webtrac.wsc/splash.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Town-run day camp (Fun in the Sun) for younger kids. Activities include games, crafts, and outdoor play at Amherst Regional Middle School.",
       "source": {
         "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-01-16"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "dates",
+        "cost"
+      ]
     },
     {
       "id": "amherst-rec-fun-in-the-sun-epic-explorers",
@@ -1515,13 +1801,18 @@
         "deadline": null,
         "url": "https://secured.amherstma.gov/wbwsc/webtrac.wsc/splash.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Town-run day camp (Fun in the Sun) for older kids. Activities include sports, games, crafts, outdoor play, and themed weeks at Amherst Regional Middle School.",
       "source": {
         "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "easthampton-rec-camp-nonotuck",
@@ -1552,13 +1843,19 @@
         "deadline": null,
         "url": "https://clubs.bluesombrero.com/easthamptonparksandrec"
       },
-      "category": ["general", "outdoor"],
+      "category": [
+        "general",
+        "outdoor"
+      ],
       "description": "Weekly day camp at Nonotuck Park with Junior and Senior groups. Activities include outdoor play, games, crafts, and field trips.",
       "source": {
         "url": "https://www.easthamptonma.gov/509/Camp-Nonotuck",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "belchertown-rec-summer-days",
@@ -1589,13 +1886,18 @@
         "deadline": null,
         "url": "https://belchertownma.myrec.com/info/activities/program_details.aspx?ProgramID=29810"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Town recreation program for grades 1-7 with themed activities and field trips.",
       "source": {
         "url": "https://belchertownma.myrec.com/info/activities/program_details.aspx?ProgramID=29810",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "chicopee-rec-opee-summer-adventures",
@@ -1626,13 +1928,19 @@
         "deadline": null,
         "url": "https://chicopeema.myrec.com/info/activities/program_details.aspx?ProgramID=29871"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "City-run summer day program. Registration and details in Chicopee Parks & Recreation portal.",
       "source": {
         "url": "https://chicopeema.myrec.com/info/activities/program_details.aspx?ProgramID=29871",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "springfield-parks-rec-summer-programs",
@@ -1663,13 +1971,20 @@
         "deadline": null,
         "url": "https://www.springfield-ma.gov/park/after-school-program"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "City-run summer programming. Check Springfield Parks & Recreation for Summer 2026 release.",
       "source": {
         "url": "https://www.springfield-ma.gov/park/after-school-program",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["ages", "cost", "dates", "hours"]
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "west-springfield-rec-tiny-tots",
@@ -1700,13 +2015,18 @@
         "deadline": null,
         "url": "https://web1.myvscloud.com/wbwsc/mawestspringfieldwt.wsc/splash.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Town camp for ages 4-5 with crafts, science, nature, sports, swimming, and field trips.",
       "source": {
         "url": "https://www.townofwestspringfield.org/files/content/town/v/288/community-resources/park-recreation-department/summer-camps-booklet-2025-final.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "west-springfield-rec-centrum-playground",
@@ -1737,13 +2057,18 @@
         "deadline": null,
         "url": "https://web1.myvscloud.com/wbwsc/mawestspringfieldwt.wsc/splash.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Town day camp for ages 6-12 with arts & crafts, science, nature, sports, swimming, and field trips.",
       "source": {
         "url": "https://www.townofwestspringfield.org/files/content/town/v/288/community-resources/park-recreation-department/summer-camps-booklet-2025-final.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "west-springfield-rec-step-teen",
@@ -1774,13 +2099,18 @@
         "deadline": null,
         "url": "https://web1.myvscloud.com/wbwsc/mawestspringfieldwt.wsc/splash.html"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Teen summer program with swimming, field trips, and leadership development.",
       "source": {
         "url": "https://www.townofwestspringfield.org/files/content/town/v/288/community-resources/park-recreation-department/summer-camps-booklet-2025-final.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "ymca-greater-springfield-camp-weber",
@@ -1811,13 +2141,20 @@
         "deadline": null,
         "url": "https://springfieldy.org/camps/"
       },
-      "category": ["general", "outdoor"],
+      "category": [
+        "general",
+        "outdoor"
+      ],
       "description": "YMCA day camp on wooded property with swimming and outdoor activities. Bus transportation available.",
       "source": {
         "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "ymca-greater-springfield-stony-brook-acres",
@@ -1848,13 +2185,20 @@
         "deadline": null,
         "url": "https://springfieldy.org/camps/"
       },
-      "category": ["general", "outdoor"],
+      "category": [
+        "general",
+        "outdoor"
+      ],
       "description": "Outdoor YMCA day camp in Wilbraham with swimming, sports, nature, archery, and arts & crafts.",
       "source": {
         "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "ymca-greater-springfield-fun-city",
@@ -1885,13 +2229,19 @@
         "deadline": null,
         "url": "https://springfieldy.org/camps/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "YMCA summer day program at Downtown Springfield Learning Center with indoor and outdoor activities.",
       "source": {
         "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "ymca-greater-springfield-small-fry",
@@ -1922,13 +2272,18 @@
         "deadline": null,
         "url": "https://springfieldy.org/camps/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "YMCA program for 5-year-olds entering kindergarten. Must be toilet trained. Includes games, science, sports, and arts & crafts.",
       "source": {
         "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates"]
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
     },
     {
       "id": "ymca-greater-springfield-teen-camp",
@@ -1959,13 +2314,20 @@
         "deadline": null,
         "url": "https://springfieldy.org/camps/"
       },
-      "category": ["general", "outdoor"],
+      "category": [
+        "general",
+        "outdoor"
+      ],
       "description": "Teen program with camp activities, field trips, and leadership development at Camp Weber and Stony Brook Acres.",
       "source": {
         "url": "https://springfieldy.org/wp-content/uploads/2025/03/YGS_CampBrochure_2025_2026-_031325.pdf",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "ymca-westfield-camp-shepard",
@@ -1981,7 +2343,12 @@
         "max": 14
       },
       "dates": {
-        "weeks": ["2026-06-29", "2026-07-13", "2026-07-27", "2026-08-10"],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-13",
+          "2026-07-27",
+          "2026-08-10"
+        ],
         "sessionLength": "2 weeks",
         "hours": null,
         "extendedCare": null
@@ -1996,13 +2363,19 @@
         "deadline": null,
         "url": "https://www.westfieldymca.org/camp-shepard/"
       },
-      "category": ["general", "outdoor"],
+      "category": [
+        "general",
+        "outdoor"
+      ],
       "description": "Outdoor YMCA day camp on 155+ acres of woodlands in Westfield.",
       "source": {
         "url": "https://www.westfieldymca.org/camp-shepard/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours"]
+      "incomplete": [
+        "cost",
+        "hours"
+      ]
     },
     {
       "id": "montague-parks-rec-summer-camp",
@@ -2033,13 +2406,19 @@
         "deadline": null,
         "url": "https://montagueparksandrec.com/summer-camp-26/"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Town-run summer camp for elementary-age kids.",
       "source": {
         "url": "https://montagueparksandrec.com/summer-camp-26/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "dates", "hours"]
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours"
+      ]
     },
     {
       "id": "montessori-school-northampton-summer",
@@ -2070,13 +2449,21 @@
         "deadline": null,
         "url": "https://msn.coursestorm.com/"
       },
-      "category": ["general", "arts", "stem"],
+      "category": [
+        "general",
+        "arts",
+        "stem"
+      ],
       "description": "Montessori-inspired summer programs for ages 18 months to 14 years. Theme-based sessions include LEGO Engineering, art classes, camping & foraging. Toddler, Preschool, Elementary, and Middle School tracks available.",
       "source": {
         "url": "https://northamptonmontessori.org/programs/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "cushman-scott-summer",
@@ -2107,13 +2494,18 @@
         "deadline": null,
         "url": "https://www.cushmanscott.org/summer-program"
       },
-      "category": ["general"],
+      "category": [
+        "general"
+      ],
       "description": "Five-week summer program for children 15 months to 5.9 years. Features outdoor time, daily water play, trips to the woods, and rest time after lunch. Flexible scheduling with minimum 3 days/week.",
       "source": {
         "url": "https://www.cushmanscott.org/summer-program",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "weeks"]
+      "incomplete": [
+        "cost",
+        "weeks"
+      ]
     },
     {
       "id": "childrens-ballet-movement-summer",
@@ -2144,13 +2536,20 @@
         "deadline": null,
         "url": "http://www.childrensballetmovement.com/summercamp"
       },
-      "category": ["performing-arts", "arts"],
+      "category": [
+        "performing-arts",
+        "arts"
+      ],
       "description": "Dance camp offering a variety of styles in a nurturing environment. Students learn fundamentals of movement including ballet and creative dance. Monthly payment plans available upon request.",
       "source": {
         "url": "http://www.childrensballetmovement.com/summercamp",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "bement-day-camp",
@@ -2166,7 +2565,15 @@
         "max": 15
       },
       "dates": {
-        "weeks": ["2026-06-15", "2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-08-03"],
+        "weeks": [
+          "2026-06-15",
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-08-03"
+        ],
         "sessionLength": "1 week",
         "hours": "9:00am-3:30pm",
         "extendedCare": "Before care 8:00-9:00am, After care 3:30-4:30pm"
@@ -2181,7 +2588,10 @@
         "deadline": null,
         "url": "https://www.bement.org/community/summer-programs/summer-camp"
       },
-      "category": ["general", "outdoor"],
+      "category": [
+        "general",
+        "outdoor"
+      ],
       "description": "Day camp on beautiful 30-acre campus for grades K-9. Jr Day Camp for K-3, Day Camp for grades 4-9. Activities include swimming, sports, arts, and outdoor adventures. Nut-free lunch included.",
       "source": {
         "url": "https://www.bement.org/community/summer-programs",
@@ -2218,13 +2628,19 @@
         "deadline": null,
         "url": "https://www.bement.org/community/summer-programs/enrichmentcamps"
       },
-      "category": ["specialty", "sports", "arts"],
+      "category": [
+        "specialty",
+        "sports",
+        "arts"
+      ],
       "description": "Specialty camps including CIT training (CPR/First Aid certification), PE Games, Visual Arts, Band Camp, and Mountain Biking. Various age ranges by program.",
       "source": {
         "url": "https://www.bement.org/community/summer-programs/enrichmentcamps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["weeks"]
+      "incomplete": [
+        "weeks"
+      ]
     },
     {
       "id": "hilltown-sleddogs-camp",
@@ -2255,13 +2671,21 @@
         "deadline": null,
         "url": "https://www.hilltownsleddogs.com/camps"
       },
-      "category": ["outdoor", "adventure", "specialty"],
+      "category": [
+        "outdoor",
+        "adventure",
+        "specialty"
+      ],
       "description": "Unique sled dog camp! Kids choose an Alaskan Husky for the week and learn to care for and train sled dogs. Activities include mushing, scootering, biking with dogs, swimming. Overnight camp includes wilderness skills and campfire activities.",
       "source": {
         "url": "https://www.hilltownsleddogs.com/camps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks"
+      ]
     },
     {
       "id": "forest-park-zoo-camp",
@@ -2292,13 +2716,21 @@
         "deadline": null,
         "url": "https://www.forestparkzoo.org/"
       },
-      "category": ["outdoor", "stem"],
+      "category": [
+        "outdoor",
+        "stem"
+      ],
       "description": "Zoo camp for ages 6-13 to explore nature, discover wildlife and meet exotic creatures. Educational programs at the Zoo in Forest Park, a 735-acre woodland park.",
       "source": {
         "url": "https://www.forestparkzoo.org/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks", "registration"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks",
+        "registration"
+      ]
     },
     {
       "id": "stoneleigh-burnham-horsemanship",
@@ -2329,13 +2761,20 @@
         "deadline": null,
         "url": "https://sbschool.org/summer-programs/horsemanship-day-camp"
       },
-      "category": ["specialty", "outdoor"],
+      "category": [
+        "specialty",
+        "outdoor"
+      ],
       "description": "Coed horsemanship day camp for beginner riders ages 9-12. Learn grooming, handling, tacking, feeding and beginner riding skills on beautiful 100-acre campus.",
       "source": {
         "url": "https://sbschool.org/summer-programs",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "weeks", "registration"]
+      "incomplete": [
+        "cost",
+        "weeks",
+        "registration"
+      ]
     },
     {
       "id": "stoneleigh-burnham-sports",
@@ -2366,13 +2805,21 @@
         "deadline": null,
         "url": "https://sbschool.org/summer-programs/sports-camp"
       },
-      "category": ["sports", "aquatics"],
+      "category": [
+        "sports",
+        "aquatics"
+      ],
       "description": "Coed sports camp with swimming in outdoor pool, soccer, basketball, handball, plus indoor and outdoor games. Perfect for active campers who enjoy variety.",
       "source": {
         "url": "https://sbschool.org/summer-programs",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks", "registration"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks",
+        "registration"
+      ]
     },
     {
       "id": "camp-wilder-adventure",
@@ -2403,13 +2850,21 @@
         "deadline": null,
         "url": "https://www.campwilder.com/"
       },
-      "category": ["outdoor", "adventure"],
+      "category": [
+        "outdoor",
+        "adventure"
+      ],
       "description": "Adventure day camps in Southampton with outdoor activities and nature exploration.",
       "source": {
         "url": "https://springfield.macaronikid.com/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks", "registration"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks",
+        "registration"
+      ]
     },
     {
       "id": "springfield-museums-camp",
@@ -2440,13 +2895,22 @@
         "deadline": null,
         "url": "https://springfieldmuseums.org/"
       },
-      "category": ["arts", "stem", "academic"],
+      "category": [
+        "arts",
+        "stem",
+        "academic"
+      ],
       "description": "Summer camps at the Springfield Museums complex featuring art, science, and history activities. Home to the Dr. Seuss Museum and other world-class exhibits.",
       "source": {
         "url": "https://springfield.macaronikid.com/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks", "registration"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks",
+        "registration"
+      ]
     },
     {
       "id": "stony-brook-acres-camp",
@@ -2477,13 +2941,21 @@
         "deadline": null,
         "url": "https://stonybrookacres.com/"
       },
-      "category": ["outdoor", "general"],
+      "category": [
+        "outdoor",
+        "general"
+      ],
       "description": "Day camp in Wilbraham offering outdoor activities and summer fun.",
       "source": {
         "url": "https://springfield.macaronikid.com/",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": ["cost", "hours", "weeks", "registration"]
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks",
+        "registration"
+      ]
     }
   ]
 }
