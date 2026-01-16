@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-01-13",
+  "lastUpdated": "2026-01-15",
   "version": "1.0.0",
-  "totalCamps": 67,
+  "totalCamps": 68,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -235,32 +235,71 @@
         "region": "Hampshire"
       },
       "ages": {
-        "min": 5,
-        "max": 12
+        "min": 3,
+        "max": 5
       },
       "dates": {
-        "weeks": [],
+        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27", "2026-08-03", "2026-08-10", "2026-08-17", "2026-08-24"],
         "sessionLength": "1 week",
-        "hours": null,
+        "hours": "8:30am-4:30pm (full-day) or 8:30am-1:30pm (half-day)",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "2026 pricing coming soon. YMCA offers financial assistance.",
+        "perWeek": 394,
+        "notes": "Full-day $394/week, Half-day $310/week. YMCA member discount available ($320/$243). Sibling discount 5%.",
         "financialAid": true
       },
       "registration": {
-        "opens": "Coming Soon - Join email list on website",
+        "opens": "2026-02-10",
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
       "category": ["general"],
-      "description": "YMCA day camp at Northampton facility. Traditional camp activities in a supportive environment. Contact Stephanie Raftery at 413.584.7086 x130 for information.",
+      "description": "Preschool day camp - ideal introduction to summer camp! Theme-based activities including swimming, art, singing, sports, and outdoor play. Children must be fully toilet trained to attend.",
+      "notes": "Children must be fully toilet trained. Camp info session Feb 1, 11am-12:30pm at YMCA.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-01-15"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": []
+    },
+    {
+      "id": "hampshire-regional-ymca-camp-prospect",
+      "name": "Camp Prospect",
+      "organization": "Hampshire Regional YMCA",
+      "location": {
+        "town": "Northampton",
+        "address": "286 Prospect St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 14
+      },
+      "dates": {
+        "weeks": ["2026-06-22", "2026-06-29", "2026-07-06", "2026-07-13", "2026-07-20", "2026-07-27", "2026-08-03", "2026-08-10", "2026-08-17", "2026-08-24"],
+        "sessionLength": "1 week",
+        "hours": "9:00am-5:00pm",
+        "extendedCare": "Morning care 8:00am-9:00am available (+$43/week)"
+      },
+      "cost": {
+        "perWeek": 342,
+        "notes": "YMCA member rate $260/week. Morning care add-on $43/week ($33 members). Sibling discount 5%.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": "2026-02-10",
+        "deadline": null,
+        "url": "https://www.hrymca.org/summer-camp/"
+      },
+      "category": ["general", "sports", "aquatics"],
+      "description": "Day camp featuring camp games, physical challenges, swimming, arts and crafts, and sports at various ability levels. Includes Ninja Warrior obstacle course with balance, agility, climbing activities, and an 8-foot Warp Wall. Weekly themes keep activities fresh and engaging.",
+      "notes": "Features Ninja Warrior obstacle course and Warp Wall. Camp info session Feb 1, 11am-12:30pm at YMCA.",
+      "source": {
+        "url": "https://www.hrymca.org/summer-camp/",
+        "lastVerified": "2026-01-15"
+      },
+      "incomplete": []
     },
     {
       "id": "hampshire-regional-ymca-camp-norwich",
@@ -268,36 +307,37 @@
       "organization": "Hampshire Regional YMCA",
       "location": {
         "town": "Huntington",
-        "address": "Lake Norwich",
+        "address": "Lake Norwich, 175 acres",
         "region": "Hampshire"
       },
       "ages": {
-        "min": 6,
+        "min": 5,
         "max": 15
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": null,
+        "weeks": ["2026-06-29", "2026-07-13", "2026-07-27", "2026-08-10", "2026-08-24"],
+        "sessionLength": "2 weeks (Sessions 1-4), 1 week (Session 5)",
+        "hours": "9:00am-4:00pm",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "2026 pricing coming soon. YMCA offers financial assistance.",
+        "perWeek": 375,
+        "notes": "2-week sessions $749 ($589 member rate). Final 1-week session $375. Bus transportation additional $140/session. Sibling discount 5%.",
         "financialAid": true
       },
       "registration": {
-        "opens": "Coming Soon - Join email list on website",
+        "opens": "2026-02-10",
         "deadline": null,
         "url": "https://www.hrymca.org/summer-camp/"
       },
-      "category": ["general", "aquatics", "outdoor"],
-      "description": "YMCA camp on beautiful Lake Norwich in Huntington. Swimming, boating, nature activities and traditional camp fun. Contact Shane Moore at 413.584.7086 for information.",
+      "category": ["general", "aquatics", "outdoor", "adventure"],
+      "description": "Classic YMCA camp on beautiful 175-acre Lake Norwich property in the Berkshire foothills. Swimming, boating, archery, fishing, arts & crafts, performing arts, nature study, team activities, outdoor cooking, and low ropes course. Age groups: Explorers (K-2), Adventurers (3-5), Trailblazers (6-8). 139 years of quality programming.",
+      "notes": "Bus transportation available from Northampton, Florence, Hadley, Southampton, and Westhampton ($140/2-week session). Open house May 30, 10am-2pm.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-01-15"
       },
-      "incomplete": ["cost", "hours", "weeks"]
+      "incomplete": []
     },
     {
       "id": "springfield-jcc-summer-camp",

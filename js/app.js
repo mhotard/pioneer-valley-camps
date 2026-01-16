@@ -15,8 +15,8 @@ const ageMaxSelect = document.getElementById('age-max');
 const townSelect = document.getElementById('town-select');
 const categorySelect = document.getElementById('category-select');
 const costMaxSelect = document.getElementById('cost-max');
+const weekSelect = document.getElementById('week-select');
 const earlyDropoffCheckbox = document.getElementById('has-early-dropoff');
-const latePickupCheckbox = document.getElementById('has-late-pickup');
 const financialAidCheckbox = document.getElementById('has-financial-aid');
 const clearFiltersBtn = document.getElementById('clear-filters');
 const clearFiltersAltBtn = document.getElementById('clear-filters-alt');
@@ -103,11 +103,11 @@ function setupEventListeners() {
     });
 
     // Filter changes
-    [ageMinSelect, ageMaxSelect, townSelect, categorySelect, costMaxSelect].forEach(el => {
+    [ageMinSelect, ageMaxSelect, townSelect, categorySelect, costMaxSelect, weekSelect].forEach(el => {
         el.addEventListener('change', applyFilters);
     });
 
-    [earlyDropoffCheckbox, latePickupCheckbox, financialAidCheckbox].forEach(el => {
+    [earlyDropoffCheckbox, financialAidCheckbox].forEach(el => {
         el.addEventListener('change', applyFilters);
     });
 
@@ -173,27 +173,6 @@ function hasEarlyDropoff(camp) {
     return false;
 }
 
-function hasLatePickup(camp) {
-    const extendedCare = camp.dates?.extendedCare || '';
-    const hours = camp.dates?.hours || '';
-    const combined = (extendedCare + ' ' + hours).toLowerCase();
-
-    // Look for PM times and check if any are 5pm or later
-    const pmTimes = combined.match(/(\d{1,2}):?(\d{2})?\s*pm/gi) || [];
-    for (const match of pmTimes) {
-        const hourMatch = match.match(/(\d{1,2})/);
-        if (hourMatch) {
-            const hour = parseInt(hourMatch[1]);
-            if (hour >= 5 && hour < 12) return true;
-        }
-    }
-
-    // Check 24-hour format (17:00, 18:00, etc.)
-    if (/1[7-9]:\d{2}|2[0-3]:\d{2}/.test(combined)) return true;
-
-    return false;
-}
-
 function applyFilters() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     const ageMin = ageMinSelect.value ? parseInt(ageMinSelect.value) : null;
@@ -201,8 +180,8 @@ function applyFilters() {
     const town = townSelect.value;
     const category = categorySelect.value;
     const costMax = costMaxSelect.value ? parseInt(costMaxSelect.value) : null;
+    const selectedWeek = weekSelect.value;
     const needsEarlyDropoff = earlyDropoffCheckbox.checked;
-    const needsLatePickup = latePickupCheckbox.checked;
     const needsFinancialAid = financialAidCheckbox.checked;
 
     filteredCamps = allCamps.filter(camp => {
@@ -243,13 +222,16 @@ function applyFilters() {
             return false;
         }
 
-        // Early drop-off filter
-        if (needsEarlyDropoff && !hasEarlyDropoff(camp)) {
-            return false;
+        // Week filter - camp must have the selected week available
+        if (selectedWeek) {
+            const campWeeks = camp.dates?.weeks || [];
+            if (!campWeeks.includes(selectedWeek)) {
+                return false;
+            }
         }
 
-        // Late pickup filter
-        if (needsLatePickup && !hasLatePickup(camp)) {
+        // Early drop-off filter
+        if (needsEarlyDropoff && !hasEarlyDropoff(camp)) {
             return false;
         }
 
@@ -271,8 +253,8 @@ function clearFilters() {
     townSelect.value = '';
     categorySelect.value = '';
     costMaxSelect.value = '';
+    weekSelect.value = '';
     earlyDropoffCheckbox.checked = false;
-    latePickupCheckbox.checked = false;
     financialAidCheckbox.checked = false;
     applyFilters();
 }
@@ -313,9 +295,6 @@ function createCampCard(camp) {
     const badges = [];
     if (hasEarlyDropoff(camp)) {
         badges.push('<span class="badge badge-early">Early drop-off</span>');
-    }
-    if (hasLatePickup(camp)) {
-        badges.push('<span class="badge badge-late">Late pickup</span>');
     }
     if (camp.cost?.financialAid) {
         badges.push('<span class="badge badge-aid">Financial aid</span>');
@@ -376,9 +355,6 @@ function createModalContent(camp) {
     if (extendedCare) {
         if (hasEarlyDropoff(camp)) {
             hoursHtml += `<li><strong>Early drop-off:</strong> Available</li>`;
-        }
-        if (hasLatePickup(camp)) {
-            hoursHtml += `<li><strong>Late pickup (5pm+):</strong> Available</li>`;
         }
         hoursHtml += `<li><em>${escapeHtml(extendedCare)}</em></li>`;
     }
