@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pioneer Valley Kids Camps</title>
-    <meta name="description" content="Searchable database of children's summer camps in the Pioneer Valley area of Massachusetts - Amherst, Northampton, Springfield, and surrounding towns.">
+    <meta name="description"
+        content="Searchable database of children's summer camps in the Pioneer Valley area of Massachusetts - Amherst, Northampton, Springfield, and surrounding towns.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -20,7 +23,8 @@
         <!-- Search and Filters -->
         <section class="filters-section">
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Search camps by name, description, or organization...">
+                <input type="text" id="search-input"
+                    placeholder="Search camps by name, description, or organization...">
             </div>
 
             <div class="filters-grid">
@@ -119,6 +123,28 @@
             <div class="filter-actions">
                 <button id="clear-filters" class="btn-secondary">Clear Filters</button>
                 <span id="results-count" aria-live="polite">0 camps found</span>
+                <div class="view-toggle">
+                    <button id="view-grid" class="btn-toggle active" aria-label="Grid View" title="Grid View">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                    <button id="view-list" class="btn-toggle" aria-label="List View" title="List View">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -127,9 +153,28 @@
             <div id="camps-grid" class="camps-grid">
                 <!-- Camp cards will be inserted here -->
             </div>
+
+            <div id="camps-table-container" class="camps-table-container">
+                <table class="camps-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="name">Camp Name</th>
+                            <th class="sortable" data-sort="cost">Cost/Week</th>
+                            <th class="sortable" data-sort="ages">Ages</th>
+                            <th class="sortable" data-sort="town">Town</th>
+                            <th>Weeks</th>
+                        </tr>
+                    </thead>
+                    <tbody id="camps-table-body">
+                        <!-- Table rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+
             <div id="no-results" class="no-results" style="display: none;">
                 <p>No camps match your current filters.</p>
-                <p>Try adjusting your search criteria or <button id="clear-filters-alt" class="btn-link">clear all filters</button>.</p>
+                <p>Try adjusting your search criteria or <button id="clear-filters-alt" class="btn-link">clear all
+                        filters</button>.</p>
             </div>
             <div id="loading" class="loading">
                 <p>Loading camps...</p>
@@ -192,7 +237,7 @@
     <script src="js/app.js"></script>
 
     <!-- GoatCounter Analytics -->
-    <script data-goatcounter="https://mhotard.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://mhotard.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
+
 </html>

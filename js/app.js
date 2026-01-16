@@ -7,9 +7,13 @@ let allCamps = [];
 let filteredCamps = [];
 let categories = [];
 let regions = {};
+let currentView = 'grid'; // 'grid' or 'list' (table)
+let currentSort = { column: 'name', direction: 'asc' };
 
 // DOM Elements
 const searchInput = document.getElementById('search-input');
+const viewGridBtn = document.getElementById('view-grid');
+const viewListBtn = document.getElementById('view-list');
 const ageMinSelect = document.getElementById('age-min');
 const ageMaxSelect = document.getElementById('age-max');
 const townSelect = document.getElementById('town-select');
@@ -139,6 +143,15 @@ function setupEventListeners() {
         }
     });
 
+    // View toggle
+    viewGridBtn?.addEventListener('click', () => setView('grid'));
+    viewListBtn?.addEventListener('click', () => setView('list'));
+
+    // Table sort headers
+    document.querySelectorAll('th.sortable').forEach(th => {
+        th.addEventListener('click', () => handleSort(th.dataset.sort));
+    });
+
     // Delegate click events for camp cards
     campsGrid.addEventListener('click', (e) => {
         const btn = e.target.closest('.camp-title-btn');
@@ -259,6 +272,23 @@ function clearFilters() {
     applyFilters();
 }
 
+function setView(view) {
+    if (currentView === view) return;
+    currentView = view;
+
+    // Update buttons
+    if (view === 'grid') {
+        viewGridBtn.classList.add('active');
+        viewListBtn.classList.remove('active');
+    } else {
+        viewGridBtn.classList.remove('active');
+        viewListBtn.classList.add('active');
+    }
+
+    // Re-render
+    renderCamps();
+}
+
 function renderCamps() {
     // Update count
     resultsCount.textContent = `${filteredCamps.length} camp${filteredCamps.length !== 1 ? 's' : ''} found`;
@@ -273,7 +303,100 @@ function renderCamps() {
     noResults.style.display = 'none';
 
     // Render camp cards
-    campsGrid.innerHTML = filteredCamps.map(camp => createCampCard(camp)).join('');
+    document.body.className = currentView === 'list' ? 'view-table' : 'view-grid';
+
+    // Sort before rendering
+    sortCamps();
+
+    if (currentView === 'grid') {
+        campsGrid.innerHTML = filteredCamps.map(camp => createCampCard(camp)).join('');
+    } else {
+        const tableBody = document.getElementById('camps-table-body');
+        if (tableBody) {
+            tableBody.innerHTML = filteredCamps.map(camp => createCampRow(camp)).join('');
+        }
+    }
+}
+
+function createCampRow(camp) {
+    const ageRange = camp.ages?.min || camp.ages?.max
+        ? `${camp.ages.min || '?'}-${camp.ages.max || '?'} yrs`
+        : 'TBD';
+
+    const cost = camp.cost?.perWeek
+        ? `$${camp.cost.perWeek}`
+        : 'TBD';
+
+    const location = camp.location?.town || 'TBD';
+    const weekCount = camp.dates?.weeks?.length || 0;
+
+    return `
+        <tr onclick="openModalById('${camp.id}')">
+            <td><strong>${escapeHtml(camp.name)}</strong><br><span style="font-size: 0.85em; color: var(--text-secondary);">${escapeHtml(camp.organization)}</span></td>
+            <td>${cost}</td>
+            <td>${ageRange}</td>
+            <td>${escapeHtml(location)}</td>
+            <td>${weekCount} week${weekCount !== 1 ? 's' : ''}</td>
+        </tr>
+    `;
+}
+
+// Helper to open modal by ID (needed for row click)
+window.openModalById = function (campId) {
+    const camp = allCamps.find(c => c.id === campId);
+    if (camp) openModal(camp);
+};
+
+function sortCamps() {
+    filteredCamps.sort((a, b) => {
+        let valA, valB;
+
+        switch (currentSort.column) {
+            case 'name':
+                valA = a.name.toLowerCase();
+                valB = b.name.toLowerCase();
+                break;
+            case 'cost':
+                valA = a.cost?.perWeek || 9999;
+                valB = b.cost?.perWeek || 9999;
+                break;
+            case 'ages':
+                valA = a.ages?.min || 99;
+                valB = b.ages?.min || 99;
+                break;
+            case 'town':
+                valA = (a.location?.town || 'z').toLowerCase();
+                valB = (b.location?.town || 'z').toLowerCase();
+                break;
+            default:
+                return 0;
+        }
+
+        if (valA < valB) return currentSort.direction === 'asc' ? -1 : 1;
+        if (valA > valB) return currentSort.direction === 'asc' ? 1 : -1;
+        return 0;
+    });
+
+    updateSortHeaders();
+}
+
+function updateSortHeaders() {
+    document.querySelectorAll('th.sortable').forEach(th => {
+        th.classList.remove('sorted-asc', 'sorted-desc');
+        if (th.dataset.sort === currentSort.column) {
+            th.classList.add(currentSort.direction === 'asc' ? 'sorted-asc' : 'sorted-desc');
+        }
+    });
+}
+
+function handleSort(column) {
+    if (currentSort.column === column) {
+        currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+        currentSort.column = column;
+        currentSort.direction = 'asc';
+    }
+    renderCamps();
 }
 
 function createCampCard(camp) {
@@ -300,6 +423,7 @@ function createCampCard(camp) {
         badges.push('<span class="badge badge-aid">Financial aid</span>');
     }
 
+    // List view has simplified content handled by CSS, but shared structure
     return `
         <article class="camp-card">
             <div class="camp-card-header">

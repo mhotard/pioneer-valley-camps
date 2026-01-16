@@ -207,6 +207,160 @@ header .subtitle {
     gap: 1.5rem;
 }
 
+/* Table View Styles */
+.camps-table-container {
+    display: none;
+    overflow-x: auto;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.camps-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    /* Prevent squishing on mobile */
+}
+
+.camps-table th {
+    background: var(--background);
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--border-color);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+}
+
+.camps-table th:hover {
+    background: #e2e8f0;
+    color: var(--text-primary);
+}
+
+.camps-table th.sortable::after {
+    content: ' ⇅';
+    opacity: 0.3;
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.camps-table th.sorted-asc::after {
+    content: ' ↑';
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.camps-table th.sorted-desc::after {
+    content: ' ↓';
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.camps-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.camps-table tr:last-child td {
+    border-bottom: none;
+}
+
+.camps-table tr:hover {
+    background-color: var(--background);
+}
+
+/* Visibility classes */
+.view-grid .camps-grid {
+    display: grid;
+}
+
+.view-grid .camps-table-container {
+    display: none;
+}
+
+.view-table .camps-grid {
+    display: none;
+}
+
+.view-table .camps-table-container {
+    display: block;
+}
+
+/* Mobile responsive for table */
+@media (max-width: 768px) {
+
+    .camps-table th,
+    .camps-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.25rem;
+    background: var(--background);
+    padding: 0.25rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+
+.btn-toggle {
+    background: transparent;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-toggle:hover {
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.btn-toggle.active {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for List View */
+@media (max-width: 768px) {
+    .camps-list .camp-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .camps-list .camp-card-header,
+    .camps-list .camp-card-body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .camps-list .camp-card-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .camps-list .camp-meta {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+}
+
 /* Camp Card */
 .camp-card {
     background: var(--surface);
@@ -273,6 +427,7 @@ header .subtitle {
     margin-bottom: 0.75rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -528,7 +683,7 @@ header .subtitle {
     margin-bottom: 0.5rem;
 }
 
-.suggest-section > p {
+.suggest-section>p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
 }
