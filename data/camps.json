@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-01-16",
+  "lastUpdated": "2026-01-20",
   "version": "1.0.0",
-  "totalCamps": 67,
+  "totalCamps": 68,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -2955,6 +2955,51 @@
         "hours",
         "weeks",
         "registration"
+      ]
+    },
+    {
+      "id": "miss-leticia-music-camp",
+      "name": "Miss Leticia Music Camp",
+      "organization": "Miss Leticia Music",
+      "location": {
+        "town": "Amherst",
+        "address": "41 Blue Hills Road",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 450,
+        "notes": "Songwriting week for ages 11+",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.missleticia.com/summer-camp"
+      },
+      "category": [
+        "performing-arts",
+        "arts"
+      ],
+      "description": "Music-focused summer camp offering instrument lessons, songwriting, and creative musical exploration for young musicians.",
+      "notes": "Songwriting week requires age 11+. Other weeks for ages 6+.",
+      "source": {
+        "url": "https://www.missleticia.com/summer-camp",
+        "lastVerified": "2026-01-20"
+      },
+      "incomplete": [
+        "weeks",
+        "registration",
+        "financialAid"
       ]
     }
   ]
