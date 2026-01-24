@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-20",
+  "lastUpdated": "2026-01-24",
   "version": "1.0.0",
   "totalCamps": 68,
   "camps": [
@@ -29,8 +29,8 @@
         "extendedCare": null
       },
       "cost": {
-        "perWeek": 395,
-        "notes": "Tiered pricing $395-$560/week; Chickadee (half-day) $305-$435",
+        "perWeek": 465,
+        "notes": "Tiered pricing: 1-week $395-$560, 2-week $765-$1,080; Chickadee (half-day) $305-$435",
         "financialAid": true
       },
       "registration": {
@@ -42,10 +42,10 @@
         "outdoor",
         "stem"
       ],
-      "description": "Nature-based summer camp with sessions for grades K-6 and a Leadership Training program for grades 7-9. Chickadee Camp offers half-day option for youngest campers.",
+      "description": "Nature-based summer camp with sessions for grades K-6 and a Leadership Training program for grades 7-9. Chickadee Camp offers half-day option for youngest campers. Max 2 sessions per child.",
       "source": {
         "url": "https://www.hitchcockcenter.org/camp-programs/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-24"
       },
       "incomplete": []
     },
@@ -63,14 +63,22 @@
         "max": 15
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
         "sessionLength": "1 week",
-        "hours": null,
+        "hours": "9:00am-3:00pm",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Sliding scale pricing based on family income",
+        "perWeek": 321,
+        "notes": "Sliding scale $107-$535/week; Mass Audubon membership required for higher tiers",
         "financialAid": true
       },
       "registration": {
@@ -79,18 +87,15 @@
         "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp"
       },
       "category": [
-        "outdoor"
+        "outdoor",
+        "stem"
       ],
-      "description": "Nature camp at the 734-acre Arcadia Wildlife Sanctuary. Children explore the outdoors, connect with nature, and develop confidence. Max 4 weeks per camper.",
+      "description": "Nature camp at the 734-acre Arcadia Wildlife Sanctuary with age-specific programs: Hummingbirds (K-2), Kingfishers (grades 2-4), Great Blue Herons (grades 5-6). Specialty camps for teens include nature photography and environmental leadership. Max 4 weeks per camper.",
       "source": {
         "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-24"
       },
-      "incomplete": [
-        "cost",
-        "dates",
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "northampton-parks-rec-safety-village",
@@ -432,34 +437,39 @@
         "max": 16
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-23",
+          "2026-06-30",
+          "2026-07-07",
+          "2026-07-14",
+          "2026-07-21",
+          "2026-07-28",
+          "2026-08-04",
+          "2026-08-11"
+        ],
         "sessionLength": "1 week minimum",
-        "hours": null,
-        "extendedCare": "Pre- and post-camp hours available"
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "8:00am-5:00pm available"
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Flexible scheduling - book from just one week",
+        "perWeek": 325,
+        "notes": "$325/week regular price (as of May 1); flexible scheduling - book from just one week",
         "financialAid": true
       },
       "registration": {
-        "opens": "2026-01-01",
+        "opens": "January 2026",
         "deadline": null,
         "url": "https://www.springfieldjcc.org/camp/"
       },
       "category": [
         "general"
       ],
-      "description": "Day camp for grades K-8 plus Leaders-in-Training for grades 9-10. Inclusion camp available. Accepts Seven Hills state assistance vouchers.",
+      "description": "Traditional day camp for grades K-10 with Leaders-in-Training program for teens. Inclusion camp (Kehillah) available for children with different abilities. Accepts Seven Hills state assistance vouchers. 8 weeks June 23-August 15.",
       "source": {
         "url": "https://www.springfieldjcc.org/camp/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-01-24"
       },
-      "incomplete": [
-        "cost",
-        "dates",
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "camp-massasoit",
