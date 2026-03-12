@@ -111,7 +111,11 @@
         "max": 6
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-13",
+          "2026-07-27"
+        ],
         "sessionLength": "2 weeks",
         "hours": null,
         "extendedCare": null
@@ -122,8 +126,8 @@
         "financialAid": true
       },
       "registration": {
-        "opens": "Late February/Early March 2026",
-        "deadline": null,
+        "opens": "2026-03-02",
+        "deadline": "Thursday before session starts",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -132,12 +136,15 @@
       "description": "Day camp for ages 4-6 with two-week sessions. Safe, fun environment for young campers. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-03-06"
+      },
+      "waitlist": {
+        "status": "unknown",
+        "notes": "Contact recreation@northamptonma.gov or 413-587-1040 for enrollment status"
       },
       "incomplete": [
         "cost",
-        "hours",
-        "weeks"
+        "hours"
       ]
     },
     {
@@ -154,7 +161,15 @@
         "max": 10
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-23",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
         "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
@@ -165,8 +180,8 @@
         "financialAid": true
       },
       "registration": {
-        "opens": "Late February/Early March 2026",
-        "deadline": null,
+        "opens": "2026-03-02",
+        "deadline": "Thursday before session starts",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -175,12 +190,15 @@
       "description": "Day camp for students entering grades 1-4 with weekly sessions. Fun activities in a safe environment. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-03-06"
+      },
+      "waitlist": {
+        "status": "unknown",
+        "notes": "Contact recreation@northamptonma.gov or 413-587-1040 for enrollment status"
       },
       "incomplete": [
         "cost",
-        "hours",
-        "weeks"
+        "hours"
       ]
     },
     {
@@ -197,7 +215,15 @@
         "max": 12
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-23",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
         "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
@@ -208,8 +234,8 @@
         "financialAid": true
       },
       "registration": {
-        "opens": "Late February/Early March 2026",
-        "deadline": null,
+        "opens": "2026-03-02",
+        "deadline": "Thursday before session starts",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -218,12 +244,15 @@
       "description": "Day camp for students entering grades 5-6 with weekly sessions. Age-appropriate activities and adventures. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-03-06"
+      },
+      "waitlist": {
+        "status": "unknown",
+        "notes": "Contact recreation@northamptonma.gov or 413-587-1040 for enrollment status"
       },
       "incomplete": [
         "cost",
-        "hours",
-        "weeks"
+        "hours"
       ]
     },
     {
@@ -240,7 +269,15 @@
         "max": 16
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-23",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
         "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
@@ -251,8 +288,8 @@
         "financialAid": true
       },
       "registration": {
-        "opens": "Late February/Early March 2026",
-        "deadline": null,
+        "opens": "2026-03-02",
+        "deadline": "Thursday before session starts",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -262,12 +299,15 @@
       "description": "Teen expedition program for students entering grades 7-10 with weekly sessions. Outdoor adventures and leadership development. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-03-06"
+      },
+      "waitlist": {
+        "status": "unknown",
+        "notes": "Contact recreation@northamptonma.gov or 413-587-1040 for enrollment status"
       },
       "incomplete": [
         "cost",
-        "hours",
-        "weeks"
+        "hours"
       ]
     },
     {
@@ -529,7 +569,18 @@
         "max": 17
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-04",
+          "2026-06-11",
+          "2026-06-18",
+          "2026-06-25",
+          "2026-07-02",
+          "2026-07-09",
+          "2026-07-16",
+          "2026-07-23",
+          "2026-07-30",
+          "2026-08-06"
+        ],
         "sessionLength": "1 week",
         "hours": "7:30am-5:30pm",
         "extendedCare": null
@@ -540,7 +591,7 @@
         "financialAid": true
       },
       "registration": {
-        "opens": "2026-03-01",
+        "opens": "2026-04-13",
         "deadline": null,
         "url": "https://www.bgclubspringfield.org/membership/summer-camp"
       },
@@ -550,11 +601,13 @@
       "description": "Affordable day camp at Henderson, Stalnaker, and Musgrave locations. Scholarships for free/reduced lunch families. Teen camp (13-17) is free.",
       "source": {
         "url": "https://www.bgclubspringfield.org/membership/summer-camp",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-03-06"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "waitlist": {
+        "status": "unknown",
+        "notes": "Registration opens April 13, 2026"
+      },
+      "incomplete": []
     },
     {
       "id": "camp-keewanee",
