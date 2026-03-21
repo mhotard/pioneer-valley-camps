@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-01-24",
   "version": "1.0.0",
-  "totalCamps": 93,
+  "totalCamps": 92,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -117,12 +117,10 @@
           "2026-07-27"
         ],
         "sessionLength": "2 weeks",
-        "hours": null,
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Financial aid for Northampton/Florence/Leeds residents",
+        "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
         "financialAid": true
       },
       "registration": {
@@ -169,14 +167,10 @@
           "2026-07-20",
           "2026-07-27",
           "2026-08-03"
-        ],
-        "sessionLength": "1 week",
-        "hours": null,
-        "extendedCare": null
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Financial aid for Northampton/Florence/Leeds residents",
+        "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
         "financialAid": true
       },
       "registration": {
@@ -223,14 +217,10 @@
           "2026-07-20",
           "2026-07-27",
           "2026-08-03"
-        ],
-        "sessionLength": "1 week",
-        "hours": null,
-        "extendedCare": null
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Financial aid for Northampton/Florence/Leeds residents",
+        "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
         "financialAid": true
       },
       "registration": {
@@ -277,14 +267,10 @@
           "2026-07-20",
           "2026-07-27",
           "2026-08-03"
-        ],
-        "sessionLength": "1 week",
-        "hours": null,
-        "extendedCare": null
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Financial aid for Northampton/Florence/Leeds residents",
+        "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
         "financialAid": true
       },
       "registration": {
@@ -669,15 +655,23 @@
         "max": 8
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17"
+        ],
         "hours": "9:00am-4:00pm",
-        "extendedCare": "Early care 7:30am-9:00am ($30), Late care 4:00pm-5:30pm ($30)"
+        "extendedCare": "Early care 7:30-9:00am, late care 4:00-5:30pm (/session each)"
       },
       "cost": {
         "perWeek": 200,
-        "notes": "$200 residents, $210 non-residents. 8-week discount: 1 week free if paid by June 1",
-        "financialAid": true
+        "notes": "Residents $200/week, Non-residents $210/week. Session A (June 29-July 2, pro-rated): $160/$170. Register all 8 weeks by June 1 for one free week.",
+        "financialAid": null
       },
       "registration": {
         "opens": null,
@@ -692,9 +686,7 @@
         "url": "https://www.greenfieldrecreation.com/camp.html",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "greenfield-recreation-sizzlers-camp",
@@ -710,15 +702,23 @@
         "max": 12
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17"
+        ],
         "hours": "9:00am-4:00pm",
-        "extendedCare": "Early care 7:30am-9:00am ($30), Late care 4:00pm-5:30pm ($30)"
+        "extendedCare": "Early care 7:30-9:00am, late care 4:00-5:30pm ($30/session each)"
       },
       "cost": {
         "perWeek": 200,
-        "notes": "$200 residents, $210 non-residents. Field trips available ($30 extra). 8-week discount available.",
-        "financialAid": true
+        "notes": "Residents $200/week, Non-residents $210/week. Session A (June 29-July 2, pro-rated): $160/$170. Register all 8 weeks by June 1 for one free week.",
+        "financialAid": null
       },
       "registration": {
         "opens": null,
@@ -733,9 +733,7 @@
         "url": "https://www.greenfieldrecreation.com/camp.html",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "franklin-county-ymca-camp-apex",
@@ -751,9 +749,7 @@
         "max": 14
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "9:00am-4:00pm",
+        "hours": "8:45am-3:30pm",
         "extendedCare": "7:00am-6:00pm (included free)"
       },
       "cost": {
@@ -785,7 +781,7 @@
       "organization": "Franklin County YMCA",
       "location": {
         "town": "Greenfield",
-        "address": "Main Street facility",
+        "address": "451 Main Street",
         "region": "Franklin"
       },
       "ages": {
@@ -793,14 +789,19 @@
         "max": 14
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "8:30am-4:00pm",
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
+        "hours": "8:30am-3:30pm",
         "extendedCare": "7:00am-6:00pm (included free)"
       },
       "cost": {
-        "perWeek": 260,
-        "notes": "$260 members, $305 non-members",
         "financialAid": true
       },
       "registration": {
@@ -817,9 +818,7 @@
         "url": "https://your-y.org/camps/",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "franklin-county-ymca-lil-flippers",
@@ -835,10 +834,8 @@
         "max": 5
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "9:00am-1:00pm",
-        "extendedCare": "Early drop-off at 7:00am available"
+        "hours": "9:00am-2:00pm",
+        "extendedCare": "7:00am-6:00pm (included free)"
       },
       "cost": {
         "perWeek": 165,
@@ -1150,12 +1147,12 @@
           "2026-07-05"
         ],
         "sessionLength": "4 days",
-        "hours": null,
+        "hours": "Extended Day: Sun 2pm-8:30pm, Mon-Tue 8:30am-8:30pm, Wed 9am-12pm. Overnight option available.",
         "extendedCare": null
       },
       "cost": {
         "perWeek": 691,
-        "notes": "$691 extended day, $791 overnight. Optional Starts & Turns clinic $150.",
+        "notes": "Extended Day (4-day session): $741. Overnight (4-day session): $841.",
         "financialAid": null
       },
       "registration": {
@@ -1172,9 +1169,7 @@
         "url": "https://www.ussportscamps.com/swim/nike/nike-swim-camp-at-williston-northampton-school",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": [
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "hartsbrook-farm-camp",
@@ -1197,15 +1192,10 @@
           "2026-07-13",
           "2026-07-20",
           "2026-07-27"
-        ],
-        "sessionLength": "1 week",
-        "hours": "8:45am-3:00pm",
-        "extendedCare": "Early bird 7:30am-8:45am available"
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Scholarship available",
-        "financialAid": true
+        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1239,15 +1229,17 @@
         "max": 14
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "8:45am-3:00pm",
-        "extendedCare": "Early bird 7:30am-8:45am available"
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": null,
-        "financialAid": null
+        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1263,8 +1255,7 @@
         "lastVerified": "2026-01-12"
       },
       "incomplete": [
-        "cost",
-        "dates"
+        "cost"
       ]
     },
     {
@@ -1281,15 +1272,12 @@
         "max": 16
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "8:45am-3:00pm",
-        "extendedCare": "Early bird 7:30am-8:45am available"
+        "weeks": [
+          "2026-07-13"
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": null,
-        "financialAid": null
+        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1306,8 +1294,7 @@
         "lastVerified": "2026-01-12"
       },
       "incomplete": [
-        "cost",
-        "dates"
+        "cost"
       ]
     },
     {
@@ -1324,15 +1311,17 @@
         "max": 12
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "8:45am-3:00pm",
-        "extendedCare": "Early bird 7:30am-8:45am available"
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ]
       },
       "cost": {
-        "perWeek": null,
-        "notes": null,
-        "financialAid": null
+        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1348,8 +1337,7 @@
         "lastVerified": "2026-01-12"
       },
       "incomplete": [
-        "cost",
-        "dates"
+        "cost"
       ]
     },
     {
@@ -1411,12 +1399,12 @@
       "dates": {
         "weeks": [],
         "sessionLength": null,
-        "hours": null,
-        "extendedCare": null
+        "hours": "7:30am-5:30pm",
+        "extendedCare": "Flexible drop-off/pickup within 7:30am-5:30pm window"
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Affordable childcare option for working parents",
+        "perWeek": 125,
+        "notes": "$125/week (ages 5-12), $35/day. Junior Leaders age 13: $45/week. Field trip fees extra.",
         "financialAid": null
       },
       "registration": {
@@ -1433,9 +1421,7 @@
         "lastVerified": "2026-01-12"
       },
       "incomplete": [
-        "cost",
-        "dates",
-        "hours"
+        "dates"
       ]
     },
     {
@@ -1635,7 +1621,7 @@
       "dates": {
         "weeks": [],
         "sessionLength": "varies",
-        "hours": null,
+        "hours": "Full Day or Half Day options. Full Day includes morning training, lunch break 12-1pm, afternoon activities. Half Day through 12pm.",
         "extendedCare": null
       },
       "cost": {
@@ -1654,12 +1640,11 @@
       "description": "Soccer camps for ages 5-12 (full day and half day) plus high school programs. Full day includes morning training and afternoon activities/scrimmages.",
       "source": {
         "url": "https://wmpioneers.com/camps/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-03-20"
       },
       "incomplete": [
         "cost",
-        "dates",
-        "hours"
+        "dates"
       ]
     },
     {
@@ -1724,14 +1709,11 @@
           "2026-07-05",
           "2026-07-19"
         ],
-        "sessionLength": "2 weeks",
-        "hours": null,
-        "extendedCare": null
+        "sessionLength": "2 weeks"
       },
       "cost": {
-        "perWeek": 1975,
-        "notes": "$3,950 per 2-week session + $700 horse boarding. Intermediate/advanced riders only.",
-        "financialAid": null
+        "perWeek": null,
+        "notes": "$3,950 per 2-week session ($500 deposit due at registration). Additional $700/session for horse boarding. Overnight residential program."
       },
       "registration": {
         "opens": null,
@@ -1747,9 +1729,7 @@
         "url": "https://sbschool.org/summer-programs/bonnie-castle-riding-camp",
         "lastVerified": "2026-01-12"
       },
-      "incomplete": [
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "academy-of-music-youth",
@@ -1813,8 +1793,8 @@
         "extendedCare": "Extended Day 4:00pm-5:00pm (additional fee)"
       },
       "cost": {
-        "perWeek": null,
-        "notes": "2026 rates not posted yet. 2025 rate was $280/week; extended day was $30/week. Seven Hills vouchers accepted.",
+        "perWeek": 280,
+        "notes": "$280/week. Week of July 4 prorated at $220. Camp moving to Amherst Regional High School (21 Mattoon St) for 2026.",
         "financialAid": true
       },
       "registration": {
@@ -1831,8 +1811,7 @@
         "lastVerified": "2026-01-16"
       },
       "incomplete": [
-        "dates",
-        "cost"
+        "dates"
       ]
     },
     {
@@ -1855,8 +1834,8 @@
         "extendedCare": "Extended Day 4:00pm-5:00pm (additional fee)"
       },
       "cost": {
-        "perWeek": null,
-        "notes": "2026 rates not posted yet. 2025 rate was $250/week; extended day was $30/week. Seven Hills vouchers accepted.",
+        "perWeek": 250,
+        "notes": "$250/week. Week of July 4 prorated at $210. Camp moving to Amherst Regional High School (21 Mattoon St) for 2026.",
         "financialAid": true
       },
       "registration": {
@@ -1873,7 +1852,6 @@
         "lastVerified": "2026-01-13"
       },
       "incomplete": [
-        "cost",
         "dates"
       ]
     },
@@ -1898,11 +1876,11 @@
       },
       "cost": {
         "perWeek": null,
-        "notes": "2026 rates not posted yet. 2025 was $200/week (Regular) or $225/week (Extended Day). Scholarships available.",
+        "notes": "$25 non-refundable deposit per week per child required when registering. Contact Easthampton Parks & Rec for 2026 pricing.",
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "2026-04-28",
         "deadline": null,
         "url": "https://clubs.bluesombrero.com/easthamptonparksandrec"
       },
@@ -2418,11 +2396,11 @@
       },
       "cost": {
         "perWeek": null,
-        "notes": "$75 non-refundable deposit per session required. Balance due one week before each session.",
+        "notes": "Members $394-438/2-week session, Non-members $408-453/2-week session. $75 non-refundable deposit per session.",
         "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "2026-02-16",
         "deadline": null,
         "url": "https://www.westfieldymca.org/camp-shepard/"
       },
@@ -2436,7 +2414,6 @@
         "lastVerified": "2026-01-13"
       },
       "incomplete": [
-        "cost",
         "hours"
       ]
     },
@@ -2465,7 +2442,7 @@
         "financialAid": null
       },
       "registration": {
-        "opens": null,
+        "opens": "March 23, 2026 (residents), April 21, 2026 (non-residents)",
         "deadline": null,
         "url": "https://montagueparksandrec.com/summer-camp-26/"
       },
@@ -2584,7 +2561,15 @@
         "max": 12
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17"
+        ],
         "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
@@ -2606,12 +2591,11 @@
       "description": "Dance camp offering a variety of styles in a nurturing environment. Students learn fundamentals of movement including ballet and creative dance. Monthly payment plans available upon request.",
       "source": {
         "url": "http://www.childrensballetmovement.com/summercamp",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-03-20"
       },
       "incomplete": [
         "cost",
-        "hours",
-        "weeks"
+        "hours"
       ]
     },
     {
@@ -2676,10 +2660,15 @@
         "max": 14
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": "1 week",
-        "hours": "Varies by program",
-        "extendedCare": null
+        "weeks": [
+          "2026-06-15",
+          "2026-06-22",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ]
       },
       "cost": {
         "perWeek": 500,
@@ -2701,9 +2690,7 @@
         "url": "https://www.bement.org/community/summer-programs/enrichmentcamps",
         "lastVerified": "2026-01-13"
       },
-      "incomplete": [
-        "weeks"
-      ]
+      "incomplete": []
     },
     {
       "id": "hilltown-sleddogs-camp",
@@ -2809,14 +2796,16 @@
         "max": 12
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-08-03"
+        ],
         "sessionLength": "1 week",
         "hours": "8:00am-4:00pm",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Contact school for 2026 pricing",
+        "perWeek": 625,
+        "notes": "$625/week ($200 deposit due at registration).",
         "financialAid": null
       },
       "registration": {
@@ -2831,13 +2820,9 @@
       "description": "Coed horsemanship day camp for beginner riders ages 9-12. Learn grooming, handling, tacking, feeding and beginner riding skills on beautiful 100-acre campus.",
       "source": {
         "url": "https://sbschool.org/summer-programs",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-03-20"
       },
-      "incomplete": [
-        "cost",
-        "weeks",
-        "registration"
-      ]
+      "incomplete": []
     },
     {
       "id": "stoneleigh-burnham-sports",
@@ -3031,23 +3016,27 @@
       },
       "ages": {
         "min": 6,
-        "max": 14
+        "max": null
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20"
+        ],
         "sessionLength": "1 week",
         "hours": "8:45am-3:00pm",
         "extendedCare": null
       },
       "cost": {
         "perWeek": 450,
-        "notes": "Songwriting week for ages 11+",
+        "notes": "$450/week. Payment plans available. Daily snack included; campers bring lunch. Friday recital 2-3pm.",
         "financialAid": null
       },
       "registration": {
         "opens": null,
         "deadline": null,
-        "url": "https://www.missleticia.com/summer-camp"
+        "url": "https://missleticia.com/registration"
       },
       "category": [
         "performing-arts",
@@ -3057,13 +3046,9 @@
       "notes": "Songwriting week requires age 11+. Other weeks for ages 6+.",
       "source": {
         "url": "https://www.missleticia.com/summer-camp",
-        "lastVerified": "2026-01-20"
+        "lastVerified": "2026-03-20"
       },
-      "incomplete": [
-        "weeks",
-        "registration",
-        "financialAid"
-      ]
+      "incomplete": []
     },
     {
       "id": "wolf-tree-programs",
@@ -3128,24 +3113,11 @@
         "max": 13
       },
       "dates": {
-        "weeks": [
-          "2026-07-06",
-          "2026-07-13",
-          "2026-07-20",
-          "2026-07-27",
-          "2026-08-03",
-          "2026-08-10",
-          "2026-08-17",
-          "2026-08-24"
-        ],
-        "sessionLength": "1 week",
-        "hours": "Half day and full day options available most weeks",
-        "extendedCare": null
+        "hours": "Full Day 9:00am-3:00pm, Half Day 9:00am-12:00pm"
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Contact for 2026 pricing.",
-        "financialAid": null
+        "perWeek": 400,
+        "notes": "Full Day $400/week, Half Day $250/week. Not all weeks offer both options."
       },
       "registration": {
         "opens": null,
@@ -3160,9 +3132,7 @@
         "url": "https://www.gloverpianostudio.com/summer",
         "lastVerified": "2026-03-20"
       },
-      "incomplete": [
-        "cost"
-      ]
+      "incomplete": []
     },
     {
       "id": "jaduke-center-summer",
@@ -3713,56 +3683,6 @@
       "incomplete": [
         "cost",
         "dates"
-      ]
-    },
-    {
-      "id": "franklin-county-ymca-gymnastics-camp",
-      "name": "Gymnastics Camp at Franklin County's YMCA",
-      "organization": "Franklin County's YMCA",
-      "location": {
-        "town": "Greenfield",
-        "address": "451 Main Street",
-        "region": "Franklin"
-      },
-      "ages": {
-        "min": 3,
-        "max": 14
-      },
-      "dates": {
-        "weeks": [
-          "2026-06-22",
-          "2026-06-29",
-          "2026-07-06",
-          "2026-07-13",
-          "2026-07-20",
-          "2026-07-27",
-          "2026-08-03"
-        ],
-        "sessionLength": "1 week",
-        "hours": null,
-        "extendedCare": null
-      },
-      "cost": {
-        "perWeek": 260,
-        "notes": "Members $260/week, Non-members $305/week. Lil' Flippers half-day (ages 3.5-5, 9am-1pm): Members $200, Non-members $245.",
-        "financialAid": null
-      },
-      "registration": {
-        "opens": null,
-        "deadline": null,
-        "url": "https://your-y.org/camps/"
-      },
-      "category": [
-        "sports"
-      ],
-      "description": "Indoor gymnastics day camp for ages 5-14 with flipping, tumbling, balance, and gymnastics skills. Lil' Flippers half-day option for ages 3.5-5. Adventure Camp and Ninja Warrior Camp also available at the same facility.",
-      "source": {
-        "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-03-20"
-      },
-      "incomplete": [
-        "hours",
-        "registration"
       ]
     },
     {
