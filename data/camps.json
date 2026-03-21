@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-01-24",
   "version": "1.0.0",
-  "totalCamps": 68,
+  "totalCamps": 71,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -3063,6 +3063,142 @@
         "weeks",
         "registration",
         "financialAid"
+      ]
+    },
+    {
+      "id": "mass-soccer-school-umass",
+      "name": "Massachusetts Soccer School Summer Camp",
+      "organization": "Massachusetts Soccer School",
+      "location": {
+        "town": "Amherst",
+        "address": "Boyden Fields, UMass Amherst campus",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [
+          "2026-07-06",
+          "2026-07-20",
+          "2026-07-27"
+        ],
+        "sessionLength": "1 week",
+        "hours": "Half Day 9:00am-12:00pm, Full Day 9:00am-4:00pm",
+        "extendedCare": "Early drop-off and late pickup available (additional fee)"
+      },
+      "cost": {
+        "perWeek": 400,
+        "notes": "Full Day $400/week, Half Day $275/week. Sibling discounts available.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.masssoccerschool.com"
+      },
+      "category": [
+        "sports"
+      ],
+      "description": "Coed soccer camp for grades K-8 led by UMass Men's Soccer coaches and players. Full Day campers receive lunch at the UMass Dining Commons. Rain location at Boyden Gym. Air conditioned rooms available.",
+      "source": {
+        "url": "https://www.masssoccerschool.com",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "registration"
+      ]
+    },
+    {
+      "id": "umass-womens-basketball-camp",
+      "name": "UMass Women's Basketball Day Camp",
+      "organization": "Coach Leflar Basketball Camps / UMass Women's Basketball",
+      "location": {
+        "town": "Amherst",
+        "address": "UMass Amherst campus",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [
+          "2026-07-13"
+        ],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.coachleflarbasketballcamps.com/"
+      },
+      "category": [
+        "sports"
+      ],
+      "description": "Basketball day camp led by the UMass Women's Basketball coaching staff on the UMass Amherst campus. July 13-17, 2026.",
+      "source": {
+        "url": "https://www.coachleflarbasketballcamps.com/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "morse-hill-rattlesnake-camps",
+      "name": "Rattlesnake Summer Camps",
+      "organization": "Morse Hill Outdoor Education Center",
+      "location": {
+        "town": "Shutesbury",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": "Overnight options available"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Day and overnight options. Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://app.campdoc.com/register/mhoec"
+      },
+      "category": [
+        "outdoor",
+        "adventure"
+      ],
+      "description": "Adventure camp in Shutesbury offering canoeing, mountain biking, caving, raft building, rock climbing, and a 30+ challenge ropes course. Day and overnight formats available for grades 1-12. Bus transportation available.",
+      "source": {
+        "url": "https://www.morsehill.com/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "hours",
+        "weeks",
+        "registration"
       ]
     }
   ]
