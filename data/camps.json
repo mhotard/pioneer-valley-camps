@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-01-24",
   "version": "1.0.0",
-  "totalCamps": 71,
+  "totalCamps": 93,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -3063,6 +3063,1039 @@
         "weeks",
         "registration",
         "financialAid"
+      ]
+    },
+    {
+      "id": "wolf-tree-programs",
+      "name": "Wolf Tree Programs Summer Day Camp",
+      "organization": "Wolf Tree Programs",
+      "location": {
+        "town": "Montague",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 7,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ],
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 395,
+        "notes": "$395 per week. Scholarship funds available for those in financial need.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://wolftreema.com/summer-camp/"
+      },
+      "category": [
+        "outdoor",
+        "adventure"
+      ],
+      "description": "Outdoor adventure camp emphasizing nature exploration and wilderness skills. Activities include rope making, fire safety, shelter building, wildlife tracking, and flora identification. Unstructured, land-based learning in small groups of 12. Scholarships available.",
+      "source": {
+        "url": "https://wolftreema.com/summer-camp/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "registration"
+      ]
+    },
+    {
+      "id": "glover-piano-studio-summer",
+      "name": "Summer @ Glover Piano Studio",
+      "organization": "Glover Piano Studio",
+      "location": {
+        "town": "South Deerfield",
+        "address": "265 Greenfield Road, Ste 1",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 4,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17",
+          "2026-08-24"
+        ],
+        "sessionLength": "1 week",
+        "hours": "Half day and full day options available most weeks",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.gloverpianostudio.com/summer"
+      },
+      "category": [
+        "performing-arts"
+      ],
+      "description": "Piano-focused summer camp for ages 4-13 with themed weekly programs including Musical STEM, Emotions Potions, Music & Arts, Keys for Kids, and Music Mind Games. Activities include music theory games, arts and crafts, outdoor play, duets and ensembles. Beginners through early intermediate welcome.",
+      "source": {
+        "url": "https://www.gloverpianostudio.com/summer",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost"
+      ]
+    },
+    {
+      "id": "jaduke-center-summer",
+      "name": "Ja'Duke Center Summer Workshops",
+      "organization": "Ja'Duke Center for the Performing Arts",
+      "location": {
+        "town": "Turners Falls",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.jadukecenter.com"
+      },
+      "category": [
+        "performing-arts"
+      ],
+      "description": "Performing arts workshops at Ja'Duke Center for the Performing Arts in Turners Falls, covering singing, dancing, and acting.",
+      "source": {
+        "url": "https://www.jadukecenter.com",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "ima-goshen-rock-camp",
+      "name": "Institute for the Musical Arts Summer Programs",
+      "organization": "The Institute for the Musical Arts",
+      "location": {
+        "town": "Goshen",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 9,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "5 days (Explore Rock) or 10 days (Teen Performance)",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://ima.org"
+      },
+      "category": [
+        "performing-arts",
+        "specialty"
+      ],
+      "description": "Rock and roll summer programs for girls and young women at a working farm and recording studio in Goshen. Explore Rock (ages 9-12) is a 5-day residential preteen program. Teen Performance Program (ages 13-18) runs 10 days in July. Participants explore instruments, songwriting, and performance with veteran musicians.",
+      "source": {
+        "url": "https://ima.org",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "necca-circus-camp",
+      "name": "NECCA Youth Circus Camps",
+      "organization": "New England Center for Circus Arts",
+      "location": {
+        "town": "Brattleboro",
+        "address": "10 Town Crier Drive",
+        "region": null
+      },
+      "ages": {
+        "min": 3,
+        "max": 17
+      },
+      "dates": {
+        "weeks": [
+          "2026-07-06",
+          "2026-07-13",
+          "2026-08-03"
+        ],
+        "sessionLength": "1 week",
+        "hours": "Full day",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 425,
+        "notes": "Full Day (ages 5-17): $85/day (~$425/week). Half Day (ages 3-5): $65/day. Advanced Performance Camp also offered July 6-10.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://necenterforcircusarts.org/youth-camps/"
+      },
+      "category": [
+        "performing-arts",
+        "adventure",
+        "specialty"
+      ],
+      "description": "Weekly youth circus camps in Brattleboro, VT (~45 min from Amherst) exploring aerials, acrobatics, juggling, clowning, trampoline, and more. Builds balance, dexterity, teamwork, and confidence. Advanced Performance Camp available for experienced campers.",
+      "source": {
+        "url": "https://necenterforcircusarts.org/youth-camps/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "pvs-summer-workshops",
+      "name": "Pioneer Valley Symphony Summer Performing Arts Workshops",
+      "organization": "Pioneer Valley Symphony",
+      "location": {
+        "town": "Greenfield",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "Morning 9:00am-12:00pm or Full Day 9:00am-4:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Sliding scale pricing. Financial aid available through the Mary Kay Hoffman Fund.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.pvsoc.org/summer"
+      },
+      "category": [
+        "performing-arts",
+        "arts"
+      ],
+      "description": "Week-long performing arts workshops in Greenfield with morning (9am-12pm) or full-day (9am-4pm) options. Afternoon adds supervised free play and unstructured arts and music activities. Sliding scale tuition with financial aid available.",
+      "source": {
+        "url": "https://www.pvsoc.org/summer",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "registration"
+      ]
+    },
+    {
+      "id": "art-in-motion-easthampton",
+      "name": "Art In Motion Immersive Arts Program",
+      "organization": "Art In Motion",
+      "location": {
+        "town": "Easthampton",
+        "address": "Keystone Mill",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://artinmotion413.com/summer/"
+      },
+      "category": [
+        "performing-arts",
+        "arts"
+      ],
+      "description": "Immersive dance and arts summer camp at Keystone Mill in Easthampton. Themed weeks with creative crafts and Friday performances for ages 5-13. Professional sprung-floor dance studio facilities.",
+      "source": {
+        "url": "https://artinmotion413.com/summer/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "camp-lion-knoll",
+      "name": "Camp Lion Knoll",
+      "organization": "The Learning Knoll / Girls Club of Greenfield",
+      "location": {
+        "town": "Greenfield",
+        "address": "77 Oak Hill Road",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 250,
+        "notes": "$250/week. Early enrollment discount: $25/week off when registered with deposit in March or April.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": "2026-06-01",
+        "url": "https://thelearningknoll.org/p/20/Registration"
+      },
+      "category": [
+        "outdoor",
+        "general"
+      ],
+      "description": "Day camp on 40 acres of open fields and pine forests in Leyden. Activities include swimming, nature exploration, theatre, music, arts and crafts, and special events. Established 1958.",
+      "source": {
+        "url": "https://girlsclubofgreenfield.org/p/19/Camp-Lion-Knoll",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "hours"
+      ]
+    },
+    {
+      "id": "ncmc-summer-programs",
+      "name": "NCMC Summer Music Programs",
+      "organization": "Northampton Community Music Center",
+      "location": {
+        "town": "Northampton",
+        "address": "139 South Street",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.ncmc.net/summer"
+      },
+      "category": [
+        "performing-arts"
+      ],
+      "description": "Summer music programs at Northampton Community Music Center offering group classes, camps, and music instruction for all ages.",
+      "source": {
+        "url": "https://www.ncmc.net/summer",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "dungeon-delvers-summer-series",
+      "name": "Dungeon Delvers Summer Series",
+      "organization": "Dungeon Delvers",
+      "location": {
+        "town": "Sunderland",
+        "address": "North Star Self-Directed Learning for Teens",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 10,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06"
+        ],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Early bird discount: $50 off when registering before March 1. Each age group has its own week: ages 16-18 (June 22-26), ages 13-15 (June 29-July 3), ages 10-12 (July 6-10).",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.dungeondelversma.com/"
+      },
+      "category": [
+        "specialty",
+        "academic"
+      ],
+      "description": "Dungeons & Dragons summer series for ages 10-18, with each age group attending their own dedicated week. Programs include Epic Adventures (overcome monsters and traps) and Dungeon Master Academy (learn to create and run your own adventures). No prior experience or equipment needed.",
+      "source": {
+        "url": "https://www.dungeondelversma.com/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "hours"
+      ]
+    },
+    {
+      "id": "camp-macduffie",
+      "name": "Camp MacDuffie Summer Camp",
+      "organization": "The MacDuffie School",
+      "location": {
+        "town": "Granby",
+        "address": "1 Ames Rd",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:00pm",
+        "extendedCare": "Morning care 7:30-8:45am ($70/week), Afternoon care 3:00-4:45pm ($70/week), Both ($115/week)"
+      },
+      "cost": {
+        "perWeek": 350,
+        "notes": "$350/week. Includes lunch by SAGE Dining Services and afternoon field trips. One-time $25 annual ACTIVE registration fee.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://macduffie.org/summer-camp"
+      },
+      "category": [
+        "arts",
+        "sports",
+        "stem",
+        "general"
+      ],
+      "description": "Full-day summer camp at The MacDuffie School with weekly programs in theater/drama, visual arts, culinary arts, dance, sports, animation, and science. Lunch included. Friday performances and gallery exhibitions. Before and after care available.",
+      "source": {
+        "url": "https://macduffie.org/summer-camp",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "registration"
+      ]
+    },
+    {
+      "id": "pic-kids-summer",
+      "name": "PIC Kids Summer",
+      "organization": "Play Incubation Collective",
+      "location": {
+        "town": "Florence",
+        "address": "Bombyx Center, 130 Pine Street",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.playincubation.org/pickids"
+      },
+      "category": [
+        "performing-arts",
+        "arts"
+      ],
+      "description": "Weekly arts camp for rising 2nd-9th graders at Bombyx Center in Florence. Each themed week explores theater, movement, and visual art, culminating in a Friday sharing at 2:30pm. Limited to 14 participants with approximately 1:4 instructor ratio.",
+      "source": {
+        "url": "https://www.playincubation.org/pickids",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "dates",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "ohana-performing-arts-summer",
+      "name": "Summer at Ohana School of Performing Arts",
+      "organization": "Ohana School of Performing Arts",
+      "location": {
+        "town": "Chicopee",
+        "address": null,
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 3,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "Full Day 8:30am-4:00pm, Half Day 8:30am-12:00pm or 12:30pm-4:00pm",
+        "extendedCare": "Early drop-off 7:30am, late pickup until 5:00pm (additional fee)"
+      },
+      "cost": {
+        "perWeek": 400,
+        "notes": "Full Day $400-450/week, Half Day $215-285/week. Daily rates: $95 full day, $55 half day. Sibling/multi-program discounts available.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://ohanaperformingarts.com/"
+      },
+      "category": [
+        "performing-arts",
+        "arts"
+      ],
+      "description": "Performing arts summer camp for ages 3-12 with themed activities, crafts, and team-building. Programs include Standard Camps, Summer Intensive, Clubhouse Experience, and Camp Broadway. Flexible half-day and full-day scheduling.",
+      "source": {
+        "url": "https://ohanaperformingarts.com/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "dates",
+        "registration"
+      ]
+    },
+    {
+      "id": "girl-scout-camp-lewis-perkins",
+      "name": "Girl Scout Camp Lewis Perkins",
+      "organization": "Girl Scouts of Central and Western Massachusetts",
+      "location": {
+        "town": "South Hadley",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:30pm",
+        "extendedCare": "Thursday evening option: dinner and programs, pickup at 8:00pm"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "$75 deposit required. Non-members add $55 (includes GSCWM membership through September 2026). Campers bring own lunch. Open to all girls, no prior Girl Scout experience needed.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-01-14",
+        "deadline": null,
+        "url": "https://www.gscwm.org/SummerCamp"
+      },
+      "category": [
+        "outdoor",
+        "general"
+      ],
+      "description": "ACA-accredited Girl Scout day camp with swimming, archery, nature art, campfire building, gaga pit, and teambuilding. Weekly themed sessions for girls entering grades 1-8. Located near South Hadley with fields, woodlands, and trails.",
+      "source": {
+        "url": "https://www.gscwm.org/SummerCamp",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "dates"
+      ]
+    },
+    {
+      "id": "franklin-county-ymca-gymnastics-camp",
+      "name": "Gymnastics Camp at Franklin County's YMCA",
+      "organization": "Franklin County's YMCA",
+      "location": {
+        "town": "Greenfield",
+        "address": "451 Main Street",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 3,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
+        "sessionLength": "1 week",
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 260,
+        "notes": "Members $260/week, Non-members $305/week. Lil' Flippers half-day (ages 3.5-5, 9am-1pm): Members $200, Non-members $245.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://your-y.org/camps/"
+      },
+      "category": [
+        "sports"
+      ],
+      "description": "Indoor gymnastics day camp for ages 5-14 with flipping, tumbling, balance, and gymnastics skills. Lil' Flippers half-day option for ages 3.5-5. Adventure Camp and Ninja Warrior Camp also available at the same facility.",
+      "source": {
+        "url": "https://your-y.org/camps/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "artplay-northampton",
+      "name": "ArtPlay Summer Camp",
+      "organization": "Northampton Center for the Arts",
+      "location": {
+        "town": "Northampton",
+        "address": null,
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 325,
+        "notes": "$325-400/week sliding scale. Financial aid available through Community Fund.",
+        "financialAid": true
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.nohoarts.org/artplay"
+      },
+      "category": [
+        "arts",
+        "performing-arts"
+      ],
+      "description": "Interdisciplinary arts camp connecting youth ages 6-12 to local teaching artists. Explore dance, music, drama, visual arts, and collaborative play. Limited to 15 participants per session.",
+      "source": {
+        "url": "https://www.nohoarts.org/artplay",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "registration"
+      ]
+    },
+    {
+      "id": "academy-at-charlemont-summer",
+      "name": "Academy at Charlemont Summer Programs",
+      "organization": "The Academy at Charlemont",
+      "location": {
+        "town": "Charlemont",
+        "address": null,
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 8,
+        "max": 18
+      },
+      "dates": {
+        "weeks": [
+          "2026-07-06",
+          "2026-07-13"
+        ],
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:30pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 350,
+        "notes": "$350/week for most programs.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.charlemont.org/summerprograms2026/"
+      },
+      "category": [
+        "outdoor",
+        "arts",
+        "specialty"
+      ],
+      "description": "Two-week summer programs on the Academy campus. Hiking/Art/STEM (ages 8-11) explores Mohawk State Forest and High Ledges with mosaics and Rube Goldberg activities. Songwriting Workshop (ages 8-11) covers meter, lyric writing, and harmony. Ultimate Frisbee Clinic (ages 13-18) provides athletic training and competitive play.",
+      "source": {
+        "url": "https://www.charlemont.org/summerprograms2026/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "registration"
+      ]
+    },
+    {
+      "id": "red-gate-farm-summer",
+      "name": "Red Gate Farm Summer Camp",
+      "organization": "Red Gate Farm",
+      "location": {
+        "town": "Ashfield",
+        "address": "4 Norman Road",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 6,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:30am-2:30pm",
+        "extendedCare": "Overnight program available for ages 10-15"
+      },
+      "cost": {
+        "perWeek": 559,
+        "notes": "$559/week (day camp, ages 6-12). Weekly sessions May 25 - August 7, 2026. Overnight program for ages 10-15 at separate cost.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.redgatefarm.org/summer"
+      },
+      "category": [
+        "outdoor",
+        "specialty"
+      ],
+      "description": "Farm and equestrian day camp with daily horseback riding lessons, horse care and horsemanship, arts and crafts, and farm picnics. Sessions end with a horse show and pizza/pool party on Fridays. Overnight program available for ages 10-15.",
+      "source": {
+        "url": "https://www.redgatefarm.org/summer",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "weeks",
+        "registration"
+      ]
+    },
+    {
+      "id": "biocitizen-our-place-summerschool",
+      "name": "Biocitizen: Our Place Summerschool",
+      "organization": "Biocitizen Inc.",
+      "location": {
+        "town": "Northampton",
+        "address": "Sheldon Field (drop-off/pickup)",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-15",
+          "2026-06-22",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-10",
+          "2026-08-17",
+          "2026-08-24"
+        ],
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://biocitizen.org/our-place-summer-school/"
+      },
+      "category": [
+        "outdoor"
+      ],
+      "description": "Nature-based outdoor summer school exploring the Nonotuck biome and Westfield River watershed. Children learn to read land and watercourses, identify habitats, and develop ecological awareness. Drop-off/pickup at Sheldon Field in Northampton with some sessions at nearby trailheads.",
+      "source": {
+        "url": "https://biocitizen.org/our-place-summer-school/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "registration"
+      ]
+    },
+    {
+      "id": "roots-vacation-camp",
+      "name": "Roots Vacation Summer Camp",
+      "organization": "Roots Vacation Camps",
+      "location": {
+        "town": "Westfield",
+        "address": "181-217 Root Rd",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 5,
+        "max": 15
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17",
+          "2026-08-24"
+        ],
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
+        "extendedCare": "Before care from 7:30am, after care until 5:00pm (additional fee)"
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Contact for 2026 pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.rootsvacation.com/"
+      },
+      "category": [
+        "sports",
+        "general"
+      ],
+      "description": "Multi-activity summer camp with gymnastics, swimming, ninja obstacle courses, turf sports, archery, crafts, and STEM. State-of-the-art facility with gyms, pools, and turf fields. Weekly themes and CIT leadership program for ages 13-15.",
+      "source": {
+        "url": "https://www.rootsvacation.com/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "cost",
+        "registration"
+      ]
+    },
+    {
+      "id": "catherine-grace-studios-summer",
+      "name": "Catherine Grace Studios Summer Dance",
+      "organization": "Catherine Grace Studios",
+      "location": {
+        "town": "Montague",
+        "address": "20 Masonic Ave",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.catherinegracestudios.com/"
+      },
+      "category": [
+        "performing-arts"
+      ],
+      "description": "Summer dance classes and programs at Catherine Grace Studios in Montague City, offering ballet, contemporary, and more for all ages.",
+      "source": {
+        "url": "https://www.catherinegracestudios.com/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours",
+        "registration"
+      ]
+    },
+    {
+      "id": "downtown-sounds-summer",
+      "name": "Downtown Sounds Music School Summer Programs",
+      "organization": "Downtown Sounds Workers Co-op",
+      "location": {
+        "town": "Northampton",
+        "address": "21 Pleasant St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": null,
+        "max": null
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": null,
+        "hours": null,
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": null,
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://downtownsounds.com/music-school/"
+      },
+      "category": [
+        "performing-arts"
+      ],
+      "description": "Summer music programs at Downtown Sounds, a worker-owned music school in downtown Northampton. Lessons on guitar, piano, voice, bass, drums, ukulele, and more for all ages.",
+      "source": {
+        "url": "https://downtownsounds.com/music-school/",
+        "lastVerified": "2026-03-20"
+      },
+      "incomplete": [
+        "ages",
+        "cost",
+        "dates",
+        "hours",
+        "registration"
       ]
     },
     {
