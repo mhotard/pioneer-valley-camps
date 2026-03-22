@@ -22,6 +22,7 @@ const costMaxSelect = document.getElementById('cost-max');
 const weekSelect = document.getElementById('week-select');
 const earlyDropoffCheckbox = document.getElementById('has-early-dropoff');
 const financialAidCheckbox = document.getElementById('has-financial-aid');
+const latePickupCheckbox = document.getElementById('has-late-pickup');
 const clearFiltersBtn = document.getElementById('clear-filters');
 const clearFiltersAltBtn = document.getElementById('clear-filters-alt');
 const resultsCount = document.getElementById('results-count');
@@ -111,7 +112,7 @@ function setupEventListeners() {
         el.addEventListener('change', applyFilters);
     });
 
-    [earlyDropoffCheckbox, financialAidCheckbox].forEach(el => {
+    [earlyDropoffCheckbox, financialAidCheckbox, latePickupCheckbox].forEach(el => {
         el.addEventListener('change', applyFilters);
     });
 
@@ -186,6 +187,20 @@ function hasEarlyDropoff(camp) {
     return false;
 }
 
+function hasLatePickup(camp) {
+    const combined = ((camp.dates?.hours || '') + ' ' + (camp.dates?.extendedCare || '')).toLowerCase();
+    const pmTimes = combined.match(/(\d{1,2})(?::(\d{2}))?\s*pm/gi) || [];
+    for (const match of pmTimes) {
+        const timeMatch = match.match(/(\d{1,2})(?::(\d{2}))?/);
+        if (timeMatch) {
+            const hour = parseInt(timeMatch[1]);
+            // In 12-hour PM: hours 4-11 = 4pm–11pm (late pickup); 12 = noon (skip); 1-3 = 1pm–3pm (not late)
+            if (hour >= 4 && hour <= 11) return true;
+        }
+    }
+    return false;
+}
+
 function applyFilters() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     const ageMin = ageMinSelect.value ? parseInt(ageMinSelect.value) : null;
@@ -196,6 +211,7 @@ function applyFilters() {
     const selectedWeek = weekSelect.value;
     const needsEarlyDropoff = earlyDropoffCheckbox.checked;
     const needsFinancialAid = financialAidCheckbox.checked;
+    const needsLatePickup = latePickupCheckbox.checked;
 
     filteredCamps = allCamps.filter(camp => {
         // Search term
@@ -253,6 +269,11 @@ function applyFilters() {
             return false;
         }
 
+        // Late pickup filter
+        if (needsLatePickup && !hasLatePickup(camp)) {
+            return false;
+        }
+
         return true;
     });
 
@@ -269,6 +290,7 @@ function clearFilters() {
     weekSelect.value = '';
     earlyDropoffCheckbox.checked = false;
     financialAidCheckbox.checked = false;
+    latePickupCheckbox.checked = false;
     applyFilters();
 }
 
