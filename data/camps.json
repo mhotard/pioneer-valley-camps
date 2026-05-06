@@ -4187,7 +4187,7 @@
         ],
         "sessionLength": "weekly",
         "hours": "8:30am-4:00pm",
-        "extendedCare": "Early arrival 7:00-8:30am; Extended day 4:00-5:30pm"
+        "extendedCare": "Early arrival 7:00am-8:30am; Extended day 4:00pm-5:30pm"
       },
       "cost": {
         "perWeek": 200,
