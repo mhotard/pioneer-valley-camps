@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-01-24",
   "version": "1.0.0",
-  "totalCamps": 92,
+  "totalCamps": 93,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -4161,6 +4161,56 @@
         "weeks",
         "registration"
       ]
+    },
+    {
+      "id": "river-valley-day-camp",
+      "name": "River Valley Day Camp",
+      "organization": "Frontier Regional School District / Union #38",
+      "location": {
+        "town": "South Deerfield",
+        "address": "Deerfield Elementary School, South Deerfield, MA",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
+        "sessionLength": "weekly",
+        "hours": "8:30am-4:00pm",
+        "extendedCare": "Early arrival 7:00-8:30am; Extended day 4:00-5:30pm"
+      },
+      "cost": {
+        "perWeek": 200,
+        "notes": "$200–$230 per week depending on session",
+        "financialAid": false
+      },
+      "registration": {
+        "opens": "2026-02-27",
+        "deadline": "2026-05-31",
+        "url": "https://www.frsu38.org/ostp/ostp-rivervalley/"
+      },
+      "category": [
+        "outdoor",
+        "arts",
+        "stem",
+        "aquatics"
+      ],
+      "description": "Weekly themed day camp at Deerfield Elementary School. Activities include arts & crafts, PE, science, nature studies, field trips to museums and nature centers, and swimming. Morning snack provided. Registration by mail or drop-off using PDF form.",
+      "source": {
+        "url": "https://www.frsu38.org/ostp/ostp-rivervalley/",
+        "lastVerified": "2026-05-05"
+      },
+      "incomplete": []
     }
   ]
 }
