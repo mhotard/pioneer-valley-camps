@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-24",
+  "lastUpdated": "2026-05-05",
   "version": "1.0.0",
   "totalCamps": 93,
   "camps": [
@@ -45,7 +45,7 @@
       "description": "Nature-based summer camp with sessions for grades K-6 and a Leadership Training program for grades 7-9. Chickadee Camp offers half-day option for youngest campers. Max 2 sessions per child.",
       "source": {
         "url": "https://www.hitchcockcenter.org/camp-programs/",
-        "lastVerified": "2026-01-24"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -93,7 +93,7 @@
       "description": "Nature camp at the 734-acre Arcadia Wildlife Sanctuary with age-specific programs: Hummingbirds (K-2), Kingfishers (grades 2-4), Great Blue Herons (grades 5-6). Specialty camps for teens include nature photography and environmental leadership. Max 4 weeks per camper.",
       "source": {
         "url": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/arcadia/camp",
-        "lastVerified": "2026-01-24"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -117,7 +117,8 @@
           "2026-07-27"
         ],
         "sessionLength": "2-week sessions",
-        "extendedCare": null
+        "extendedCare": null,
+        "hours": "Contact Parks & Rec for hours"
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -134,7 +135,7 @@
       "description": "Day camp for ages 4-6 with two-week sessions. Safe, fun environment for young campers. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "waitlist": {
         "status": "unknown",
@@ -168,7 +169,8 @@
           "2026-07-27",
           "2026-08-03"
         ],
-        "sessionLength": "weekly"
+        "sessionLength": "weekly",
+        "hours": "Contact Parks & Rec for hours"
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -176,7 +178,7 @@
       },
       "registration": {
         "opens": "2026-03-02",
-        "deadline": "Thursday before session starts",
+        "deadline": "2026-05-29",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -185,7 +187,7 @@
       "description": "Day camp for students entering grades 1-4 with weekly sessions. Fun activities in a safe environment. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "waitlist": {
         "status": "unknown",
@@ -219,7 +221,8 @@
           "2026-07-27",
           "2026-08-03"
         ],
-        "sessionLength": "weekly"
+        "sessionLength": "weekly",
+        "hours": "Contact Parks & Rec for hours"
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -227,7 +230,7 @@
       },
       "registration": {
         "opens": "2026-03-02",
-        "deadline": "Thursday before session starts",
+        "deadline": "2026-05-29",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -236,7 +239,7 @@
       "description": "Day camp for students entering grades 5-6 with weekly sessions. Age-appropriate activities and adventures. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "waitlist": {
         "status": "unknown",
@@ -270,7 +273,8 @@
           "2026-07-27",
           "2026-08-03"
         ],
-        "sessionLength": "weekly"
+        "sessionLength": "weekly",
+        "hours": "Contact Parks & Rec for hours"
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -278,7 +282,7 @@
       },
       "registration": {
         "opens": "2026-03-02",
-        "deadline": "Thursday before session starts",
+        "deadline": "2026-05-29",
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps"
       },
       "category": [
@@ -288,7 +292,7 @@
       "description": "Teen expedition program for students entering grades 7-10 with weekly sessions. Outdoor adventures and leadership development. Financial aid available for Northampton, Florence, and Leeds residents.",
       "source": {
         "url": "https://www.northamptonma.gov/902/Summer-Day-Camps",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "waitlist": {
         "status": "unknown",
@@ -346,7 +350,7 @@
       "notes": "Children must be fully toilet trained. Camp info session Feb 1, 11am-12:30pm at YMCA.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-15"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -399,7 +403,7 @@
       "notes": "Features Ninja Warrior obstacle course and Warp Wall. Camp info session Feb 1, 11am-12:30pm at YMCA.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-15"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -448,7 +452,7 @@
       "notes": "Bus transportation available from Northampton, Florence, Hadley, Southampton, and Westhampton ($140/2-week session). Open house May 30, 10am-2pm.",
       "source": {
         "url": "https://www.hrymca.org/summer-camp/",
-        "lastVerified": "2026-01-15"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -467,16 +471,17 @@
       },
       "dates": {
         "weeks": [
-          "2026-06-23",
-          "2026-06-30",
-          "2026-07-07",
-          "2026-07-14",
-          "2026-07-21",
-          "2026-07-28",
-          "2026-08-04",
-          "2026-08-11"
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17"
         ],
-        "sessionLength": "1 week minimum",
+        "sessionLength": "1 week",
         "hours": "9:00am-4:00pm",
         "extendedCare": "8:00am-5:00pm available"
       },
@@ -488,7 +493,7 @@
       "registration": {
         "opens": "January 2026",
         "deadline": null,
-        "url": "https://www.springfieldjcc.org/camp/"
+        "url": "https://www.springfieldjcc.org/camp-registration/"
       },
       "category": [
         "general"
@@ -496,7 +501,7 @@
       "description": "Traditional day camp for grades K-10 with Leaders-in-Training program for teens. Inclusion camp (Kehillah) available for children with different abilities. Accepts Seven Hills state assistance vouchers. 8 weeks June 23-August 15.",
       "source": {
         "url": "https://www.springfieldjcc.org/camp/",
-        "lastVerified": "2026-01-24"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -514,20 +519,25 @@
         "max": 15
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": null,
+        "weeks": [
+          "2026-06-29",
+          "2026-07-13",
+          "2026-07-27",
+          "2026-08-10"
+        ],
+        "sessionLength": "2 weeks",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": null,
-        "financialAid": null
+        "perWeek": 625,
+        "notes": "Session 1 (June 29-July 10): $625; Sessions 2-4: $650 each. 50% deposit at registration, balance due June 1.",
+        "financialAid": true
       },
       "registration": {
-        "opens": null,
+        "opens": "2026-04-01",
         "deadline": null,
-        "url": "https://springfield.edu/about/east-campus/camp-massasoit"
+        "url": "https://springfield.edu/east-campus/camp-massasoit/how-to-register"
       },
       "category": [
         "general",
@@ -536,11 +546,9 @@
       "description": "Developmentally appropriate programs balancing skill development and enjoyment. Theme of respect practiced throughout the day. Contact: (413) 748-4020.",
       "source": {
         "url": "https://springfield.edu/about/east-campus/camp-massasoit",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
-        "cost",
-        "dates",
         "hours"
       ]
     },
@@ -559,16 +567,17 @@
       },
       "dates": {
         "weeks": [
-          "2026-06-04",
-          "2026-06-11",
-          "2026-06-18",
-          "2026-06-25",
-          "2026-07-02",
-          "2026-07-09",
-          "2026-07-16",
-          "2026-07-23",
-          "2026-07-30",
-          "2026-08-06"
+          "2026-06-01",
+          "2026-06-08",
+          "2026-06-15",
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
         ],
         "sessionLength": "1 week",
         "hours": "7:30am-5:30pm",
@@ -576,7 +585,7 @@
       },
       "cost": {
         "perWeek": 55,
-        "notes": "Youth $55/week + $10 membership fee; Teens FREE + $10 membership",
+        "notes": "$55/week plus $10 one-time membership fee. Some units free. Scholarships available for families on free/reduced lunch.",
         "financialAid": true
       },
       "registration": {
@@ -590,7 +599,7 @@
       "description": "Affordable day camp at Henderson, Stalnaker, and Musgrave locations. Scholarships for free/reduced lunch families. Teen camp (13-17) is free.",
       "source": {
         "url": "https://www.bgclubspringfield.org/membership/summer-camp",
-        "lastVerified": "2026-03-06"
+        "lastVerified": "2026-05-05"
       },
       "waitlist": {
         "status": "unknown",
@@ -616,13 +625,13 @@
           "2026-07-06",
           "2026-07-27"
         ],
-        "sessionLength": "3-week sessions",
+        "sessionLength": "3 weeks",
         "hours": "8:30am-3pm",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Session 1 Jul 6-24 $660 (3 weeks), Session 2 Jul 27-Aug 14 $660 (3 weeks); sliding scale scholarships available",
+        "perWeek": 220,
+        "notes": "$660 per 3-week session. Free bus transportation and free meal program.",
         "financialAid": true
       },
       "registration": {
@@ -637,7 +646,7 @@
       "description": "Nonprofit arts-focused day camp since 1924. Emphasizes creativity, inclusivity, and self-esteem. Sessions: July 6-24 and July 27-Aug 13.",
       "source": {
         "url": "https://www.campkeewanee.com/",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -684,7 +693,7 @@
       "description": "Day camp for grades K-2. Activities include playground time, swimming, games, and arts & crafts. Daily lunch and morning snack provided.",
       "source": {
         "url": "https://www.greenfieldrecreation.com/camp.html",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -731,7 +740,7 @@
       "description": "Day camp for grades 3-6. Activities include playground time, swimming, games, and arts & crafts. Daily lunch and morning snack provided.",
       "source": {
         "url": "https://www.greenfieldrecreation.com/camp.html",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -754,7 +763,7 @@
       },
       "cost": {
         "perWeek": 260,
-        "notes": "$260 members, $305 non-members. $40 deposit per week at registration.",
+        "notes": "$260 members, $305 non-members. $40 deposit per week at registration. Free meals through Greenfield Summer Eats (except June 22-26 and Aug 17-21).",
         "financialAid": true
       },
       "registration": {
@@ -769,11 +778,9 @@
       "description": "Traditional day camp on 30+ acres. Activities include group games, songs, swimming, obstacle course, gaga ball, and arts & crafts.",
       "source": {
         "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "franklin-county-ymca-gymnastics-camp",
@@ -802,7 +809,9 @@
         "extendedCare": "7:00am-6:00pm (included free)"
       },
       "cost": {
-        "financialAid": true
+        "financialAid": true,
+        "perWeek": 260,
+        "notes": "$260 members, $305 non-members. $40 deposit per week at registration."
       },
       "registration": {
         "opens": null,
@@ -816,7 +825,7 @@
       "description": "Indoor camp for kids who love to flip, tumble, balance, and swing. Held at Main Street facility in Greenfield.",
       "source": {
         "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -838,8 +847,8 @@
         "extendedCare": "7:00am-6:00pm (included free)"
       },
       "cost": {
-        "perWeek": 165,
-        "notes": "$165 members, $210 non-members. Must be potty trained.",
+        "perWeek": 200,
+        "notes": "$200 members, $245 non-members. $40 deposit per week at registration. Must be potty trained.",
         "financialAid": true
       },
       "registration": {
@@ -853,11 +862,9 @@
       "description": "Half-day camp for preschoolers ages 3.5-5. Must be potty trained to attend.",
       "source": {
         "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "holyoke-ymca-summer-program",
@@ -969,12 +976,12 @@
           "2026-07-20"
         ],
         "sessionLength": "4-5 days",
-        "hours": "8:30am-3:00pm",
-        "extendedCare": "After-care 3:00pm-6:00pm available"
+        "hours": "9:00am-3:00pm",
+        "extendedCare": "Pre-care 8:30-9am, after-care 3:00-6:00pm"
       },
       "cost": {
         "perWeek": 475,
-        "notes": "$475-$595 depending on program. Robotics, coding, Minecraft, engineering courses available.",
+        "notes": "$475-$595 per week depending on program. Extended care (3-6pm) available.",
         "financialAid": null
       },
       "registration": {
@@ -989,7 +996,7 @@
       "description": "STEM camps at UMass featuring robotics, coding, Minecraft, and engineering. Courses for grades 2-8 with hands-on projects and outdoor activities.",
       "source": {
         "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": []
     },
@@ -1192,10 +1199,13 @@
           "2026-07-13",
           "2026-07-20",
           "2026-07-27"
-        ]
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early Bird from 7:45am"
       },
       "cost": {
-        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
+        "notes": "Tiered pricing (Tiers 1-3). Scholarships available. Contact school for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1209,11 +1219,9 @@
       "description": "Farm-based camp with animal chores (feeding goats, collecting eggs), farm crafts like wool work and cheese-making. Sprouts program for Pre-K to 1st grade.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "cost"
-      ]
+      "incomplete": []
     },
     {
       "id": "hartsbrook-creativity-camp",
@@ -1236,10 +1244,13 @@
           "2026-07-13",
           "2026-07-20",
           "2026-07-27"
-        ]
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early Bird from 7:45am"
       },
       "cost": {
-        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
+        "notes": "Tiered pricing (Tiers 1-3). Scholarships available. Contact school for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1252,11 +1263,9 @@
       "description": "Weekly themed artmaking with open-ended creative expression. Each week has unique themed focus with showcase for families at end.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "cost"
-      ]
+      "incomplete": []
     },
     {
       "id": "hartsbrook-fiddle-camp",
@@ -1274,10 +1283,13 @@
       "dates": {
         "weeks": [
           "2026-07-13"
-        ]
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early Bird from 7:45am"
       },
       "cost": {
-        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
+        "notes": "Tiered pricing (Tiers 1-3). Scholarships available. Contact school for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1291,11 +1303,9 @@
       "description": "Traditional fiddle instruction by ear from Ireland, Scotland, Louisiana, and Appalachia. Welcomes multiple string instruments.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "cost"
-      ]
+      "incomplete": []
     },
     {
       "id": "hartsbrook-cooking-camp",
@@ -1318,10 +1328,13 @@
           "2026-07-13",
           "2026-07-20",
           "2026-07-27"
-        ]
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:45am-3:00pm",
+        "extendedCare": "Early Bird from 7:45am"
       },
       "cost": {
-        "notes": "Tiered pricing — families select their own cost tier. Contact for rates."
+        "notes": "Tiered pricing (Tiers 1-3). Scholarships available. Contact school for rates."
       },
       "registration": {
         "opens": "2026-01-28",
@@ -1334,11 +1347,9 @@
       "description": "Children prepare simple, nourishing foods alongside crafts and writing projects.",
       "source": {
         "url": "https://www.hartsbrook.org/summer-programs/",
-        "lastVerified": "2026-01-12"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "cost"
-      ]
+      "incomplete": []
     },
     {
       "id": "roots-vacation-camps",
@@ -1443,8 +1454,8 @@
           "2026-07-20",
           "2026-08-03"
         ],
-        "sessionLength": "2-week sessions",
-        "hours": null,
+        "sessionLength": "2 weeks",
+        "hours": "9:00am-2:00pm",
         "extendedCare": null
       },
       "cost": {
@@ -1464,10 +1475,9 @@
       "description": "Fully inclusive summer camp serving children and young adults ages 3-22, with and without disabilities. Contact Anne Benoit at 413-562-5678.",
       "source": {
         "url": "https://www.bhninc.org/kamp-kids",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
-        "hours",
         "cost"
       ]
     },
@@ -1797,7 +1807,7 @@
       },
       "cost": {
         "perWeek": 280,
-        "notes": "Holiday week $220; extended care $30/week",
+        "notes": "$280/week (Early Adventures ages 5-6); $220 for July 4th week. Extended day (4-5pm) $30/week.",
         "financialAid": true
       },
       "registration": {
@@ -1811,7 +1821,7 @@
       "description": "Town-run day camp (Fun in the Sun) for younger kids. Activities include games, crafts, and outdoor play at Amherst Regional Middle School.",
       "source": {
         "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
         "dates"
@@ -1838,7 +1848,7 @@
       },
       "cost": {
         "perWeek": 250,
-        "notes": "Holiday week $210; extended care $30/week",
+        "notes": "$250/week (Epic Explorers ages 7-11); $210 for July 4th week. Extended day (4-5pm) $30/week.",
         "financialAid": true
       },
       "registration": {
@@ -1852,7 +1862,7 @@
       "description": "Town-run day camp (Fun in the Sun) for older kids. Activities include sports, games, crafts, outdoor play, and themed weeks at Amherst Regional Middle School.",
       "source": {
         "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
         "dates"
@@ -1872,14 +1882,23 @@
         "max": 13
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-24",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
         "sessionLength": "1 week",
         "hours": "9:00am-3:30pm",
-        "extendedCare": "Extended Day option 8:00am-4:00pm (additional fee)"
+        "extendedCare": "Extended day 8:00am-4:00pm ($235/week)"
       },
       "cost": {
-        "perWeek": null,
-        "notes": "$25 non-refundable deposit per week per child required when registering. Contact Easthampton Parks & Rec for 2026 pricing.",
+        "perWeek": 210,
+        "notes": "$210/week regular (9am-3:30pm); $235/week extended (8am-4pm). Week 1 pro-rated (3 days $125, 4 days $170). 10% discount for full 8-week payment.",
         "financialAid": true
       },
       "registration": {
@@ -1894,12 +1913,9 @@
       "description": "Weekly day camp at Nonotuck Park with Junior and Senior groups. Activities include outdoor play, games, crafts, and field trips.",
       "source": {
         "url": "https://www.easthamptonma.gov/509/Camp-Nonotuck",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "cost",
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "belchertown-rec-summer-days",
@@ -2395,7 +2411,7 @@
         ],
         "sessionLength": "2-week sessions",
         "hours": null,
-        "extendedCare": null
+        "extendedCare": "Morning and afternoon extended care available"
       },
       "cost": {
         "perWeek": null,
@@ -2414,11 +2430,9 @@
       "description": "Outdoor YMCA day camp on 155+ acres of woodlands in Westfield.",
       "source": {
         "url": "https://www.westfieldymca.org/camp-shepard/",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "montague-parks-rec-summer-camp",
@@ -2434,18 +2448,26 @@
         "max": 12
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": null,
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Registration typically opens in March for residents. Check site for 2026 details.",
+        "perWeek": 110,
+        "notes": "$110/week residents, $125/week non-residents. Family discounts available. Registration opened March 23 (residents), April 21 (non-residents).",
         "financialAid": null
       },
       "registration": {
-        "opens": "March 23, 2026 (residents), April 21, 2026 (non-residents)",
+        "opens": "2026-03-23",
         "deadline": null,
         "url": "https://montagueparksandrec.com/summer-camp-26/"
       },
@@ -2455,13 +2477,9 @@
       "description": "Town-run summer camp for elementary-age kids.",
       "source": {
         "url": "https://montagueparksandrec.com/summer-camp-26/",
-        "lastVerified": "2026-01-13"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "cost",
-        "dates",
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "montessori-school-northampton-summer",
@@ -2473,22 +2491,19 @@
         "region": "Hampshire"
       },
       "ages": {
-        "min": 2,
-        "max": 14
+        "min": 3,
+        "max": 12
       },
       "dates": {
         "weeks": [
           "2026-06-22",
           "2026-06-29",
           "2026-07-06",
-          "2026-07-13",
           "2026-07-20",
           "2026-07-27",
-          "2026-08-03",
-          "2026-08-10",
-          "2026-08-17"
+          "2026-08-10"
         ],
-        "sessionLength": "weekly",
+        "sessionLength": "1 week",
         "hours": null,
         "extendedCare": null
       },
@@ -2500,7 +2515,7 @@
       "registration": {
         "opens": "Rolling admission",
         "deadline": null,
-        "url": "https://northamptonmontessori.org/programs/"
+        "url": "https://msn.campintouch.com/ui/unrestricted/pricing/DatesAndRates"
       },
       "category": [
         "general",
@@ -2510,12 +2525,11 @@
       "description": "Montessori-inspired summer programs for ages 18 months to 14 years. Theme-based sessions include LEGO Engineering, art classes, camping & foraging. Toddler, Preschool, Elementary, and Middle School tracks available.",
       "source": {
         "url": "https://northamptonmontessori.org/programs/",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
         "cost",
-        "hours",
-        "weeks"
+        "hours"
       ]
     },
     {
@@ -2529,7 +2543,7 @@
       },
       "ages": {
         "min": 1,
-        "max": 5
+        "max": 6
       },
       "dates": {
         "weeks": [
@@ -2539,8 +2553,8 @@
           "2026-08-03",
           "2026-08-10"
         ],
-        "sessionLength": "5-week program",
-        "hours": "Until 1pm, 3:30pm, or 4:30pm",
+        "sessionLength": "5 weeks",
+        "hours": "Until 1:00pm, 3:30pm, or 4:30pm (flexible)",
         "extendedCare": null
       },
       "cost": {
@@ -2556,10 +2570,10 @@
       "category": [
         "general"
       ],
-      "description": "Five-week summer program for children 15 months to 5.9 years. Features outdoor time, daily water play, trips to the woods, and rest time after lunch. Flexible scheduling with minimum 3 days/week.",
+      "description": "Five-week summer program starting second week of July for children ages 15 months to 5.9 years. Outdoor play, water play, nature trips. Minimum 3 days/week enrollment.",
       "source": {
         "url": "https://www.cushmanscott.org/summer-program",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
         "cost",
@@ -3294,7 +3308,7 @@
       "organization": "Pioneer Valley Symphony",
       "location": {
         "town": "Greenfield",
-        "address": null,
+        "address": "Greenfield High School, 21 Barr Ave",
         "region": "Franklin"
       },
       "ages": {
@@ -3306,13 +3320,13 @@
           "2026-07-20",
           "2026-07-27"
         ],
-        "sessionLength": "weekly",
-        "hours": "9am-12:30pm (half day) or 9am-4pm (full day)",
+        "sessionLength": "1 week",
+        "hours": "9:00am-4:00pm",
         "extendedCare": null
       },
       "cost": {
         "perWeek": null,
-        "notes": "Sliding scale per half-day; full-day saves $50; financial aid through Mary Kay Hoffman Fund",
+        "notes": "Sliding scale. Free breakfast and lunch provided. Registration closes July 1, 2026.",
         "financialAid": true
       },
       "registration": {
@@ -3327,7 +3341,7 @@
       "description": "Week-long performing arts workshops in Greenfield with morning (9am-12pm) or full-day (9am-4pm) options. Afternoon adds supervised free play and unstructured arts and music activities. Sliding scale tuition with financial aid available.",
       "source": {
         "url": "https://www.pvsoc.org/summer",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
       "incomplete": [
         "ages",
@@ -3350,15 +3364,17 @@
       "dates": {
         "weeks": [
           "2026-07-06",
+          "2026-07-13",
+          "2026-07-27",
           "2026-08-10"
         ],
-        "sessionLength": "weekly",
+        "sessionLength": "1 week",
         "hours": "9am-12:30pm (ages 5-7), 9am-3pm (ages 10-14)",
         "extendedCare": null
       },
       "cost": {
         "perWeek": 475,
-        "notes": "Full day $475/week, half day $275/week; $100 deposit required",
+        "notes": "$275/week (half-day ages 5-7); $475/week (full-day programs). $100 deposit at registration.",
         "financialAid": null
       },
       "registration": {
@@ -3373,11 +3389,9 @@
       "description": "Immersive dance and arts summer camp at Keystone Mill in Easthampton. Themed weeks with creative crafts and Friday performances for ages 5-13. Professional sprung-floor dance studio facilities.",
       "source": {
         "url": "https://artinmotion413.com/summer/",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "weeks"
-      ]
+      "incomplete": []
     },
     {
       "id": "camp-lion-knoll",
@@ -3405,11 +3419,11 @@
         ],
         "sessionLength": "1 week",
         "hours": null,
-        "extendedCare": null
+        "extendedCare": "Before and after care available (email nhurlburt@thelearningknoll.org)"
       },
       "cost": {
         "perWeek": 250,
-        "notes": "$250/week. Early enrollment discount: $25/week off when registered with deposit in March or April.",
+        "notes": "$250/week. Early enrollment discount: $25/week off with deposit in March/April.",
         "financialAid": null
       },
       "registration": {
@@ -3424,11 +3438,9 @@
       "description": "Day camp on 40 acres of open fields and pine forests in Leyden. Activities include swimming, nature exploration, theatre, music, arts and crafts, and special events. Established 1958.",
       "source": {
         "url": "https://girlsclubofgreenfield.org/p/19/Camp-Lion-Knoll",
-        "lastVerified": "2026-03-20"
+        "lastVerified": "2026-05-05"
       },
-      "incomplete": [
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "ncmc-summer-programs",
@@ -4191,7 +4203,7 @@
       },
       "cost": {
         "perWeek": 200,
-        "notes": "$200–$230 per week depending on session",
+        "notes": "$200\u2013$230 per week depending on session",
         "financialAid": false
       },
       "registration": {

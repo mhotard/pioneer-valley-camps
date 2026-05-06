@@ -5,3 +5,7 @@ MONETIZATION_PLAYBOOK.md
 screenshots/
 admin.html
 serve.sh
+
+# Camp data archives (local only)
+cache/
+data/history/
