@@ -75,6 +75,26 @@ async function init() {
     }
 }
 
+// Date helpers (avoid new Date('YYYY-MM-DD') which parses as UTC)
+function parseISODate(str) {
+    const [y, m, d] = str.split('-').map(Number);
+    return new Date(y, m - 1, d);
+}
+
+function toISODate(date) {
+    const pad = n => String(n).padStart(2, '0');
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+}
+
+// Normalize any session start date to the Monday of its camp week.
+// Sunday starts (overnight camps) belong to the week beginning the next day.
+function mondayOfWeek(dateStr) {
+    const date = parseISODate(dateStr);
+    const day = date.getDay(); // 0 = Sunday
+    date.setDate(date.getDate() + (day === 0 ? 1 : 1 - day));
+    return toISODate(date);
+}
+
 function populateFilters() {
     // Populate towns from actual camp data
     const townsInData = new Set();
@@ -88,6 +108,22 @@ function populateFilters() {
         option.value = town;
         option.textContent = town;
         townSelect.appendChild(option);
+    });
+
+    // Populate weeks from actual camp data, normalized to Mondays
+    const weekMondays = new Set();
+    allCamps.forEach(camp => {
+        (camp.dates?.weeks || []).forEach(w => weekMondays.add(mondayOfWeek(w)));
+    });
+    const fmt = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    Array.from(weekMondays).sort().forEach(monday => {
+        const start = parseISODate(monday);
+        const end = new Date(start);
+        end.setDate(end.getDate() + 4);
+        const option = document.createElement('option');
+        option.value = monday;
+        option.textContent = `${fmt(start)}-${fmt(end)}`;
+        weekSelect.appendChild(option);
     });
 
     // Populate categories
@@ -159,6 +195,17 @@ function setupEventListeners() {
         if (btn) {
             const campId = btn.dataset.campId;
             const camp = allCamps.find(c => c.id === campId);
+            if (camp) {
+                openModal(camp);
+            }
+        }
+    });
+
+    // Delegate click events for table rows
+    document.getElementById('camps-table-body')?.addEventListener('click', (e) => {
+        const row = e.target.closest('tr[data-camp-id]');
+        if (row) {
+            const camp = allCamps.find(c => c.id === row.dataset.campId);
             if (camp) {
                 openModal(camp);
             }
@@ -251,10 +298,11 @@ function applyFilters() {
             return false;
         }
 
-        // Week filter - camp must have the selected week available
+        // Week filter - camp must have a session during the selected week
+        // (compare by Monday-of-week so Sunday/Tuesday starts still match)
         if (selectedWeek) {
             const campWeeks = camp.dates?.weeks || [];
-            if (!campWeeks.includes(selectedWeek)) {
+            if (!campWeeks.some(w => mondayOfWeek(w) === selectedWeek)) {
                 return false;
             }
         }
@@ -315,28 +363,27 @@ function renderCamps() {
     // Update count
     resultsCount.textContent = `${filteredCamps.length} camp${filteredCamps.length !== 1 ? 's' : ''} found`;
 
+    document.body.className = currentView === 'list' ? 'view-table' : 'view-grid';
+
+    const tableBody = document.getElementById('camps-table-body');
+
     // Show/hide no results
     if (filteredCamps.length === 0) {
         campsGrid.innerHTML = '';
+        if (tableBody) tableBody.innerHTML = '';
         noResults.style.display = 'block';
         return;
     }
 
     noResults.style.display = 'none';
 
-    // Render camp cards
-    document.body.className = currentView === 'list' ? 'view-table' : 'view-grid';
-
     // Sort before rendering
     sortCamps();
 
     if (currentView === 'grid') {
         campsGrid.innerHTML = filteredCamps.map(camp => createCampCard(camp)).join('');
-    } else {
-        const tableBody = document.getElementById('camps-table-body');
-        if (tableBody) {
-            tableBody.innerHTML = filteredCamps.map(camp => createCampRow(camp)).join('');
-        }
+    } else if (tableBody) {
+        tableBody.innerHTML = filteredCamps.map(camp => createCampRow(camp)).join('');
     }
 }
 
@@ -353,7 +400,7 @@ function createCampRow(camp) {
     const weekCount = camp.dates?.weeks?.length || 0;
 
     return `
-        <tr onclick="openModalById('${camp.id}')">
+        <tr data-camp-id="${camp.id}">
             <td><strong>${escapeHtml(camp.name)}</strong><br><span style="font-size: 0.85em; color: var(--text-secondary);">${escapeHtml(camp.organization)}</span></td>
             <td>${cost}</td>
             <td>${ageRange}</td>
@@ -362,12 +409,6 @@ function createCampRow(camp) {
         </tr>
     `;
 }
-
-// Helper to open modal by ID (needed for row click)
-window.openModalById = function (campId) {
-    const camp = allCamps.find(c => c.id === campId);
-    if (camp) openModal(camp);
-};
 
 function sortCamps() {
     filteredCamps.sort((a, b) => {
@@ -521,9 +562,11 @@ function createModalContent(camp) {
     let datesHtml = '';
     if (camp.dates?.weeks?.length > 0) {
         const weeks = camp.dates.weeks.map(w => {
-            const start = new Date(w + 'T00:00:00');
+            const start = parseISODate(w);
             const end = new Date(start);
-            end.setDate(end.getDate() + 4); // Mon-Fri
+            // Sunday starts run Sun-Sat (overnight camps); weekday starts run through Friday
+            const day = start.getDay();
+            end.setDate(end.getDate() + (day === 0 ? 6 : Math.max(5 - day, 0)));
             const startStr = start.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             const endStr = end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             return `${startStr} - ${endStr}`;
@@ -554,8 +597,9 @@ function createModalContent(camp) {
         locationHtml += ` - ${camp.location.address}`;
     }
 
-    // Source link
-    const sourceUrl = camp.registration?.url || camp.source?.url || '#';
+    // Source link (only allow http/https, escape for the href attribute)
+    const rawUrl = camp.registration?.url || camp.source?.url || '';
+    const sourceUrl = /^https?:\/\//i.test(rawUrl) ? rawUrl.replace(/"/g, '&quot;') : '#';
 
     // Incomplete data warning
     const incompleteHtml = camp.incomplete?.length > 0
@@ -641,8 +685,7 @@ function formatDate(dateStr) {
     if (!dateStr) return '';
     // If it looks like YYYY-MM-DD, format it nicely
     if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
-        const d = new Date(dateStr + 'T00:00:00');
-        return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        return parseISODate(dateStr).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
     }
     // Otherwise return as-is (supports "February 2026", "Early January", etc.)
     return dateStr;

@@ -118,7 +118,7 @@
         ],
         "sessionLength": "2-week sessions",
         "extendedCare": null,
-        "hours": "Contact Parks & Rec for hours"
+        "hours": null
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -170,7 +170,7 @@
           "2026-08-03"
         ],
         "sessionLength": "weekly",
-        "hours": "Contact Parks & Rec for hours"
+        "hours": null
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -222,7 +222,7 @@
           "2026-08-03"
         ],
         "sessionLength": "weekly",
-        "hours": "Contact Parks & Rec for hours"
+        "hours": null
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -274,7 +274,7 @@
           "2026-08-03"
         ],
         "sessionLength": "weekly",
-        "hours": "Contact Parks & Rec for hours"
+        "hours": null
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -3947,8 +3947,7 @@
         "lastVerified": "2026-03-20"
       },
       "incomplete": [
-        "cost",
-        "registration"
+        "cost"
       ]
     },
     {
@@ -4203,7 +4202,7 @@
       },
       "cost": {
         "perWeek": 200,
-        "notes": "$200\u2013$230 per week depending on session",
+        "notes": "$200–$230 per week depending on session",
         "financialAid": false
       },
       "registration": {

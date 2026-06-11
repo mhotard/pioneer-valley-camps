@@ -9,7 +9,6 @@ import argparse
 import collections
 import datetime
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -18,15 +17,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def load(name):
     return json.loads((ROOT / "data" / name).read_text())
-
-
-def dropdown_weeks():
-    """Week values offered by the week filter in index.html."""
-    html = (ROOT / "index.html").read_text()
-    m = re.search(r'id="week-select".*?</select>', html, re.DOTALL)
-    if not m:
-        return set()
-    return set(re.findall(r'value="(\d{4}-\d{2}-\d{2})"', m.group(0)))
 
 
 def main():
@@ -70,24 +60,19 @@ def main():
             if cat not in valid_cats:
                 errors.append(f"{c['id']}: unknown category '{cat}'")
 
-    # Weeks: must be Mondays and findable via the week filter
-    in_dropdown = dropdown_weeks()
-    invisible = []
+    # Weeks: parseable dates inside camp season (the site normalizes
+    # any start day to Monday-of-week, so non-Monday starts are fine)
+    season_year = int(data.get("lastUpdated", str(today))[:4])
     for c in camps:
-        weeks = (c.get("dates") or {}).get("weeks") or []
-        for w in weeks:
+        for w in (c.get("dates") or {}).get("weeks") or []:
             try:
                 d = datetime.date.fromisoformat(w)
             except ValueError:
                 errors.append(f"{c['id']}: bad week date '{w}'")
                 continue
-            if d.weekday() != 0:
-                warnings.append(f"{c['id']}: week {w} is a {d.strftime('%A')}, not a Monday")
-        if weeks and in_dropdown and not any(w in in_dropdown for w in weeks):
-            invisible.append(c["id"])
-    for cid in invisible:
-        warnings.append(f"{cid}: has session weeks but NONE match the week-filter dropdown "
-                        f"(camp is invisible when filtering by week)")
+            if d.year != season_year or not 5 <= d.month <= 9:
+                warnings.append(f"{c['id']}: week {w} falls outside the May-Sep {season_year} "
+                                f"camp season (typo?)")
 
     # incomplete[] consistency
     present_checks = {
