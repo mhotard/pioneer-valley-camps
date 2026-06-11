@@ -1,0 +1,61 @@
+name: Monthly source check
+
+on:
+  schedule:
+    - cron: "0 11 1 * *" # 1st of each month, 11:00 UTC (~6am Eastern)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore previous snapshots
+        run: |
+          if git fetch origin snapshots 2>/dev/null; then
+            git checkout FETCH_HEAD -- cache/
+            git restore --staged cache/
+            echo "Restored $(ls cache | wc -l) snapshot date(s)"
+          else
+            echo "No snapshots branch yet; this run establishes the baseline"
+          fi
+
+      - name: Check camp source pages for changes
+        run: python3 scripts/check_sources.py | tee result.txt
+
+      - name: Open issue if pages changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q '^CHANGED' result.txt; then
+            {
+              echo "The monthly source check found camp pages that changed since the last snapshot:"
+              echo
+              echo '```'
+              grep '^CHANGED' result.txt
+              echo '```'
+              echo
+              echo "Run \`/camps-update\` and re-verify these camps. Fetched copies are archived on the \`snapshots\` branch."
+            } > issue-body.md
+            gh issue create \
+              --title "Camp source pages changed - $(date -u '+%B %Y')" \
+              --body-file issue-body.md
+          else
+            echo "No changes detected; not opening an issue"
+          fi
+
+      - name: Save snapshots to snapshots branch
+        run: |
+          # keep only the three most recent snapshot dates
+          ls -d cache/*/ | sort | head -n -3 | xargs -r rm -rf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan snapshots-tmp
+          git add -f cache
+          git commit -m "Source snapshots $(date -u +%F)"
+          git push -f origin HEAD:snapshots

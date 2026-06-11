@@ -60,6 +60,11 @@ Use `/camps-update` to research and add new camps automatically.
 - Hosted on GitHub Pages
 - Push to `main` branch to deploy
 - Live at: https://mhotard.github.io/pioneer-valley-camps
+- GitHub Actions: `validate.yml` runs check_data.py on every push; `check-sources.yml` runs check_sources.py on the 1st of each month and opens an issue listing camps whose pages changed (snapshots kept on the `snapshots` branch)
+
+## Shareable URLs
+
+Filter state is encoded in query params (`?town=Amherst&cost=400&aid=1`; keys: q, agemin, agemax, town, category, cost, week, early, aid, late). Opening a camp's modal sets `#camp-id`, so links to individual camps work too.
 
 ## Suggestion Form
 

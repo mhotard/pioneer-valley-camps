@@ -38,6 +38,46 @@ const modalBody = document.getElementById('modal-body');
 const modalClose = document.querySelector('.modal-close');
 const modalBackdrop = document.querySelector('.modal-backdrop');
 
+// URL <-> filter state, so searches are bookmarkable and shareable
+const FILTER_PARAMS = [
+    ['q', searchInput, 'value'],
+    ['agemin', ageMinSelect, 'value'],
+    ['agemax', ageMaxSelect, 'value'],
+    ['town', townSelect, 'value'],
+    ['category', categorySelect, 'value'],
+    ['cost', costMaxSelect, 'value'],
+    ['week', weekSelect, 'value'],
+    ['early', earlyDropoffCheckbox, 'checked'],
+    ['aid', financialAidCheckbox, 'checked'],
+    ['late', latePickupCheckbox, 'checked']
+];
+
+function updateURL() {
+    const params = new URLSearchParams();
+    for (const [key, el, prop] of FILTER_PARAMS) {
+        const val = el[prop];
+        if (val === true) {
+            params.set(key, '1');
+        } else if (typeof val === 'string' && val.trim()) {
+            params.set(key, val.trim());
+        }
+    }
+    const query = params.toString();
+    history.replaceState(null, '', location.pathname + (query ? '?' + query : '') + location.hash);
+}
+
+function applyFiltersFromURL() {
+    const params = new URLSearchParams(location.search);
+    for (const [key, el, prop] of FILTER_PARAMS) {
+        if (!params.has(key)) continue;
+        if (prop === 'checked') {
+            el.checked = params.get(key) === '1';
+        } else {
+            el.value = params.get(key);
+        }
+    }
+}
+
 // Initialize
 async function init() {
     try {
@@ -60,7 +100,8 @@ async function init() {
         // Populate filter dropdowns
         populateFilters();
 
-        // Initial render
+        // Restore any filters encoded in the URL, then render
+        applyFiltersFromURL();
         applyFilters();
 
         // Hide loading
@@ -68,6 +109,12 @@ async function init() {
 
         // Set up event listeners
         setupEventListeners();
+
+        // Deep link: #camp-id opens that camp's modal
+        const linkedCamp = allCamps.find(c => c.id === location.hash.slice(1));
+        if (linkedCamp) {
+            openModal(linkedCamp);
+        }
 
     } catch (error) {
         console.error('Failed to load data:', error);
@@ -325,6 +372,7 @@ function applyFilters() {
         return true;
     });
 
+    updateURL();
     renderCamps();
 }
 
@@ -514,11 +562,15 @@ function openModal(camp) {
     modalBody.innerHTML = html;
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    history.replaceState(null, '', location.pathname + location.search + '#' + camp.id);
 }
 
 function closeModal() {
     modal.style.display = 'none';
     document.body.style.overflow = '';
+    if (location.hash) {
+        history.replaceState(null, '', location.pathname + location.search);
+    }
 }
 
 function createModalContent(camp) {

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#2563eb"/>
+  <rect width="1200" height="220" y="410" fill="#1d4ed8"/>
+  <circle cx="1020" cy="140" r="70" fill="#fbbf24"/>
+  <g stroke="#fbbf24" stroke-width="14" stroke-linecap="round">
+    <line x1="1020" y1="30" x2="1020" y2="55"/>
+    <line x1="1020" y1="225" x2="1020" y2="250"/>
+    <line x1="910" y1="140" x2="935" y2="140"/>
+    <line x1="1105" y1="140" x2="1130" y2="140"/>
+    <line x1="942" y1="62" x2="960" y2="80"/>
+    <line x1="1080" y1="200" x2="1098" y2="218"/>
+    <line x1="1098" y1="62" x2="1080" y2="80"/>
+    <line x1="960" y1="200" x2="942" y2="218"/>
+  </g>
+  <text x="80" y="280" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="bold" fill="#ffffff">Pioneer Valley</text>
+  <text x="80" y="370" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="bold" fill="#ffffff">Kids Camps</text>
+  <text x="80" y="490" font-family="Helvetica, Arial, sans-serif" font-size="38" fill="#dbeafe">Searchable directory of summer camps</text>
+  <text x="80" y="545" font-family="Helvetica, Arial, sans-serif" font-size="38" fill="#dbeafe">within 45 minutes of Amherst, MA</text>
+</svg>
