@@ -767,3 +767,72 @@ footer a {
         flex-direction: column;
     }
 }
+/* ----- Summer Planner: star buttons ----- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.star-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: color 0.15s, transform 0.15s;
+}
+
+.star-btn:hover {
+    color: var(--warning-color);
+    transform: scale(1.15);
+}
+
+.star-btn.starred {
+    color: var(--warning-color);
+}
+
+.camp-card-header {
+    position: relative;
+}
+
+.camp-card-header .star-btn {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+}
+
+.camp-card-header h3 {
+    padding-right: 2rem;
+}
+
+.camps-table .star-col {
+    width: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0;
+    cursor: default;
+}
+
+.camps-table th.star-col:hover {
+    background: var(--background);
+}
+
+.modal-header {
+    position: relative;
+}
+
+.modal-header .star-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+}

@@ -97,6 +97,9 @@ async function init() {
             lastUpdated.textContent = campsData.lastUpdated;
         }
 
+        // Restore saved planner state (stars + assignments)
+        loadPlannerState();
+
         // Populate filter dropdowns
         populateFilters();
 
@@ -109,6 +112,7 @@ async function init() {
 
         // Set up event listeners
         setupEventListeners();
+        updatePlannerChip();
 
         // Deep link: #camp-id opens that camp's modal
         const linkedCamp = allCamps.find(c => c.id === location.hash.slice(1));
@@ -140,6 +144,91 @@ function mondayOfWeek(dateStr) {
     const day = date.getDay(); // 0 = Sunday
     date.setDate(date.getDate() + (day === 0 ? 1 : 1 - day));
     return toISODate(date);
+}
+
+// ----- Summer Planner state (starred camps + week assignments) -----
+// All reads/writes go through loadPlannerState/savePlannerState so the
+// storage backend can be swapped later without touching render logic.
+const PLANNER_KEY = 'pvcamps-planner-v1';
+let plannerState = { starred: [], assignments: {} };
+
+function campRunsWeek(campId, weekMonday) {
+    const camp = allCamps.find(c => c.id === campId);
+    return !!camp && (camp.dates?.weeks || []).some(w => mondayOfWeek(w) === weekMonday);
+}
+
+function loadPlannerState() {
+    try {
+        const raw = JSON.parse(localStorage.getItem(PLANNER_KEY));
+        if (!raw || !Array.isArray(raw.starred)) return;
+        const validIds = new Set(allCamps.map(c => c.id));
+        plannerState.starred = raw.starred.filter(id => validIds.has(id));
+        plannerState.assignments = {};
+        for (const [week, ids] of Object.entries(raw.assignments || {})) {
+            const camps = (Array.isArray(ids) ? ids : [ids]).filter(id =>
+                plannerState.starred.includes(id) && campRunsWeek(id, week));
+            if (camps.length > 0) {
+                plannerState.assignments[week] = camps;
+            }
+        }
+    } catch (e) {
+        plannerState = { starred: [], assignments: {} };
+    }
+}
+
+function savePlannerState() {
+    plannerState.updated = new Date().toISOString();
+    try {
+        localStorage.setItem(PLANNER_KEY, JSON.stringify(plannerState));
+    } catch (e) {
+        // Private browsing or full storage: planner still works for the session
+    }
+}
+
+function isStarred(campId) {
+    return plannerState.starred.includes(campId);
+}
+
+function toggleStar(campId) {
+    if (isStarred(campId)) {
+        plannerState.starred = plannerState.starred.filter(id => id !== campId);
+        for (const [week, ids] of Object.entries(plannerState.assignments)) {
+            const rest = ids.filter(id => id !== campId);
+            if (rest.length > 0) {
+                plannerState.assignments[week] = rest;
+            } else {
+                delete plannerState.assignments[week];
+            }
+        }
+    } else {
+        plannerState.starred.push(campId);
+    }
+    savePlannerState();
+    refreshStarButtons(campId);
+    updatePlannerChip();
+}
+
+// Sync every star button for this camp without a full re-render
+function refreshStarButtons(campId) {
+    const starred = isStarred(campId);
+    document.querySelectorAll(`.star-btn[data-star-id="${campId}"]`).forEach(btn => {
+        btn.setAttribute('aria-pressed', String(starred));
+        btn.classList.toggle('starred', starred);
+    });
+}
+
+function updatePlannerChip() {
+    const chip = document.getElementById('planner-count');
+    if (!chip) return;
+    const count = plannerState.starred.length;
+    chip.textContent = count > 0 ? count : '';
+    chip.style.display = count > 0 ? '' : 'none';
+}
+
+function createStarButton(camp) {
+    const starred = isStarred(camp.id);
+    return `<button class="star-btn${starred ? ' starred' : ''}" data-star-id="${camp.id}"
+        aria-pressed="${starred}" aria-label="Save to Summer Planner" title="Save to Summer Planner">★</button>`;
 }
 
 function populateFilters() {
@@ -236,8 +325,13 @@ function setupEventListeners() {
         th.addEventListener('click', () => handleSort(th.dataset.sort));
     });
 
-    // Delegate click events for camp cards
+    // Delegate click events for camp cards (star first, so it never opens the modal)
     campsGrid.addEventListener('click', (e) => {
+        const star = e.target.closest('.star-btn');
+        if (star) {
+            toggleStar(star.dataset.starId);
+            return;
+        }
         const btn = e.target.closest('.camp-title-btn');
         if (btn) {
             const campId = btn.dataset.campId;
@@ -250,12 +344,25 @@ function setupEventListeners() {
 
     // Delegate click events for table rows
     document.getElementById('camps-table-body')?.addEventListener('click', (e) => {
+        const star = e.target.closest('.star-btn');
+        if (star) {
+            toggleStar(star.dataset.starId);
+            return;
+        }
         const row = e.target.closest('tr[data-camp-id]');
         if (row) {
             const camp = allCamps.find(c => c.id === row.dataset.campId);
             if (camp) {
                 openModal(camp);
             }
+        }
+    });
+
+    // Star button inside the modal header
+    modalBody.addEventListener('click', (e) => {
+        const star = e.target.closest('.star-btn');
+        if (star) {
+            toggleStar(star.dataset.starId);
         }
     });
 }
@@ -449,6 +556,7 @@ function createCampRow(camp) {
 
     return `
         <tr data-camp-id="${camp.id}">
+            <td class="star-col">${createStarButton(camp)}</td>
             <td><strong>${escapeHtml(camp.name)}</strong><br><span style="font-size: 0.85em; color: var(--text-secondary);">${escapeHtml(camp.organization)}</span></td>
             <td>${cost}</td>
             <td>${ageRange}</td>
@@ -538,6 +646,7 @@ function createCampCard(camp) {
     return `
         <article class="camp-card">
             <div class="camp-card-header">
+                ${createStarButton(camp)}
                 <h3><button class="camp-title-btn" data-camp-id="${camp.id}">${escapeHtml(camp.name)}</button></h3>
                 ${camp.organization ? `<p class="camp-organization">${escapeHtml(camp.organization)}</p>` : ''}
             </div>
@@ -660,6 +769,7 @@ function createModalContent(camp) {
 
     return `
         <div class="modal-header">
+            ${createStarButton(camp)}
             <h2>${escapeHtml(camp.name)}</h2>
             ${camp.organization ? `<p class="organization">${escapeHtml(camp.organization)}</p>` : ''}
         </div>
