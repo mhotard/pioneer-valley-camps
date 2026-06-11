@@ -14,6 +14,7 @@ let currentSort = { column: 'name', direction: 'asc' };
 const searchInput = document.getElementById('search-input');
 const viewGridBtn = document.getElementById('view-grid');
 const viewListBtn = document.getElementById('view-list');
+const viewPlannerBtn = document.getElementById('view-planner');
 const ageMinSelect = document.getElementById('age-min');
 const ageMaxSelect = document.getElementById('age-max');
 const townSelect = document.getElementById('town-select');
@@ -146,6 +147,19 @@ function mondayOfWeek(dateStr) {
     return toISODate(date);
 }
 
+// Every camp week in the data, as sorted Monday dates
+function allSummerWeeks() {
+    const weeks = new Set();
+    allCamps.forEach(camp => {
+        (camp.dates?.weeks || []).forEach(w => weeks.add(mondayOfWeek(w)));
+    });
+    return Array.from(weeks).sort();
+}
+
+function formatWeekShort(monday) {
+    return parseISODate(monday).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
 // ----- Summer Planner state (starred camps + week assignments) -----
 // All reads/writes go through loadPlannerState/savePlannerState so the
 // storage backend can be swapped later without touching render logic.
@@ -247,18 +261,12 @@ function populateFilters() {
     });
 
     // Populate weeks from actual camp data, normalized to Mondays
-    const weekMondays = new Set();
-    allCamps.forEach(camp => {
-        (camp.dates?.weeks || []).forEach(w => weekMondays.add(mondayOfWeek(w)));
-    });
-    const fmt = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    Array.from(weekMondays).sort().forEach(monday => {
-        const start = parseISODate(monday);
-        const end = new Date(start);
+    allSummerWeeks().forEach(monday => {
+        const end = parseISODate(monday);
         end.setDate(end.getDate() + 4);
         const option = document.createElement('option');
         option.value = monday;
-        option.textContent = `${fmt(start)}-${fmt(end)}`;
+        option.textContent = `${formatWeekShort(monday)}-${end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
         weekSelect.appendChild(option);
     });
 
@@ -319,6 +327,41 @@ function setupEventListeners() {
     // View toggle
     viewGridBtn?.addEventListener('click', () => setView('grid'));
     viewListBtn?.addEventListener('click', () => setView('list'));
+    viewPlannerBtn?.addEventListener('click', () => setView('planner'));
+
+    // Planner interactions (assignment cells, unstar, camp links, actions)
+    document.getElementById('planner-body')?.addEventListener('click', (e) => {
+        const cell = e.target.closest('.cell-btn');
+        if (cell) {
+            toggleAssignment(cell.dataset.week, cell.dataset.camp);
+            return;
+        }
+        const unstar = e.target.closest('.unstar-btn');
+        if (unstar) {
+            toggleStar(unstar.dataset.starId);
+            renderPlanner();
+            return;
+        }
+        const title = e.target.closest('.camp-title-btn');
+        if (title) {
+            const camp = allCamps.find(c => c.id === title.dataset.campId);
+            if (camp) {
+                openModal(camp);
+            }
+            return;
+        }
+        if (e.target.closest('#planner-browse')) {
+            setView('grid');
+            return;
+        }
+        if (e.target.closest('#clear-plan')) {
+            if (confirm('Clear all week assignments? Saved camps stay saved.')) {
+                plannerState.assignments = {};
+                savePlannerState();
+                renderPlanner();
+            }
+        }
+    });
 
     // Table sort headers
     document.querySelectorAll('th.sortable').forEach(th => {
@@ -501,20 +544,20 @@ function setView(view) {
     if (currentView === view) return;
     currentView = view;
 
-    // Update buttons
-    if (view === 'grid') {
-        viewGridBtn.classList.add('active');
-        viewListBtn.classList.remove('active');
-    } else {
-        viewGridBtn.classList.remove('active');
-        viewListBtn.classList.add('active');
-    }
+    viewGridBtn.classList.toggle('active', view === 'grid');
+    viewListBtn.classList.toggle('active', view === 'list');
+    viewPlannerBtn?.classList.toggle('active', view === 'planner');
 
-    // Re-render
     renderCamps();
 }
 
 function renderCamps() {
+    if (currentView === 'planner') {
+        document.body.className = 'view-planner';
+        renderPlanner();
+        return;
+    }
+
     // Update count
     resultsCount.textContent = `${filteredCamps.length} camp${filteredCamps.length !== 1 ? 's' : ''} found`;
 
@@ -664,6 +707,167 @@ function createCampCard(camp) {
             </div>
         </article>
     `;
+}
+
+// ----- Summer Planner view -----
+
+function toggleAssignment(week, campId) {
+    const ids = plannerState.assignments[week] || [];
+    const next = ids.includes(campId)
+        ? ids.filter(id => id !== campId)
+        : [...ids, campId];
+    if (next.length > 0) {
+        plannerState.assignments[week] = next;
+    } else {
+        delete plannerState.assignments[week];
+    }
+    savePlannerState();
+    renderPlanner();
+}
+
+function renderPlanner() {
+    const container = document.getElementById('planner-body');
+    if (!container) return;
+
+    const starredCamps = plannerState.starred
+        .map(id => allCamps.find(c => c.id === id))
+        .filter(Boolean)
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+    if (starredCamps.length === 0) {
+        container.innerHTML = `
+            <div class="planner-empty">
+                <h2>Plan your summer</h2>
+                <p>Star camps while browsing (the ★ on any camp) and they show up here in a
+                week-by-week grid, so you can see which weeks are covered and what the
+                summer will cost.</p>
+                <button id="planner-browse" class="btn-primary">Browse camps</button>
+            </div>`;
+        return;
+    }
+
+    const weeks = allSummerWeeks();
+    const withDates = starredCamps.filter(c => c.dates?.weeks?.length > 0);
+    const noDates = starredCamps.filter(c => !(c.dates?.weeks?.length > 0));
+
+    let html = plannerSummaryHtml(weeks);
+    if (withDates.length > 0) {
+        html += plannerGridHtml(withDates, weeks);
+    } else {
+        html += `<p class="planner-note">None of your saved camps have published 2026 session
+            dates yet. Open each camp below for its website link.</p>`;
+    }
+    if (noDates.length > 0) {
+        html += plannerNoDatesHtml(noDates);
+    }
+    html += `
+        <div class="planner-actions">
+            <button id="clear-plan" class="btn-secondary">Clear plan</button>
+        </div>`;
+    container.innerHTML = html;
+}
+
+function plannerSummaryHtml(weeks) {
+    const cells = weeks.map(week => {
+        const names = (plannerState.assignments[week] || [])
+            .map(id => allCamps.find(c => c.id === id)?.name)
+            .filter(Boolean);
+        let label = '<span class="summary-none">&mdash;</span>';
+        if (names.length > 2) {
+            label = `<span class="summary-camp">${names.length} camps</span>`;
+        } else if (names.length > 0) {
+            label = names.map(n => `<span class="summary-camp">${escapeHtml(n)}</span>`).join('');
+        }
+        return `
+            <div class="summary-week${names.length > 0 ? ' covered' : ''}">
+                <div class="summary-date">${formatWeekShort(week)}</div>
+                ${label}
+            </div>`;
+    }).join('');
+
+    const covered = weeks.filter(w => (plannerState.assignments[w] || []).length > 0).length;
+    let cost = 0;
+    let tbd = 0;
+    Object.values(plannerState.assignments).forEach(ids => ids.forEach(id => {
+        const camp = allCamps.find(c => c.id === id);
+        if (camp?.cost?.perWeek) {
+            cost += camp.cost.perWeek;
+        } else {
+            tbd++;
+        }
+    }));
+    let costText = `Estimated cost: $${cost.toLocaleString()}`;
+    if (tbd > 0) {
+        costText += ` plus ${tbd} camp week${tbd !== 1 ? 's' : ''} TBD`;
+    }
+
+    return `
+        <div class="planner-summary" aria-live="polite">
+            <div class="summary-strip">${cells}</div>
+            <p class="summary-totals"><strong>${covered} of ${weeks.length} weeks covered.</strong> ${costText}.</p>
+        </div>`;
+}
+
+function plannerGridHtml(camps, weeks) {
+    const head = `<tr>
+        <th scope="col" class="planner-camp-col">Camp</th>
+        ${weeks.map(w => `<th scope="col">${formatWeekShort(w)}</th>`).join('')}
+    </tr>`;
+
+    const rows = camps.map(camp => {
+        const campWeeks = new Set((camp.dates?.weeks || []).map(w => mondayOfWeek(w)));
+        const cells = weeks.map(week => {
+            if (!campWeeks.has(week)) {
+                return '<td class="cell-na"></td>';
+            }
+            const assigned = (plannerState.assignments[week] || []).includes(camp.id);
+            return `
+                <td class="${assigned ? 'cell-assigned' : 'cell-avail'}">
+                    <button class="cell-btn" data-week="${week}" data-camp="${camp.id}"
+                        aria-pressed="${assigned}"
+                        aria-label="${assigned ? 'Remove' : 'Add'} ${escapeAttr(camp.name)}, week of ${formatWeekShort(week)}">${assigned ? '&check;' : '+'}</button>
+                </td>`;
+        }).join('');
+
+        const meta = [
+            camp.location?.town,
+            camp.cost?.perWeek ? `$${camp.cost.perWeek}/wk` : 'Cost TBD',
+            camp.dates?.sessionLength
+        ].filter(Boolean).map(v => escapeHtml(String(v))).join(' &middot; ');
+
+        return `<tr>
+            <th scope="row" class="planner-camp-col">
+                <button class="camp-title-btn" data-camp-id="${camp.id}">${escapeHtml(camp.name)}</button>
+                <span class="planner-camp-meta">${meta}</span>
+                <button class="unstar-btn" data-star-id="${camp.id}">Remove</button>
+            </th>
+            ${cells}
+        </tr>`;
+    }).join('');
+
+    return `
+        <div class="planner-grid-wrap">
+            <table class="planner-grid">
+                <thead>${head}</thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>`;
+}
+
+function plannerNoDatesHtml(camps) {
+    const items = camps.map(camp => `
+        <li>
+            <button class="camp-title-btn" data-camp-id="${camp.id}">${escapeHtml(camp.name)}</button>
+            <span class="planner-camp-meta">${escapeHtml(camp.location?.town || '')} &middot; Check website for 2026 dates</span>
+            <button class="unstar-btn" data-star-id="${camp.id}">Remove</button>
+        </li>`).join('');
+    return `
+        <div class="planner-no-dates">
+            <h3>Dates unknown</h3>
+            <p>These saved camps have not published week-by-week dates yet, so they can't be
+            placed on the grid. Verify dates on their websites.</p>
+            <ul>${items}</ul>
+        </div>`;
 }
 
 function openModal(camp) {
@@ -841,6 +1045,11 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// For interpolation inside double-quoted HTML attributes
+function escapeAttr(text) {
+    return escapeHtml(text).replace(/"/g, '&quot;');
 }
 
 function formatDate(dateStr) {

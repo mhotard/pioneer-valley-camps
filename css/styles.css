@@ -836,3 +836,266 @@ footer a {
     right: 0;
     font-size: 1.5rem;
 }
+
+/* ----- Summer Planner view ----- */
+.planner-section {
+    display: none;
+    margin: 1.5rem 0;
+}
+
+.view-planner .planner-section {
+    display: block;
+}
+
+.view-planner .results-section {
+    display: none;
+}
+
+.planner-count {
+    background: var(--warning-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0 0.35rem;
+    margin-left: 0.25rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.planner-empty {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+.planner-empty p {
+    max-width: 480px;
+    margin: 0.75rem auto 1.25rem;
+    color: var(--text-secondary);
+}
+
+.planner-summary {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-strip {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.summary-week {
+    flex: 1 0 90px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    text-align: center;
+    background: var(--background);
+}
+
+.summary-week.covered {
+    border-color: var(--success-color);
+    background: #f0fdf4;
+}
+
+.summary-date {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+}
+
+.summary-camp {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 110px;
+    margin: 0 auto;
+}
+
+.summary-none {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+.summary-totals {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.planner-grid-wrap {
+    overflow-x: auto;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.planner-grid {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.planner-grid th,
+.planner-grid td {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.4rem;
+    text-align: center;
+}
+
+.planner-grid thead th {
+    background: var(--background);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    padding: 0.6rem 0.4rem;
+}
+
+.planner-grid .planner-camp-col {
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+    text-align: left;
+    min-width: 180px;
+    max-width: 220px;
+    padding: 0.6rem 0.75rem;
+    z-index: 1;
+    box-shadow: 1px 0 0 var(--border-color);
+}
+
+.planner-grid thead .planner-camp-col {
+    background: var(--background);
+}
+
+.planner-grid .camp-title-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    text-align: left;
+}
+
+.planner-grid .camp-title-btn:hover {
+    color: var(--primary-color);
+}
+
+.planner-camp-meta {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.unstar-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.unstar-btn:hover {
+    color: #dc2626;
+}
+
+.cell-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 6px;
+    border: 1px dashed var(--border-color);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.cell-avail .cell-btn {
+    color: #cbd5e1;
+}
+
+.cell-avail .cell-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: #eff6ff;
+}
+
+.cell-assigned .cell-btn {
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+}
+
+.cell-na {
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, #f1f5f9 4px, #f1f5f9 8px);
+}
+
+.planner-no-dates {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.planner-no-dates h3 {
+    margin-bottom: 0.25rem;
+}
+
+.planner-no-dates > p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.planner-no-dates ul {
+    list-style: none;
+}
+
+.planner-no-dates li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    flex-wrap: wrap;
+}
+
+.planner-no-dates .camp-title-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.planner-no-dates .camp-title-btn:hover {
+    color: var(--primary-color);
+}
+
+.planner-note {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem 1.5rem;
+    color: var(--text-secondary);
+}
+
+.planner-actions {
+    margin-top: 1.5rem;
+}

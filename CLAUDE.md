@@ -62,6 +62,18 @@ Use `/camps-update` to research and add new camps automatically.
 - Live at: https://mhotard.github.io/pioneer-valley-camps
 - GitHub Actions: `validate.yml` runs check_data.py on every push; `check-sources.yml` runs check_sources.py on the 1st of each month and opens an issue listing camps whose pages changed (snapshots kept on the `snapshots` branch)
 
+## Summer Planner
+
+Third view toggle (calendar icon). Parents star camps (★ on cards, table rows,
+and the modal), then the planner shows starred camps in a weeks-by-camps grid.
+Clicking a cell assigns/unassigns that camp for that week (multiple camps per
+week allowed); a summary strip shows covered weeks and estimated cost, with
+camp weeks lacking a price counted as "TBD". Camps without `dates.weeks` data
+appear in a separate "Dates unknown" list. State persists in localStorage key
+`pvcamps-planner-v1` ({ starred: [ids], assignments: { weekMonday: [ids] } });
+all access goes through `loadPlannerState`/`savePlannerState` so the backend
+could be swapped later. Full design in PLANNER_SPEC.md (local, untracked).
+
 ## Shareable URLs
 
 Filter state is encoded in query params (`?town=Amherst&cost=400&aid=1`; keys: q, agemin, agemax, town, category, cost, week, early, aid, late). Opening a camp's modal sets `#camp-id`, so links to individual camps work too.
