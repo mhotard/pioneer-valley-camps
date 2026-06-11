@@ -1099,3 +1099,8 @@ footer a {
 .planner-actions {
     margin-top: 1.5rem;
 }
+
+.planner-actions {
+    display: flex;
+    gap: 0.75rem;
+}

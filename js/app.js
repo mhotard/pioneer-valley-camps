@@ -101,6 +101,10 @@ async function init() {
         // Restore saved planner state (stars + assignments)
         loadPlannerState();
 
+        // Capture a shared plan link before updateURL() strips the param
+        const planParam = new URLSearchParams(location.search).get('plan');
+        const planImported = planParam ? importPlanFromParam(planParam) : false;
+
         // Populate filter dropdowns
         populateFilters();
 
@@ -114,6 +118,11 @@ async function init() {
         // Set up event listeners
         setupEventListeners();
         updatePlannerChip();
+
+        // A shared plan lands directly on the planner view
+        if (planImported) {
+            setView('planner');
+        }
 
         // Deep link: #camp-id opens that camp's modal
         const linkedCamp = allCamps.find(c => c.id === location.hash.slice(1));
@@ -352,6 +361,21 @@ function setupEventListeners() {
         }
         if (e.target.closest('#planner-browse')) {
             setView('grid');
+            return;
+        }
+        if (e.target.closest('#copy-plan')) {
+            const link = buildPlanLink();
+            navigator.clipboard.writeText(link).then(() => {
+                const btn = document.getElementById('copy-plan');
+                if (btn) {
+                    btn.textContent = 'Link copied!';
+                    setTimeout(() => {
+                        if (btn.isConnected) btn.textContent = 'Copy plan link';
+                    }, 2000);
+                }
+            }).catch(() => {
+                prompt('Copy this link to share your plan:', link);
+            });
             return;
         }
         if (e.target.closest('#clear-plan')) {
@@ -711,6 +735,44 @@ function createCampCard(camp) {
 
 // ----- Summer Planner view -----
 
+// Share link format: ?plan=2026-06-22:camp-a,2026-06-29:camp-b (week repeats for multi-camp weeks)
+function buildPlanLink() {
+    const parts = [];
+    Object.keys(plannerState.assignments).sort().forEach(week => {
+        plannerState.assignments[week].forEach(id => parts.push(`${week}:${id}`));
+    });
+    return `${location.origin}${location.pathname}?plan=${parts.join(',')}`;
+}
+
+function importPlanFromParam(planParam) {
+    const imported = {};
+    const campIds = new Set();
+    planParam.split(',').forEach(entry => {
+        const [week, campId] = entry.split(':');
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(week || '') || !campId) return;
+        if (!campRunsWeek(campId, week)) return;
+        const ids = imported[week] = imported[week] || [];
+        if (!ids.includes(campId)) {
+            ids.push(campId);
+            campIds.add(campId);
+        }
+    });
+    if (Object.keys(imported).length === 0) return false;
+
+    const hasLocalPlan = Object.keys(plannerState.assignments).length > 0;
+    if (hasLocalPlan && !confirm('Replace your saved summer plan with this shared one?')) {
+        return false;
+    }
+    plannerState.assignments = imported;
+    campIds.forEach(id => {
+        if (!isStarred(id)) {
+            plannerState.starred.push(id);
+        }
+    });
+    savePlannerState();
+    return true;
+}
+
 function toggleAssignment(week, campId) {
     const ids = plannerState.assignments[week] || [];
     const next = ids.includes(campId)
@@ -760,8 +822,10 @@ function renderPlanner() {
     if (noDates.length > 0) {
         html += plannerNoDatesHtml(noDates);
     }
+    const hasPlan = Object.keys(plannerState.assignments).length > 0;
     html += `
         <div class="planner-actions">
+            ${hasPlan ? '<button id="copy-plan" class="btn-primary">Copy plan link</button>' : ''}
             <button id="clear-plan" class="btn-secondary">Clear plan</button>
         </div>`;
     container.innerHTML = html;
