@@ -51,6 +51,10 @@ The `registration.opens` field accepts flexible formats:
 ### Running the update skill
 Use `/camps-update` to research and add new camps automatically.
 
+### Cheap checks (run these before any LLM research)
+- `python3 scripts/check_data.py` validates camps.json (counts, categories, week dates vs the filter dropdown, incomplete[] consistency) and summarizes staleness and missing data. `--stale 60` lists camps not verified in 60+ days.
+- `python3 scripts/check_sources.py` fetches every camp's source URL, diffs visible text against the last snapshot in `cache/`, and prints which pages CHANGED. Only CHANGED camps need re-verification; SAME camps just get `lastVerified` bumped.
+
 ## Deployment
 
 - Hosted on GitHub Pages
