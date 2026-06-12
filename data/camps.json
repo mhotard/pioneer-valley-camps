@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-05",
+  "lastUpdated": "2026-06-11",
   "version": "1.0.0",
   "totalCamps": 93,
   "camps": [
@@ -1912,8 +1912,8 @@
       ],
       "description": "Weekly day camp at Nonotuck Park with Junior and Senior groups. Activities include outdoor play, games, crafts, and field trips.",
       "source": {
-        "url": "https://www.easthamptonma.gov/509/Camp-Nonotuck",
-        "lastVerified": "2026-05-05"
+        "url": "https://easthamptonma.gov/172/Camp-Nonotuck-Summer-Day-Camp",
+        "lastVerified": "2026-06-11"
       },
       "incomplete": []
     },
@@ -2012,39 +2012,41 @@
         "region": "Hampden"
       },
       "ages": {
-        "min": null,
-        "max": null
+        "min": 6,
+        "max": 13
       },
       "dates": {
-        "weeks": [],
-        "sessionLength": null,
-        "hours": null,
+        "weeks": [
+          "2026-07-01",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03"
+        ],
+        "sessionLength": "Full summer program (Jul 1 - Aug 7)",
+        "hours": "8:30am-3:00pm",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Summer 2026 details expected mid-April 2026.",
+        "perWeek": 0,
+        "notes": "Free for Springfield families. Children must turn 6 by July 1, 2026 and may not turn 14 during the program.",
         "financialAid": null
       },
       "registration": {
         "opens": null,
         "deadline": null,
-        "url": "https://www.springfield-ma.gov/park/after-school-program"
+        "url": "https://www.springfield-ma.gov/park/after-school"
       },
       "category": [
         "general"
       ],
-      "description": "City-run summer programming. Check Springfield Parks & Recreation for Summer 2026 release.",
+      "description": "Free city-run summer programs at four sites: Camp Star (all abilities), Kiley, Van Sickle, and Forest Park (ECOS). Academic enrichment, arts, fitness, and games, July 1 to August 7. Online registration required.",
       "source": {
-        "url": "https://www.springfield-ma.gov/park/after-school-program",
-        "lastVerified": "2026-01-13"
+        "url": "https://www.springfield-ma.gov/park/after-school",
+        "lastVerified": "2026-06-11"
       },
-      "incomplete": [
-        "ages",
-        "cost",
-        "dates",
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "west-springfield-rec-tiny-tots",
@@ -2469,15 +2471,15 @@
       "registration": {
         "opens": "2026-03-23",
         "deadline": null,
-        "url": "https://montagueparksandrec.com/summer-camp-26/"
+        "url": "https://montagueparksrec.com/p/1029/Summer-Camp"
       },
       "category": [
         "general"
       ],
       "description": "Town-run summer camp for elementary-age kids.",
       "source": {
-        "url": "https://montagueparksandrec.com/summer-camp-26/",
-        "lastVerified": "2026-05-05"
+        "url": "https://montagueparksrec.com/p/1029/Summer-Camp",
+        "lastVerified": "2026-06-11"
       },
       "incomplete": []
     },
@@ -3423,8 +3425,8 @@
       },
       "cost": {
         "perWeek": 250,
-        "notes": "$250/week. Early enrollment discount: $25/week off with deposit in March/April.",
-        "financialAid": null
+        "notes": "$250/week. Early enrollment discount: $25/week off with deposit in March/April. Financial aid forms available.",
+        "financialAid": true
       },
       "registration": {
         "opens": null,
@@ -3437,8 +3439,8 @@
       ],
       "description": "Day camp on 40 acres of open fields and pine forests in Leyden. Activities include swimming, nature exploration, theatre, music, arts and crafts, and special events. Established 1958.",
       "source": {
-        "url": "https://girlsclubofgreenfield.org/p/19/Camp-Lion-Knoll",
-        "lastVerified": "2026-05-05"
+        "url": "https://thelearningknoll.org/p/19/Camp-Lion-Knoll",
+        "lastVerified": "2026-06-11"
       },
       "incomplete": []
     },

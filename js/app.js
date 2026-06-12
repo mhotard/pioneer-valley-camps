@@ -514,8 +514,8 @@ function applyFilters() {
             return false;
         }
 
-        // Cost filter
-        if (costMax !== null && (!camp.cost?.perWeek || camp.cost.perWeek > costMax)) {
+        // Cost filter (0 = free, which passes any cap; unknown cost is excluded)
+        if (costMax !== null && (camp.cost?.perWeek == null || camp.cost.perWeek > costMax)) {
             return false;
         }
 
@@ -614,9 +614,7 @@ function createCampRow(camp) {
         ? `${camp.ages.min || '?'}-${camp.ages.max || '?'} yrs`
         : 'TBD';
 
-    const cost = camp.cost?.perWeek
-        ? `$${camp.cost.perWeek}`
-        : 'TBD';
+    const cost = formatCost(camp.cost?.perWeek, '') || 'TBD';
 
     const location = camp.location?.town || 'TBD';
     const weekCount = camp.dates?.weeks?.length || 0;
@@ -643,8 +641,8 @@ function sortCamps() {
                 valB = b.name.toLowerCase();
                 break;
             case 'cost':
-                valA = a.cost?.perWeek || 9999;
-                valB = b.cost?.perWeek || 9999;
+                valA = a.cost?.perWeek ?? 9999;
+                valB = b.cost?.perWeek ?? 9999;
                 break;
             case 'ages':
                 valA = a.ages?.min || 99;
@@ -690,9 +688,7 @@ function createCampCard(camp) {
         ? `${camp.ages.min || '?'}-${camp.ages.max || '?'} yrs`
         : 'Ages TBD';
 
-    const cost = camp.cost?.perWeek
-        ? `$${camp.cost.perWeek}/week`
-        : 'Cost TBD';
+    const cost = formatCost(camp.cost?.perWeek) || 'Cost TBD';
 
     const location = camp.location?.town || 'Location TBD';
 
@@ -854,7 +850,7 @@ function plannerSummaryHtml(weeks) {
     let tbd = 0;
     Object.values(plannerState.assignments).forEach(ids => ids.forEach(id => {
         const camp = allCamps.find(c => c.id === id);
-        if (camp?.cost?.perWeek) {
+        if (camp?.cost?.perWeek != null) {
             cost += camp.cost.perWeek;
         } else {
             tbd++;
@@ -895,7 +891,7 @@ function plannerGridHtml(camps, weeks) {
 
         const meta = [
             camp.location?.town,
-            camp.cost?.perWeek ? `$${camp.cost.perWeek}/wk` : 'Cost TBD',
+            formatCost(camp.cost?.perWeek, '/wk') || 'Cost TBD',
             camp.dates?.sessionLength
         ].filter(Boolean).map(v => escapeHtml(String(v))).join(' &middot; ');
 
@@ -977,8 +973,8 @@ function createModalContent(camp) {
 
     // Build cost section
     let costHtml = '';
-    if (camp.cost?.perWeek) {
-        costHtml += `<li><strong>Cost:</strong> $${camp.cost.perWeek}/week</li>`;
+    if (camp.cost?.perWeek != null) {
+        costHtml += `<li><strong>Cost:</strong> ${formatCost(camp.cost.perWeek)}</li>`;
     }
     if (camp.cost?.notes) {
         costHtml += `<li>${escapeHtml(camp.cost.notes)}</li>`;
@@ -1114,6 +1110,12 @@ function escapeHtml(text) {
 // For interpolation inside double-quoted HTML attributes
 function escapeAttr(text) {
     return escapeHtml(text).replace(/"/g, '&quot;');
+}
+
+// Known cost -> "$350/week" or "Free"; unknown (null) -> null so callers show TBD
+function formatCost(perWeek, suffix = '/week') {
+    if (perWeek == null) return null;
+    return perWeek === 0 ? 'Free' : `$${perWeek}${suffix}`;
 }
 
 function formatDate(dateStr) {
