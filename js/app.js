@@ -918,29 +918,24 @@ function planTotals() {
 
 // Tab-separated plan table that pastes cleanly into Excel / Google Sheets.
 // One row per week (uncovered weeks included, so coverage gaps are visible
-// when families compare plans side by side).
+// when families compare plans side by side). No costs: shared tables are
+// for coordinating schedules, not budgets.
 function buildPlanTable() {
-    const lines = [['Week', 'Camp', 'Town', 'Cost/Week'].join('\t')];
+    const lines = [['Week', 'Camp', 'Town'].join('\t')];
     allSummerWeeks().forEach(week => {
         const label = weekRangeLabel(week);
         const ids = plannerState.assignments[week] || [];
         if (ids.length === 0) {
-            lines.push([label, '', '', ''].join('\t'));
+            lines.push([label, '', ''].join('\t'));
             return;
         }
         ids.forEach(id => {
             const camp = allCamps.find(c => c.id === id);
             if (camp) {
-                lines.push([
-                    label,
-                    camp.name,
-                    camp.location?.town || '',
-                    formatCost(camp.cost?.perWeek, '') || 'TBD'
-                ].join('\t'));
+                lines.push([label, camp.name, camp.location?.town || ''].join('\t'));
             }
         });
     });
-    lines.push(['Total', '', '', planTotals().text].join('\t'));
     return lines.join('\n');
 }
 
