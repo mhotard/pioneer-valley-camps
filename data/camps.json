@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "version": "1.0.0",
-  "totalCamps": 93,
+  "totalCamps": 97,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -757,16 +757,16 @@
         "region": "Franklin"
       },
       "ages": {
-        "min": 6,
+        "min": 5,
         "max": 14
       },
       "dates": {
         "hours": "8:45am-3:30pm",
-        "extendedCare": "7:00am-6:00pm (included free)"
+        "extendedCare": "Free extended care 7:00am-6:00pm"
       },
       "cost": {
         "perWeek": 260,
-        "notes": "$260 members, $305 non-members. $40 deposit per week at registration. Free meals through Greenfield Summer Eats (except June 22-26 and Aug 17-21).",
+        "notes": "$260/week members, $305/week non-members. Free breakfast and lunch via Greenfield Summer Eats program. No transportation to Shelburne site.",
         "financialAid": true
       },
       "registration": {
@@ -781,7 +781,7 @@
       "description": "Traditional day camp on 30+ acres. Activities include group games, songs, swimming, obstacle course, gaga ball, and arts & crafts.",
       "source": {
         "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-05-05"
+        "lastVerified": "2026-06-12"
       },
       "incomplete": []
     },
@@ -809,12 +809,12 @@
           "2026-08-03"
         ],
         "hours": "8:30am-3:30pm",
-        "extendedCare": "7:00am-6:00pm (included free)"
+        "extendedCare": "Free extended care 7:00am-6:00pm"
       },
       "cost": {
         "financialAid": true,
         "perWeek": 260,
-        "notes": "$260 members, $305 non-members. $40 deposit per week at registration."
+        "notes": "$260/week members, $305/week non-members. Free breakfast and lunch via Greenfield Summer Eats program."
       },
       "registration": {
         "opens": null,
@@ -828,7 +828,7 @@
       "description": "Indoor camp for kids who love to flip, tumble, balance, and swing. Held at Main Street facility in Greenfield.",
       "source": {
         "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-05-05"
+        "lastVerified": "2026-06-12"
       },
       "incomplete": []
     },
@@ -846,12 +846,12 @@
         "max": 5
       },
       "dates": {
-        "hours": "9:00am-2:00pm",
-        "extendedCare": "7:00am-6:00pm (included free)"
+        "hours": "Camp day ends 2:00pm",
+        "extendedCare": "Extended care available"
       },
       "cost": {
         "perWeek": 200,
-        "notes": "$200 members, $245 non-members. $40 deposit per week at registration. Must be potty trained.",
+        "notes": "$200/week members, $245/week non-members. Must be potty trained. Free breakfast and lunch via Greenfield Summer Eats program.",
         "financialAid": true
       },
       "registration": {
@@ -865,7 +865,7 @@
       "description": "Half-day camp for preschoolers ages 3.5-5. Must be potty trained to attend.",
       "source": {
         "url": "https://your-y.org/camps/",
-        "lastVerified": "2026-05-05"
+        "lastVerified": "2026-06-12"
       },
       "incomplete": []
     },
@@ -4105,48 +4105,44 @@
     },
     {
       "id": "umass-womens-basketball-camp",
-      "name": "UMass Women's Basketball Day Camp",
-      "organization": "Coach Leflar Basketball Camps / UMass Women's Basketball",
+      "name": "Coach Leflar Basketball Camp",
+      "organization": "UMass Women’s Basketball",
       "location": {
         "town": "Amherst",
-        "address": "UMass Amherst campus",
+        "address": "UMass Champions Center, 190 Commonwealth Ave",
         "region": "Hampshire"
       },
       "ages": {
-        "min": null,
-        "max": null
+        "min": 6,
+        "max": 14
       },
       "dates": {
         "weeks": [
           "2026-07-13"
         ],
         "sessionLength": "weekly",
-        "hours": null,
+        "hours": "9:00am-4:00pm (drop-off 8:30am)",
         "extendedCare": null
       },
       "cost": {
-        "perWeek": null,
-        "notes": "Contact for 2026 pricing.",
+        "perWeek": 400,
+        "notes": "$400 includes t-shirt; $50 early discount before April 1. 2026 camp is currently full.",
         "financialAid": null
       },
       "registration": {
         "opens": "Rolling admission",
         "deadline": null,
-        "url": "https://www.coachleflarbasketballcamps.com/"
+        "url": "https://register.ryzer.com/camp.cfm?sport=4&id=319284"
       },
       "category": [
         "sports"
       ],
-      "description": "Basketball day camp led by the UMass Women's Basketball coaching staff on the UMass Amherst campus. July 13-17, 2026.",
+      "description": "Coed basketball day camp for grades 1-8 led by the UMass Women’s Basketball coaching staff (head coach Mike Leflar) at the Champions Center. Skill drills, group lectures, and individual instruction; teams divided by age. The 2026 session (July 13-17) is currently full.",
       "source": {
-        "url": "https://www.coachleflarbasketballcamps.com/",
-        "lastVerified": "2026-03-20"
+        "url": "https://www.umass.edu/lifelong/events/massachusetts-day-camp-1st-8th",
+        "lastVerified": "2026-06-12"
       },
-      "incomplete": [
-        "ages",
-        "cost",
-        "hours"
-      ]
+      "incomplete": []
     },
     {
       "id": "morse-hill-rattlesnake-camps",
@@ -4240,6 +4236,185 @@
       "source": {
         "url": "https://www.frsu38.org/ostp/ostp-rivervalley/",
         "lastVerified": "2026-05-05"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "franklin-county-ymca-adventure-camp",
+      "name": "Adventure Camp",
+      "organization": "Franklin County YMCA",
+      "location": {
+        "town": "Greenfield",
+        "address": "Main Street facility",
+        "region": "Franklin"
+      },
+      "ages": {
+        "min": 5,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [],
+        "sessionLength": "1 week",
+        "hours": "8:30am-3:30pm",
+        "extendedCare": "Free extended care 7:00am-6:00pm"
+      },
+      "cost": {
+        "perWeek": 260,
+        "notes": "$260/week members, $305/week non-members. Free breakfast and lunch via Greenfield Summer Eats program.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://your-y.org/camps"
+      },
+      "category": [
+        "sports",
+        "general"
+      ],
+      "description": "Combines gymnastics and ninja rotations with gym sports like soccer, kickball, and relay races. For campers entering first grade and up, at the Main Street facility in Greenfield.",
+      "source": {
+        "url": "https://your-y.org/camps",
+        "lastVerified": "2026-06-12"
+      },
+      "incomplete": [
+        "dates"
+      ]
+    },
+    {
+      "id": "umass-discovery-camp",
+      "name": "UMass Discovery Camp",
+      "organization": "UMass Recreation & Wellbeing (RecWell)",
+      "location": {
+        "town": "Amherst",
+        "address": "UMass Amherst campus",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 13
+      },
+      "dates": {
+        "weeks": [
+          "2026-08-03",
+          "2026-08-10"
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:30am-3:30pm",
+        "extendedCare": "Extended care 3:30-5:30pm (+$50 per session)"
+      },
+      "cost": {
+        "perWeek": 350,
+        "notes": "$350 per session; $25 off each additional sibling; lunch at UMass dining commons included. Registration closes June 30 or when full.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": "2026-06-30",
+        "url": "https://www.umass.edu/lifelong/youth/recwell"
+      },
+      "category": [
+        "general",
+        "stem"
+      ],
+      "description": "Hands-on day camp across the UMass campus: science, art, nature exploration, athletics, and team-building in small groups of up to 10. Also listed as the RecWell Multi-activities Camp.",
+      "source": {
+        "url": "https://www.umass.edu/lifelong/youth/recwell",
+        "lastVerified": "2026-06-12"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "brains-and-motion-umass",
+      "name": "Brains & Motion (BAM!) Summer Camp",
+      "organization": "Brains & Motion Education",
+      "location": {
+        "town": "Amherst",
+        "address": "UMass Amherst campus",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-15",
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20"
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:30am-3:00pm",
+        "extendedCare": "After-care 3:00-6:00pm available"
+      },
+      "cost": {
+        "perWeek": 595,
+        "notes": "$595/week for most courses; some shorter sessions $475.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts"
+      },
+      "category": [
+        "stem",
+        "sports"
+      ],
+      "description": "STEM-plus-sports day camp at UMass Amherst: coding, robotics, LEGO engineering, and Minecraft game design paired with daily outdoor sports and games. Grades 2-8 in three age bands.",
+      "source": {
+        "url": "https://www.brains-and-motion.com/collections/summer-camps-university-of-massachusetts",
+        "lastVerified": "2026-06-12"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "id-tech-umass",
+      "name": "iD Tech Camps at UMass Amherst",
+      "organization": "iD Tech",
+      "location": {
+        "town": "Amherst",
+        "address": "UMass Amherst campus",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 7,
+        "max": 17
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27"
+        ],
+        "sessionLength": "1 week",
+        "hours": "8:30am-4:30pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 1109,
+        "notes": "Starting at $1,109/week depending on course; payment plans available.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.idtech.com/locations/massachusetts-summer-camps/umass-amherst"
+      },
+      "category": [
+        "stem",
+        "specialty",
+        "overnight"
+      ],
+      "description": "Tech camp with day and overnight options: coding in Scratch, Python, and Unity, Minecraft and Roblox game development, robotics and BattleBots, AI, and 3D printing. Beginner to advanced, ages 7-17.",
+      "source": {
+        "url": "https://www.idtech.com/locations/massachusetts-summer-camps/umass-amherst",
+        "lastVerified": "2026-06-12"
       },
       "incomplete": []
     }
