@@ -102,6 +102,9 @@ async function init() {
                 }
             });
         });
+        if (seasonLastMonday) {
+            seasonYear = parseInt(seasonLastMonday.slice(0, 4));
+        }
 
         // Update last updated date
         if (campsData.lastUpdated) {
@@ -175,6 +178,7 @@ function addWeeksToMonday(monday, n) {
 // Last Monday of the season across all raw session starts; expansion of
 // multi-week sessions never invents weeks beyond this. Set in init().
 let seasonLastMonday = null;
+let seasonYear = new Date().getFullYear();
 
 // All weeks a camp actually runs: each session start covers
 // dates.weeksPerSession consecutive weeks (default 1).
@@ -1034,10 +1038,10 @@ function createModalContent(camp) {
             const endStr = end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             return `${startStr} - ${endStr}`;
         });
-        datesHtml += `<li><strong>2026 Sessions:</strong></li>`;
+        datesHtml += `<li><strong>${seasonYear} Sessions:</strong></li>`;
         datesHtml += `<ul>${weeks.map(w => `<li>${w}</li>`).join('')}</ul>`;
     } else {
-        datesHtml += `<li><strong>2026 Sessions:</strong> Check website for dates</li>`;
+        datesHtml += `<li><strong>${seasonYear} Sessions:</strong> Check website for dates</li>`;
     }
     if (camp.dates?.sessionLength) {
         datesHtml += `<li><strong>Session length:</strong> ${escapeHtml(camp.dates.sessionLength)}</li>`;
