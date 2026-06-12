@@ -118,7 +118,8 @@
         ],
         "sessionLength": "2-week sessions",
         "extendedCare": null,
-        "hours": null
+        "hours": null,
+        "weeksPerSession": 2
       },
       "cost": {
         "notes": "Contact Northampton Parks & Rec for 2026 pricing. Financial aid available for Northampton/Florence/Leeds residents.",
@@ -430,7 +431,8 @@
         ],
         "sessionLength": "2 weeks (Sessions 1-4), 1 week (Session 5)",
         "hours": "9:00am-4:00pm",
-        "extendedCare": null
+        "extendedCare": null,
+        "weeksPerSession": 2
       },
       "cost": {
         "perWeek": 375,
@@ -527,7 +529,8 @@
         ],
         "sessionLength": "2 weeks",
         "hours": null,
-        "extendedCare": null
+        "extendedCare": null,
+        "weeksPerSession": 2
       },
       "cost": {
         "perWeek": 625,
@@ -1456,7 +1459,8 @@
         ],
         "sessionLength": "2 weeks",
         "hours": "9:00am-2:00pm",
-        "extendedCare": null
+        "extendedCare": null,
+        "weeksPerSession": 2
       },
       "cost": {
         "perWeek": null,
@@ -1722,7 +1726,8 @@
           "2026-07-05",
           "2026-07-19"
         ],
-        "sessionLength": "2 weeks"
+        "sessionLength": "2 weeks",
+        "weeksPerSession": 2
       },
       "cost": {
         "perWeek": null,
@@ -1800,7 +1805,15 @@
         "max": 6
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
         "sessionLength": "1 week",
         "hours": "8:30am-4:00pm",
         "extendedCare": "Extended Day 4:00pm-5:00pm (additional fee)"
@@ -1821,11 +1834,9 @@
       "description": "Town-run day camp (Fun in the Sun) for younger kids. Activities include games, crafts, and outdoor play at Amherst Regional Middle School.",
       "source": {
         "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
-        "lastVerified": "2026-05-05"
+        "lastVerified": "2026-06-11"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "amherst-rec-fun-in-the-sun-epic-explorers",
@@ -1841,7 +1852,15 @@
         "max": 11
       },
       "dates": {
-        "weeks": [],
+        "weeks": [
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
         "sessionLength": "1 week",
         "hours": "8:30am-4:00pm",
         "extendedCare": "Extended Day 4:00pm-5:00pm (additional fee)"
@@ -1862,11 +1881,9 @@
       "description": "Town-run day camp (Fun in the Sun) for older kids. Activities include sports, games, crafts, outdoor play, and themed weeks at Amherst Regional Middle School.",
       "source": {
         "url": "https://amherstmarec.org/3505/Summer-Day-Camps",
-        "lastVerified": "2026-05-05"
+        "lastVerified": "2026-06-11"
       },
-      "incomplete": [
-        "dates"
-      ]
+      "incomplete": []
     },
     {
       "id": "easthampton-rec-camp-nonotuck",
@@ -2413,7 +2430,8 @@
         ],
         "sessionLength": "2-week sessions",
         "hours": null,
-        "extendedCare": "Morning and afternoon extended care available"
+        "extendedCare": "Morning and afternoon extended care available",
+        "weeksPerSession": 2
       },
       "cost": {
         "perWeek": null,

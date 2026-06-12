@@ -21,7 +21,10 @@ Each camp in `camps.json` has:
 - `id`, `name`, `organization`
 - `location`: { town, address, region }
 - `ages`: { min, max }
-- `dates`: { weeks[], sessionLength, hours, extendedCare }
+- `dates`: { weeks[], sessionLength, hours, extendedCare, weeksPerSession }
+  - `weeks` holds session START dates; `weeksPerSession` (int, default 1) says
+    how many consecutive weeks each start covers. Set it to 2 for camps with
+    "2-week sessions" so the week filter and planner cover both weeks.
 - `cost`: { perWeek, notes, financialAid }
 - `registration`: { opens (flexible format), deadline, url }
 - `category`: array of category IDs

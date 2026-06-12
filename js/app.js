@@ -93,6 +93,16 @@ async function init() {
         categories = categoriesData.categories || [];
         regions = regionsData;
 
+        // Cap multi-week session expansion at the season's last real week
+        allCamps.forEach(camp => {
+            (camp.dates?.weeks || []).forEach(w => {
+                const monday = mondayOfWeek(w);
+                if (!seasonLastMonday || monday > seasonLastMonday) {
+                    seasonLastMonday = monday;
+                }
+            });
+        });
+
         // Update last updated date
         if (campsData.lastUpdated) {
             lastUpdated.textContent = campsData.lastUpdated;
@@ -156,11 +166,40 @@ function mondayOfWeek(dateStr) {
     return toISODate(date);
 }
 
+function addWeeksToMonday(monday, n) {
+    const date = parseISODate(monday);
+    date.setDate(date.getDate() + 7 * n);
+    return toISODate(date);
+}
+
+// Last Monday of the season across all raw session starts; expansion of
+// multi-week sessions never invents weeks beyond this. Set in init().
+let seasonLastMonday = null;
+
+// All weeks a camp actually runs: each session start covers
+// dates.weeksPerSession consecutive weeks (default 1).
+function campCoveredWeeks(camp) {
+    const starts = (camp.dates?.weeks || []).map(mondayOfWeek);
+    const covered = new Set(starts);
+    const span = camp.dates?.weeksPerSession || 1;
+    if (span > 1) {
+        starts.forEach(start => {
+            for (let i = 1; i < span; i++) {
+                const monday = addWeeksToMonday(start, i);
+                if (!seasonLastMonday || monday <= seasonLastMonday) {
+                    covered.add(monday);
+                }
+            }
+        });
+    }
+    return covered;
+}
+
 // Every camp week in the data, as sorted Monday dates
 function allSummerWeeks() {
     const weeks = new Set();
     allCamps.forEach(camp => {
-        (camp.dates?.weeks || []).forEach(w => weeks.add(mondayOfWeek(w)));
+        campCoveredWeeks(camp).forEach(w => weeks.add(w));
     });
     return Array.from(weeks).sort();
 }
@@ -177,7 +216,7 @@ let plannerState = { starred: [], assignments: {} };
 
 function campRunsWeek(campId, weekMonday) {
     const camp = allCamps.find(c => c.id === campId);
-    return !!camp && (camp.dates?.weeks || []).some(w => mondayOfWeek(w) === weekMonday);
+    return !!camp && campCoveredWeeks(camp).has(weekMonday);
 }
 
 function loadPlannerState() {
@@ -519,13 +558,10 @@ function applyFilters() {
             return false;
         }
 
-        // Week filter - camp must have a session during the selected week
-        // (compare by Monday-of-week so Sunday/Tuesday starts still match)
-        if (selectedWeek) {
-            const campWeeks = camp.dates?.weeks || [];
-            if (!campWeeks.some(w => mondayOfWeek(w) === selectedWeek)) {
-                return false;
-            }
+        // Week filter - camp must run during the selected week (Monday-
+        // normalized, multi-week sessions cover all their weeks)
+        if (selectedWeek && !campCoveredWeeks(camp).has(selectedWeek)) {
+            return false;
         }
 
         // Early drop-off filter
@@ -875,7 +911,7 @@ function plannerGridHtml(camps, weeks) {
     </tr>`;
 
     const rows = camps.map(camp => {
-        const campWeeks = new Set((camp.dates?.weeks || []).map(w => mondayOfWeek(w)));
+        const campWeeks = campCoveredWeeks(camp);
         const cells = weeks.map(week => {
             if (!campWeeks.has(week)) {
                 return '<td class="cell-na"></td>';
@@ -986,12 +1022,14 @@ function createModalContent(camp) {
     // Build dates section
     let datesHtml = '';
     if (camp.dates?.weeks?.length > 0) {
+        const sessionSpan = camp.dates?.weeksPerSession || 1;
         const weeks = camp.dates.weeks.map(w => {
             const start = parseISODate(w);
             const end = new Date(start);
-            // Sunday starts run Sun-Sat (overnight camps); weekday starts run through Friday
+            // Sunday starts run Sun-Sat (overnight camps); weekday starts run
+            // through Friday; multi-week sessions extend by whole weeks
             const day = start.getDay();
-            end.setDate(end.getDate() + (day === 0 ? 6 : Math.max(5 - day, 0)));
+            end.setDate(end.getDate() + (day === 0 ? 6 : Math.max(5 - day, 0)) + (sessionSpan - 1) * 7);
             const startStr = start.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             const endStr = end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             return `${startStr} - ${endStr}`;
