@@ -72,7 +72,10 @@ and the modal), then the planner shows starred camps in a weeks-by-camps grid.
 Clicking a cell assigns/unassigns that camp for that week (multiple camps per
 week allowed); a summary strip shows covered weeks and estimated cost, with
 camp weeks lacking a price counted as "TBD". Camps without `dates.weeks` data
-appear in a separate "Dates unknown" list. State persists in localStorage key
+appear in a separate "Dates unknown" list. Plans can be shared two ways:
+"Copy plan link" (URL that recreates the plan) and "Copy for spreadsheet"
+(tab-separated week/camp/town/cost rows that paste into Excel or Google
+Sheets, for families comparing plans). State persists in localStorage key
 `pvcamps-planner-v1` ({ starred: [ids], assignments: { weekMonday: [ids] } });
 all access goes through `loadPlannerState`/`savePlannerState` so the backend
 could be swapped later. Full design in PLANNER_SPEC.md (local, untracked).

@@ -212,6 +212,13 @@ function formatWeekShort(monday) {
     return parseISODate(monday).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
+// "Jun 22-Jun 26" (Mon-Fri) label for a week
+function weekRangeLabel(monday) {
+    const end = parseISODate(monday);
+    end.setDate(end.getDate() + 4);
+    return `${formatWeekShort(monday)}-${end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
+}
+
 // ----- Summer Planner state (starred camps + week assignments) -----
 // All reads/writes go through loadPlannerState/savePlannerState so the
 // storage backend can be swapped later without touching render logic.
@@ -314,11 +321,9 @@ function populateFilters() {
 
     // Populate weeks from actual camp data, normalized to Mondays
     allSummerWeeks().forEach(monday => {
-        const end = parseISODate(monday);
-        end.setDate(end.getDate() + 4);
         const option = document.createElement('option');
         option.value = monday;
-        option.textContent = `${formatWeekShort(monday)}-${end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
+        option.textContent = weekRangeLabel(monday);
         weekSelect.appendChild(option);
     });
 
@@ -406,18 +411,15 @@ function setupEventListeners() {
             setView('grid');
             return;
         }
-        if (e.target.closest('#copy-plan')) {
-            const link = buildPlanLink();
-            navigator.clipboard.writeText(link).then(() => {
-                const btn = document.getElementById('copy-plan');
-                if (btn) {
-                    btn.textContent = 'Link copied!';
-                    setTimeout(() => {
-                        if (btn.isConnected) btn.textContent = 'Copy plan link';
-                    }, 2000);
-                }
-            }).catch(() => {
-                prompt('Copy this link to share your plan:', link);
+        const copyBtn = e.target.closest('#copy-plan, #copy-table');
+        if (copyBtn) {
+            const label = copyBtn.textContent;
+            const text = copyBtn.id === 'copy-table' ? buildPlanTable() : buildPlanLink();
+            copyTextToClipboard(text).then(() => {
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => {
+                    if (copyBtn.isConnected) copyBtn.textContent = label;
+                }, 2000);
             });
             return;
         }
@@ -861,7 +863,9 @@ function renderPlanner() {
     const hasPlan = Object.keys(plannerState.assignments).length > 0;
     html += `
         <div class="planner-actions">
-            ${hasPlan ? '<button id="copy-plan" class="btn-primary">Copy plan link</button>' : ''}
+            ${hasPlan ? `
+            <button id="copy-plan" class="btn-primary">Copy plan link</button>
+            <button id="copy-table" class="btn-secondary">Copy for spreadsheet</button>` : ''}
             <button id="clear-plan" class="btn-secondary">Clear plan</button>
         </div>`;
     container.innerHTML = html;
@@ -886,6 +890,15 @@ function plannerSummaryHtml(weeks) {
     }).join('');
 
     const covered = weeks.filter(w => (plannerState.assignments[w] || []).length > 0).length;
+
+    return `
+        <div class="planner-summary" aria-live="polite">
+            <div class="summary-strip">${cells}</div>
+            <p class="summary-totals"><strong>${covered} of ${weeks.length} weeks covered.</strong> Estimated cost: ${planTotals().text}.</p>
+        </div>`;
+}
+
+function planTotals() {
     let cost = 0;
     let tbd = 0;
     Object.values(plannerState.assignments).forEach(ids => ids.forEach(id => {
@@ -896,16 +909,63 @@ function plannerSummaryHtml(weeks) {
             tbd++;
         }
     }));
-    let costText = `Estimated cost: $${cost.toLocaleString()}`;
+    let text = `$${cost.toLocaleString()}`;
     if (tbd > 0) {
-        costText += ` plus ${tbd} camp week${tbd !== 1 ? 's' : ''} TBD`;
+        text += ` plus ${tbd} camp week${tbd !== 1 ? 's' : ''} TBD`;
     }
+    return { cost, tbd, text };
+}
 
-    return `
-        <div class="planner-summary" aria-live="polite">
-            <div class="summary-strip">${cells}</div>
-            <p class="summary-totals"><strong>${covered} of ${weeks.length} weeks covered.</strong> ${costText}.</p>
-        </div>`;
+// Tab-separated plan table that pastes cleanly into Excel / Google Sheets.
+// One row per week (uncovered weeks included, so coverage gaps are visible
+// when families compare plans side by side).
+function buildPlanTable() {
+    const lines = [['Week', 'Camp', 'Town', 'Cost/Week'].join('\t')];
+    allSummerWeeks().forEach(week => {
+        const label = weekRangeLabel(week);
+        const ids = plannerState.assignments[week] || [];
+        if (ids.length === 0) {
+            lines.push([label, '', '', ''].join('\t'));
+            return;
+        }
+        ids.forEach(id => {
+            const camp = allCamps.find(c => c.id === id);
+            if (camp) {
+                lines.push([
+                    label,
+                    camp.name,
+                    camp.location?.town || '',
+                    formatCost(camp.cost?.perWeek, '') || 'TBD'
+                ].join('\t'));
+            }
+        });
+    });
+    lines.push(['Total', '', '', planTotals().text].join('\t'));
+    return lines.join('\n');
+}
+
+function copyTextToClipboard(text) {
+    if (navigator.clipboard?.writeText) {
+        return navigator.clipboard.writeText(text).catch(() => legacyCopy(text));
+    }
+    return Promise.resolve(legacyCopy(text));
+}
+
+function legacyCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try {
+        ok = document.execCommand('copy');
+    } catch (e) { /* fall through to prompt */ }
+    ta.remove();
+    if (!ok) {
+        prompt('Copy this:', text);
+    }
 }
 
 function plannerGridHtml(camps, weeks) {
