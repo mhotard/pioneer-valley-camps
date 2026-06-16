@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2026-06-16",
   "version": "1.0.0",
-  "totalCamps": 100,
+  "totalCamps": 99,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -4462,55 +4462,6 @@
       "incomplete": [
         "cost"
       ]
-    },
-    {
-      "id": "ke-camps-northampton-country-club",
-      "name": "KE Camps at Northampton Country Club",
-      "organization": "KE Camps",
-      "location": {
-        "town": "Northampton",
-        "address": "Northampton Country Club",
-        "region": "Hampshire"
-      },
-      "ages": {
-        "min": 5,
-        "max": 12
-      },
-      "dates": {
-        "weeks": [
-          "2026-06-16",
-          "2026-06-23",
-          "2026-06-30",
-          "2026-07-07",
-          "2026-07-14",
-          "2026-07-21",
-          "2026-07-28"
-        ],
-        "weeksPerSession": 1,
-        "sessionLength": "1 week (Tue-Fri)",
-        "hours": "9:00am-3:00pm (drop-off 8:30am)",
-        "extendedCare": null
-      },
-      "cost": {
-        "perWeek": 355,
-        "notes": "$355/week standard, $325 advanced rate (club members), plus one-time $45 registration fee. Full payment due at registration.",
-        "financialAid": null
-      },
-      "registration": {
-        "opens": "2026-02-09",
-        "deadline": null,
-        "url": "https://kecamps.com/camps/northampton-country-club"
-      },
-      "category": [
-        "sports",
-        "general"
-      ],
-      "description": "Country club day camp for kids entering grades 1-6: golf and tennis instruction, swimming, arts and crafts, group games, culinary activities, and STEM challenges. Tuesday-Friday sessions.",
-      "source": {
-        "url": "https://kecamps.com/camps/northampton-country-club",
-        "lastVerified": "2026-06-16"
-      },
-      "incomplete": []
     },
     {
       "id": "college-for-kids-stcc",
