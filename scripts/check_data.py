@@ -9,10 +9,22 @@ import argparse
 import collections
 import datetime
 import json
+import math
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# Amherst, MA town center; camps should sit within the coverage radius of it.
+CENTER = (42.3732, -72.5199)
+REGION_RADIUS_MILES = 40
+
+
+def haversine_miles(a, b):
+    lat1, lon1, lat2, lon2 = map(math.radians, [a[0], a[1], b[0], b[1]])
+    dlat, dlon = lat2 - lat1, lon2 - lon1
+    h = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    return 3958.8 * 2 * math.asin(math.sqrt(h))
 
 
 def load(name):
@@ -87,6 +99,20 @@ def main():
             check = present_checks.get(field)
             if check and check(c):
                 warnings.append(f"{c['id']}: incomplete[] lists '{field}' but the data is present")
+
+    # Geocoding: flag un-geocoded camps and any that landed out of region
+    # (the latter catches wrong-state entries, e.g. a Northampton in another state)
+    for c in camps:
+        loc = c.get("location") or {}
+        lat, lng = loc.get("lat"), loc.get("lng")
+        if lat is None:
+            if loc.get("address"):
+                warnings.append(f"{c['id']}: has an address but no coordinates (run scripts/geocode.py)")
+            continue
+        dist = haversine_miles(CENTER, (lat, lng))
+        if dist > REGION_RADIUS_MILES:
+            warnings.append(f"{c['id']}: geocodes {round(dist)} mi from center, "
+                            f"outside the {REGION_RADIUS_MILES}-mi region (wrong town/state?)")
 
     # Staleness summary
     buckets = collections.Counter()

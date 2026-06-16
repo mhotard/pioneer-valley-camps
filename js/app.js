@@ -15,6 +15,7 @@ const searchInput = document.getElementById('search-input');
 const viewGridBtn = document.getElementById('view-grid');
 const viewListBtn = document.getElementById('view-list');
 const viewPlannerBtn = document.getElementById('view-planner');
+const viewMapBtn = document.getElementById('view-map');
 const ageMinSelect = document.getElementById('age-min');
 const ageMaxSelect = document.getElementById('age-max');
 const townSelect = document.getElementById('town-select');
@@ -385,6 +386,18 @@ function setupEventListeners() {
     viewGridBtn?.addEventListener('click', () => setView('grid'));
     viewListBtn?.addEventListener('click', () => setView('list'));
     viewPlannerBtn?.addEventListener('click', () => setView('planner'));
+    viewMapBtn?.addEventListener('click', () => setView('map'));
+
+    // Delegate "View details" clicks from map popups
+    document.getElementById('map')?.addEventListener('click', (e) => {
+        const btn = e.target.closest('.map-details-btn');
+        if (btn) {
+            const camp = allCamps.find(c => c.id === btn.dataset.campId);
+            if (camp) {
+                openModal(camp);
+            }
+        }
+    });
 
     // Planner interactions (assignment cells, unstar, camp links, actions)
     document.getElementById('planner-body')?.addEventListener('click', (e) => {
@@ -613,6 +626,7 @@ function setView(view) {
     viewGridBtn.classList.toggle('active', view === 'grid');
     viewListBtn.classList.toggle('active', view === 'list');
     viewPlannerBtn?.classList.toggle('active', view === 'planner');
+    viewMapBtn?.classList.toggle('active', view === 'map');
 
     renderCamps();
 }
@@ -621,6 +635,12 @@ function renderCamps() {
     if (currentView === 'planner') {
         document.body.className = 'view-planner';
         renderPlanner();
+        return;
+    }
+
+    if (currentView === 'map') {
+        document.body.className = 'view-map';
+        renderMap();
         return;
     }
 
@@ -1022,6 +1042,120 @@ function plannerNoDatesHtml(camps) {
             <p>These saved camps have not published week-by-week dates yet, so they can't be
             placed on the grid. Verify dates on their websites.</p>
             <ul>${items}</ul>
+        </div>`;
+}
+
+// ----- Map view (Leaflet, lazy-loaded on first open) -----
+
+const AMHERST_CENTER = [42.3732, -72.5199];
+let mapInstance = null;
+let markerLayer = null;
+let leafletLoading = null;
+
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+    });
+}
+
+function loadStyle(href) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+}
+
+function loadLeaflet() {
+    if (leafletLoading) return leafletLoading;
+    leafletLoading = (async () => {
+        loadStyle('vendor/leaflet/leaflet.css');
+        loadStyle('vendor/leaflet.markercluster/MarkerCluster.css');
+        loadStyle('vendor/leaflet.markercluster/MarkerCluster.Default.css');
+        await loadScript('vendor/leaflet/leaflet.js');
+        await loadScript('vendor/leaflet.markercluster/leaflet.markercluster.js');
+    })();
+    return leafletLoading;
+}
+
+function renderMap() {
+    const mapEl = document.getElementById('map');
+    if (!mapEl) return;
+
+    if (typeof L === 'undefined') {
+        mapEl.innerHTML = '<p class="map-loading">Loading map&hellip;</p>';
+        loadLeaflet().then(renderMap).catch(() => {
+            mapEl.innerHTML = '<p class="map-loading">Map failed to load.</p>';
+        });
+        return;
+    }
+
+    if (!mapInstance) {
+        mapEl.innerHTML = '';
+        mapInstance = L.map('map');
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(mapInstance);
+        markerLayer = L.markerClusterGroup({ maxClusterRadius: 45 });
+        mapInstance.addLayer(markerLayer);
+    }
+
+    // Container starts hidden; Leaflet must recompute size when shown
+    mapInstance.invalidateSize();
+
+    markerLayer.clearLayers();
+    const bounds = [];
+    const unmapped = [];
+
+    filteredCamps.forEach(camp => {
+        const { lat, lng } = camp.location || {};
+        if (lat == null || lng == null) {
+            unmapped.push(camp.name);
+            return;
+        }
+        const approximate = camp.location.geo?.approximate;
+        const marker = approximate
+            ? L.circleMarker([lat, lng], {
+                radius: 8, color: '#d97706', weight: 2,
+                fillColor: '#fbbf24', fillOpacity: 0.5
+            })
+            : L.marker([lat, lng]);
+        marker.bindPopup(mapPopupHtml(camp, approximate));
+        markerLayer.addLayer(marker);
+        bounds.push([lat, lng]);
+    });
+
+    if (bounds.length > 0) {
+        mapInstance.fitBounds(bounds, { padding: [30, 30], maxZoom: 13 });
+    } else {
+        mapInstance.setView(AMHERST_CENTER, 10);
+    }
+
+    const note = document.getElementById('map-unmapped');
+    if (note) {
+        if (unmapped.length === 0) {
+            note.textContent = '';
+        } else {
+            const shown = unmapped.slice(0, 3).join(', ');
+            const more = unmapped.length > 3 ? `, and ${unmapped.length - 3} more` : '';
+            note.textContent = `${unmapped.length} camp${unmapped.length !== 1 ? 's' : ''} `
+                + `couldn't be placed on the map (no location data): ${shown}${more}.`;
+        }
+    }
+}
+
+function mapPopupHtml(camp, approximate) {
+    const cost = formatCost(camp.cost?.perWeek) || 'Cost TBD';
+    return `
+        <div class="map-popup">
+            <strong>${escapeHtml(camp.name)}</strong><br>
+            ${escapeHtml(camp.location?.town || '')} &middot; ${escapeHtml(cost)}
+            ${approximate ? '<br><em>Approximate location (town center)</em>' : ''}
+            <br><button class="map-details-btn" data-camp-id="${escapeAttr(camp.id)}">View details</button>
         </div>`;
 }
 

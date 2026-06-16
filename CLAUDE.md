@@ -55,8 +55,12 @@ The `registration.opens` field accepts flexible formats:
 Use `/camps-update` to research and add new camps automatically.
 
 ### Cheap checks (run these before any LLM research)
-- `python3 scripts/check_data.py` validates camps.json (counts, categories, week dates vs the filter dropdown, incomplete[] consistency) and summarizes staleness and missing data. `--stale 60` lists camps not verified in 60+ days.
+- `python3 scripts/check_data.py` validates camps.json (counts, categories, week dates vs the filter dropdown, incomplete[] consistency, geocoding coverage + out-of-region distance) and summarizes staleness and missing data. `--stale 60` lists camps not verified in 60+ days.
 - `python3 scripts/check_sources.py` fetches every camp's source URL, diffs visible text against the last snapshot in `cache/`, and prints which pages CHANGED. Only CHANGED camps need re-verification; SAME camps just get `lastVerified` bumped.
+- `python3 scripts/geocode.py` adds `location.lat`/`lng`/`geo` to camps missing/stale coordinates (free: US Census for street addresses + named-venue and town lookups via Nominatim). Run it after adding camps. It flags any camp landing >40 mi from Amherst (wrong town/state guard), and check_data.py warns on the same.
+
+### Map view
+4th view toggle (map-pin icon). Plots `filteredCamps` on a Leaflet map (vendored in `vendor/`, OpenStreetMap tiles, lazy-loaded on first open). Precise camps use the default marker; town-level/approximate camps (geocoding fallback or the privacy list in geocode.py) use a hollow circle and say "approximate" in the popup. Overlapping town-center markers cluster via Leaflet.markercluster. Marker popup -> "View details" opens the camp modal. Camps without coordinates surface in a notice, not dropped. The map respects active filters.
 
 ## Deployment
 

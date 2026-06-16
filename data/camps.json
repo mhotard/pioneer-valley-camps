@@ -10,7 +10,16 @@
       "location": {
         "town": "Amherst",
         "address": "845 West St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3312,
+        "lng": -72.52388,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "845 West St, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -56,7 +65,16 @@
       "location": {
         "town": "Easthampton",
         "address": "127 Combs Rd",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.28869,
+        "lng": -72.64414,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "127 Combs Rd, Easthampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -104,7 +122,16 @@
       "location": {
         "town": "Northampton",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Northampton, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 4,
@@ -154,7 +181,16 @@
       "location": {
         "town": "Northampton",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Northampton, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -206,7 +242,16 @@
       "location": {
         "town": "Northampton",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Northampton, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 10,
@@ -258,7 +303,16 @@
       "location": {
         "town": "Northampton",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Northampton, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 12,
@@ -311,7 +365,16 @@
       "location": {
         "town": "Northampton",
         "address": "286 Prospect St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.32928,
+        "lng": -72.64371,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "286 Prospect St, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -362,7 +425,16 @@
       "location": {
         "town": "Northampton",
         "address": "286 Prospect St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.32928,
+        "lng": -72.64371,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "286 Prospect St, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -415,7 +487,16 @@
       "location": {
         "town": "Huntington",
         "address": "Lake Norwich, 175 acres",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.23439,
+        "lng": -72.8799,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Lake Norwich, 175 acres, Huntington, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -465,7 +546,16 @@
       "location": {
         "town": "Springfield",
         "address": "1160 Dickinson St",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.0677,
+        "lng": -72.55542,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "1160 Dickinson St, Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -514,7 +604,16 @@
       "location": {
         "town": "Springfield",
         "address": "701 Wilbraham Rd",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.11365,
+        "lng": -72.53872,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "701 Wilbraham Rd, Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -562,7 +661,16 @@
       "location": {
         "town": "Springfield",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10188,
+        "lng": -72.58867,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Springfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -617,7 +725,16 @@
       "location": {
         "town": "Greenfield",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58763,
+        "lng": -72.60021,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Greenfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -660,7 +777,16 @@
       "location": {
         "town": "Greenfield",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58763,
+        "lng": -72.60021,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Greenfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -707,7 +833,16 @@
       "location": {
         "town": "Greenfield",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58763,
+        "lng": -72.60021,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Greenfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 8,
@@ -754,7 +889,16 @@
       "location": {
         "town": "Shelburne",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58364,
+        "lng": -72.71109,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Shelburne, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -792,7 +936,16 @@
       "location": {
         "town": "Greenfield",
         "address": "451 Main Street",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58729,
+        "lng": -72.59688,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "451 Main Street, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -839,7 +992,16 @@
       "location": {
         "town": "Greenfield",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58763,
+        "lng": -72.60021,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Greenfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -876,7 +1038,16 @@
       "location": {
         "town": "Holyoke",
         "address": "171 Pine St",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.20737,
+        "lng": -72.61419,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "171 Pine St, Holyoke, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -920,7 +1091,16 @@
       "location": {
         "town": "Chicopee",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.14877,
+        "lng": -72.60711,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Chicopee, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -963,7 +1143,16 @@
       "location": {
         "town": "Amherst",
         "address": "667 N Pleasant St (UMass)",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.39257,
+        "lng": -72.52552,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "667 N Pleasant St (UMass), Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -1010,7 +1199,16 @@
       "location": {
         "town": "Amherst",
         "address": "Amherst College",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.37038,
+        "lng": -72.51607,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Amherst College, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 8,
@@ -1053,7 +1251,16 @@
       "location": {
         "town": "Amherst",
         "address": "Amherst College",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.37038,
+        "lng": -72.51607,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Amherst College, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 8,
@@ -1096,7 +1303,16 @@
       "location": {
         "town": "Amherst",
         "address": "521 S Pleasant St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.35961,
+        "lng": -72.52088,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "521 S Pleasant St, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -1145,7 +1361,16 @@
       "location": {
         "town": "South Hadley",
         "address": "50 College St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.25226,
+        "lng": -72.57804,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "50 College St, South Hadley, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 10,
@@ -1188,7 +1413,16 @@
       "location": {
         "town": "Hadley",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.34233,
+        "lng": -72.58912,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Hadley, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 4,
@@ -1233,7 +1467,16 @@
       "location": {
         "town": "Hadley",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.34233,
+        "lng": -72.58912,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Hadley, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -1277,7 +1520,16 @@
       "location": {
         "town": "Hadley",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.34233,
+        "lng": -72.58912,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Hadley, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 9,
@@ -1317,7 +1569,16 @@
       "location": {
         "town": "Hadley",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.34233,
+        "lng": -72.58912,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Hadley, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -1361,7 +1622,16 @@
       "location": {
         "town": "East Longmeadow",
         "address": "129 Industrial Dr",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.04735,
+        "lng": -72.52945,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "129 Industrial Dr, East Longmeadow, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -1404,7 +1674,16 @@
       "location": {
         "town": "Westfield",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.12054,
+        "lng": -72.74892,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Westfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -1445,7 +1724,16 @@
       "location": {
         "town": "Westfield",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.12054,
+        "lng": -72.74892,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Westfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -1492,7 +1780,16 @@
       "location": {
         "town": "Goshen",
         "address": "PO Box 326",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.44175,
+        "lng": -72.80004,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "PO Box 326, Goshen, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -1541,7 +1838,16 @@
       "location": {
         "town": "East Longmeadow",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.06491,
+        "lng": -72.51293,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "East Longmeadow, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 4,
@@ -1585,7 +1891,16 @@
       "location": {
         "town": "East Longmeadow",
         "address": "21 Baldwin St",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.06375,
+        "lng": -72.51734,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "21 Baldwin St, East Longmeadow, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -1629,7 +1944,16 @@
       "location": {
         "town": "Ludlow",
         "address": "Lusitano Stadium",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.15791,
+        "lng": -72.46999,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Lusitano Stadium, Ludlow, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -1671,7 +1995,16 @@
       "location": {
         "town": "Northampton",
         "address": "Smith College",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.31622,
+        "lng": -72.64039,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Smith College, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 10,
@@ -1714,7 +2047,16 @@
       "location": {
         "town": "Greenfield",
         "address": "Stoneleigh-Burnham School",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.61569,
+        "lng": -72.58635,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Stoneleigh-Burnham School, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 8,
@@ -1756,7 +2098,16 @@
       "location": {
         "town": "Northampton",
         "address": "274 Main St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.31772,
+        "lng": -72.63313,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "274 Main St, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -1798,7 +2149,16 @@
       "location": {
         "town": "Amherst",
         "address": "Amherst Regional Middle School",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.38433,
+        "lng": -72.51099,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Amherst Regional Middle School, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -1845,7 +2205,16 @@
       "location": {
         "town": "Amherst",
         "address": "Amherst Regional Middle School",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.38433,
+        "lng": -72.51099,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Amherst Regional Middle School, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -1892,7 +2261,16 @@
       "location": {
         "town": "Easthampton",
         "address": "Nonotuck Park",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.25347,
+        "lng": -72.66511,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Nonotuck Park, Easthampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -1941,7 +2319,16 @@
       "location": {
         "town": "Belchertown",
         "address": "Belchertown High School",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.26601,
+        "lng": -72.41011,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Belchertown High School, Belchertown, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -1983,7 +2370,16 @@
       "location": {
         "town": "Chicopee",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.14877,
+        "lng": -72.60711,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Chicopee, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -2026,7 +2422,16 @@
       "location": {
         "town": "Springfield",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10188,
+        "lng": -72.58867,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Springfield, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2072,7 +2477,16 @@
       "location": {
         "town": "West Springfield",
         "address": "West Springfield Middle School",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.1249,
+        "lng": -72.64665,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "West Springfield Middle School, West Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 4,
@@ -2114,7 +2528,16 @@
       "location": {
         "town": "West Springfield",
         "address": "West Springfield Middle School",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.1249,
+        "lng": -72.64665,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "West Springfield Middle School, West Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2156,7 +2579,16 @@
       "location": {
         "town": "West Springfield",
         "address": "West Springfield Middle School",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.1249,
+        "lng": -72.64665,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "West Springfield Middle School, West Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 13,
@@ -2198,7 +2630,16 @@
       "location": {
         "town": "West Springfield",
         "address": "Dewey Street",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.12559,
+        "lng": -72.66162,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Dewey Street, West Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2242,7 +2683,16 @@
       "location": {
         "town": "Wilbraham",
         "address": "1004 Stony Hill Rd",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.106,
+        "lng": -72.45859,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "1004 Stony Hill Rd, Wilbraham, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2286,7 +2736,16 @@
       "location": {
         "town": "Springfield",
         "address": "1500 Main St (YMCA Learning Center)",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10344,
+        "lng": -72.59248,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "1500 Main St (YMCA Learning Center), Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2329,7 +2788,16 @@
       "location": {
         "town": "Springfield",
         "address": "1500 Main St (YMCA Learning Center)",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10344,
+        "lng": -72.59248,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "1500 Main St (YMCA Learning Center), Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -2371,7 +2839,16 @@
       "location": {
         "town": "West Springfield",
         "address": "Camp Weber / Stony Brook Acres",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10524,
+        "lng": -72.62137,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Camp Weber / Stony Brook Acres, West Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 13,
@@ -2415,7 +2892,16 @@
       "location": {
         "town": "Westfield",
         "address": "370 Northwest Rd",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.12572,
+        "lng": -72.82203,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "370 Northwest Rd, Westfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 4,
@@ -2461,7 +2947,16 @@
       "location": {
         "town": "Montague",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.59012,
+        "lng": -72.54973,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Montague, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -2508,7 +3003,16 @@
       "location": {
         "town": "Northampton",
         "address": "51 Bates Street",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.33143,
+        "lng": -72.62697,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "51 Bates Street, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -2559,7 +3063,16 @@
       "location": {
         "town": "Northampton",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Northampton, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 1,
@@ -2607,7 +3120,16 @@
       "location": {
         "town": "Hadley",
         "address": "47 East Street",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3469,
+        "lng": -72.58226,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "47 East Street, Hadley, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -2658,7 +3180,16 @@
       "location": {
         "town": "Deerfield",
         "address": "94 Old Main St",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.54813,
+        "lng": -72.60381,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "94 Old Main St, Deerfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -2706,7 +3237,16 @@
       "location": {
         "town": "Deerfield",
         "address": "94 Old Main St",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.54813,
+        "lng": -72.60381,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "94 Old Main St, Deerfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -2752,7 +3292,16 @@
       "location": {
         "town": "Chesterfield",
         "address": "27 Mt Rd, West Chesterfield",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.41201,
+        "lng": -72.87625,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "27 Mt Rd, West Chesterfield, Chesterfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 8,
@@ -2801,7 +3350,16 @@
       "location": {
         "town": "Springfield",
         "address": "293 Sumner Ave",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.08468,
+        "lng": -72.56528,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "293 Sumner Ave, Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2844,7 +3402,16 @@
       "location": {
         "town": "Greenfield",
         "address": "574 Bernardston Road",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.61249,
+        "lng": -72.58261,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "574 Bernardston Road, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 9,
@@ -2886,7 +3453,16 @@
       "location": {
         "town": "Greenfield",
         "address": "574 Bernardston Road",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.61249,
+        "lng": -72.58261,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "574 Bernardston Road, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -2931,7 +3507,16 @@
       "location": {
         "town": "Southampton",
         "address": "19 Rattle Hill Rd",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.24775,
+        "lng": -72.73094,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "19 Rattle Hill Rd, Southampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -2976,7 +3561,16 @@
       "location": {
         "town": "Springfield",
         "address": "21 Edwards St",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10437,
+        "lng": -72.58706,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "21 Edwards St, Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -3022,7 +3616,16 @@
       "location": {
         "town": "Wilbraham",
         "address": "1004 Stony Hill Road",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.106,
+        "lng": -72.45859,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "1004 Stony Hill Road, Wilbraham, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -3067,7 +3670,16 @@
       "location": {
         "town": "Amherst",
         "address": "41 Blue Hills Road",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.37335,
+        "lng": -72.52867,
+        "geo": {
+          "precision": "street",
+          "approximate": true,
+          "source": "geocoder",
+          "query": "41 Blue Hills Road, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -3112,7 +3724,16 @@
       "location": {
         "town": "Montague",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.59012,
+        "lng": -72.54973,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Montague, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -3159,7 +3780,16 @@
       "location": {
         "town": "South Deerfield",
         "address": "265 Greenfield Road, Ste 1",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.50712,
+        "lng": -72.60572,
+        "geo": {
+          "precision": "street",
+          "approximate": true,
+          "source": "geocoder",
+          "query": "265 Greenfield Road, Ste 1, South Deerfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 4,
@@ -3194,7 +3824,16 @@
       "location": {
         "town": "Turners Falls",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.60831,
+        "lng": -72.55679,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Turners Falls, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -3239,7 +3878,16 @@
       "location": {
         "town": "Goshen",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.44175,
+        "lng": -72.80004,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Goshen, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 9,
@@ -3284,7 +3932,16 @@
       "location": {
         "town": "Brattleboro",
         "address": "10 Town Crier Drive",
-        "region": null
+        "region": null,
+        "lat": 42.87091,
+        "lng": -72.55723,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "10 Town Crier Drive, Brattleboro, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -3329,7 +3986,16 @@
       "location": {
         "town": "Greenfield",
         "address": "Greenfield High School, 21 Barr Ave",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.60535,
+        "lng": -72.59491,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Greenfield High School, 21 Barr Ave, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -3375,7 +4041,16 @@
       "location": {
         "town": "Easthampton",
         "address": "Keystone Mill",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.27088,
+        "lng": -72.67196,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Keystone Mill, Easthampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -3420,7 +4095,16 @@
       "location": {
         "town": "Greenfield",
         "address": "77 Oak Hill Road",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.64826,
+        "lng": -72.59985,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "77 Oak Hill Road, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -3469,7 +4153,16 @@
       "location": {
         "town": "Northampton",
         "address": "139 South Street",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.31244,
+        "lng": -72.63397,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "139 South Street, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -3514,7 +4207,16 @@
       "location": {
         "town": "Sunderland",
         "address": "North Star Self-Directed Learning for Teens",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.46369,
+        "lng": -72.58056,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "North Star Self-Directed Learning for Teens, Sunderland, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 10,
@@ -3561,7 +4263,16 @@
       "location": {
         "town": "Granby",
         "address": "1 Ames Rd",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.25702,
+        "lng": -72.51648,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "1 Ames Rd, Granby, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -3611,7 +4322,16 @@
       "location": {
         "town": "Florence",
         "address": "Bombyx Center, 130 Pine Street",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.33557,
+        "lng": -72.67195,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Bombyx Center, 130 Pine Street, Florence, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -3656,7 +4376,16 @@
       "location": {
         "town": "Chicopee",
         "address": null,
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.14877,
+        "lng": -72.60711,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Chicopee, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 3,
@@ -3699,7 +4428,16 @@
       "location": {
         "town": "South Hadley",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.25914,
+        "lng": -72.57513,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "South Hadley, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -3742,7 +4480,16 @@
       "location": {
         "town": "Northampton",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Northampton, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -3789,7 +4536,16 @@
       "location": {
         "town": "Charlemont",
         "address": null,
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.62754,
+        "lng": -72.87449,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Charlemont, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 8,
@@ -3833,7 +4589,16 @@
       "location": {
         "town": "Ashfield",
         "address": "4 Norman Road",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.56434,
+        "lng": -72.82604,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "4 Norman Road, Ashfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -3875,7 +4640,16 @@
       "location": {
         "town": "Northampton",
         "address": "Sheldon Field (drop-off/pickup)",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.3179,
+        "lng": -72.6311,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Sheldon Field (drop-off/pickup), Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -3925,7 +4699,16 @@
       "location": {
         "town": "Westfield",
         "address": "181-217 Root Rd",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.17465,
+        "lng": -72.74836,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "181-217 Root Rd, Westfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -3977,7 +4760,16 @@
       "location": {
         "town": "Montague",
         "address": "20 Masonic Ave",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58466,
+        "lng": -72.57421,
+        "geo": {
+          "precision": "street",
+          "approximate": true,
+          "source": "geocoder",
+          "query": "20 Masonic Ave, Montague, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -4022,7 +4814,16 @@
       "location": {
         "town": "Northampton",
         "address": "21 Pleasant St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.31918,
+        "lng": -72.62932,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "21 Pleasant St, Northampton, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": null,
@@ -4067,7 +4868,16 @@
       "location": {
         "town": "Amherst",
         "address": "Boyden Fields, UMass Amherst campus",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.37319,
+        "lng": -72.51988,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Boyden Fields, UMass Amherst campus, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -4110,7 +4920,16 @@
       "location": {
         "town": "Amherst",
         "address": "UMass Champions Center, 190 Commonwealth Ave",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.37319,
+        "lng": -72.51988,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "UMass Champions Center, 190 Commonwealth Ave, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -4151,7 +4970,16 @@
       "location": {
         "town": "Shutesbury",
         "address": null,
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.45215,
+        "lng": -72.4098,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Shutesbury, Massachusetts, USA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 6,
@@ -4196,7 +5024,16 @@
       "location": {
         "town": "South Deerfield",
         "address": "Deerfield Elementary School, South Deerfield, MA",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.48116,
+        "lng": -72.60827,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "Deerfield Elementary School, South Deerfield, MA, South Deerfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -4246,7 +5083,16 @@
       "location": {
         "town": "Greenfield",
         "address": "Main Street facility",
-        "region": "Franklin"
+        "region": "Franklin",
+        "lat": 42.58763,
+        "lng": -72.60021,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "Main Street facility, Greenfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 5,
@@ -4288,7 +5134,16 @@
       "location": {
         "town": "Amherst",
         "address": "UMass Amherst campus",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.39195,
+        "lng": -72.52742,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "UMass Amherst campus, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -4331,7 +5186,16 @@
       "location": {
         "town": "Amherst",
         "address": "UMass Amherst campus",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.39195,
+        "lng": -72.52742,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "UMass Amherst campus, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -4378,7 +5242,16 @@
       "location": {
         "town": "Amherst",
         "address": "UMass Amherst campus",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.39195,
+        "lng": -72.52742,
+        "geo": {
+          "precision": "street",
+          "approximate": false,
+          "source": "geocoder",
+          "query": "UMass Amherst campus, Amherst, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 7,
@@ -4425,7 +5298,16 @@
       "location": {
         "town": "Florence",
         "address": "BOMBYX Center, 130 Pine St",
-        "region": "Hampshire"
+        "region": "Hampshire",
+        "lat": 42.33557,
+        "lng": -72.67195,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "BOMBYX Center, 130 Pine St, Florence, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 9,
@@ -4470,7 +5352,16 @@
       "location": {
         "town": "Springfield",
         "address": "STCC campus, 1 Armory Sq",
-        "region": "Hampden"
+        "region": "Hampden",
+        "lat": 42.10188,
+        "lng": -72.58867,
+        "geo": {
+          "precision": "town",
+          "approximate": true,
+          "source": "nominatim",
+          "query": "STCC campus, 1 Armory Sq, Springfield, MA",
+          "geocodedAt": "2026-06-16"
+        }
       },
       "ages": {
         "min": 11,
