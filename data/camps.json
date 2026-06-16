@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-06-16",
   "version": "1.0.0",
-  "totalCamps": 97,
+  "totalCamps": 100,
   "camps": [
     {
       "id": "hitchcock-center-nature-camp",
@@ -4417,6 +4417,152 @@
         "lastVerified": "2026-06-12"
       },
       "incomplete": []
+    },
+    {
+      "id": "young-singers-in-harmony",
+      "name": "Young Singers in Harmony",
+      "organization": "Heart of the Valley Chorus",
+      "location": {
+        "town": "Florence",
+        "address": "BOMBYX Center, 130 Pine St",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 9,
+        "max": 14
+      },
+      "dates": {
+        "weeks": [
+          "2026-07-13"
+        ],
+        "weeksPerSession": 1,
+        "sessionLength": "1 week",
+        "hours": "8:30am-12:30pm (Mon-Thu), 8:30am-3:00pm (Fri)",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Check website for 2026 tuition.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://bombyx.live/events/young-singers-in-harmony/"
+      },
+      "category": [
+        "performing-arts",
+        "specialty"
+      ],
+      "description": "Half-day a cappella and vocal music program for singers entering grades 4-9. Explores the science of sound through musical games, art and science projects, and ensemble singing, ending in a family showcase. All ability levels welcome.",
+      "source": {
+        "url": "https://bombyx.live/events/young-singers-in-harmony/",
+        "lastVerified": "2026-06-16"
+      },
+      "incomplete": [
+        "cost"
+      ]
+    },
+    {
+      "id": "ke-camps-northampton-country-club",
+      "name": "KE Camps at Northampton Country Club",
+      "organization": "KE Camps",
+      "location": {
+        "town": "Northampton",
+        "address": "Northampton Country Club",
+        "region": "Hampshire"
+      },
+      "ages": {
+        "min": 5,
+        "max": 12
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-16",
+          "2026-06-23",
+          "2026-06-30",
+          "2026-07-07",
+          "2026-07-14",
+          "2026-07-21",
+          "2026-07-28"
+        ],
+        "weeksPerSession": 1,
+        "sessionLength": "1 week (Tue-Fri)",
+        "hours": "9:00am-3:00pm (drop-off 8:30am)",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": 355,
+        "notes": "$355/week standard, $325 advanced rate (club members), plus one-time $45 registration fee. Full payment due at registration.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": "2026-02-09",
+        "deadline": null,
+        "url": "https://kecamps.com/camps/northampton-country-club"
+      },
+      "category": [
+        "sports",
+        "general"
+      ],
+      "description": "Country club day camp for kids entering grades 1-6: golf and tennis instruction, swimming, arts and crafts, group games, culinary activities, and STEM challenges. Tuesday-Friday sessions.",
+      "source": {
+        "url": "https://kecamps.com/camps/northampton-country-club",
+        "lastVerified": "2026-06-16"
+      },
+      "incomplete": []
+    },
+    {
+      "id": "college-for-kids-stcc",
+      "name": "College for Kids at STCC",
+      "organization": "Springfield Technical Community College",
+      "location": {
+        "town": "Springfield",
+        "address": "STCC campus, 1 Armory Sq",
+        "region": "Hampden"
+      },
+      "ages": {
+        "min": 11,
+        "max": 16
+      },
+      "dates": {
+        "weeks": [
+          "2026-06-22",
+          "2026-06-29",
+          "2026-07-06",
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10"
+        ],
+        "weeksPerSession": 1,
+        "sessionLength": "1 week",
+        "hours": "9:00am-3:00pm",
+        "extendedCare": null
+      },
+      "cost": {
+        "perWeek": null,
+        "notes": "Check STCC for 2026 course pricing.",
+        "financialAid": null
+      },
+      "registration": {
+        "opens": null,
+        "deadline": null,
+        "url": "https://www.stcc.edu/explore/summer-youth-programs/college-for-kids/"
+      },
+      "category": [
+        "academic",
+        "stem"
+      ],
+      "description": "Weeklong academic enrichment for ages 11-16 on the STCC campus: hands-on courses in science, technology, engineering, arts, business, and leadership, with technology and computer science a large part of the 2026 curriculum.",
+      "source": {
+        "url": "https://www.stcc.edu/explore/summer-youth-programs/college-for-kids/",
+        "lastVerified": "2026-06-16"
+      },
+      "incomplete": [
+        "cost"
+      ]
     }
   ]
 }
