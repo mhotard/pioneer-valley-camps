@@ -94,9 +94,12 @@ Filter state is encoded in query params (`?town=Amherst&cost=400&aid=1`; keys: q
 
 ## Suggestion Form
 
-- Powered by Formspree (ID: mwvvknwb)
-- Submissions go to account owner's email
+- Powered by Formspree (ID: mwvvknwb); submissions go to pioneervalleysummercamps@gmail.com
 - Review and manually add suggested camps
+
+## Analytics
+
+- GoatCounter (free): https://mhotard.goatcounter.com
 
 ## Categories
 
