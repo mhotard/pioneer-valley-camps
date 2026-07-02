@@ -64,7 +64,7 @@ Use `/camps-update` to research and add new camps automatically.
 - `python3 scripts/geocode.py` adds `location.lat`/`lng`/`geo` to camps missing/stale coordinates (free: US Census for street addresses + named-venue and town lookups via Nominatim). Run it after adding camps. It flags any camp landing >40 mi from Amherst (wrong town/state guard), and check_data.py warns on the same.
 
 ### Map view
-4th view toggle (map-pin icon). Plots `filteredCamps` on a Leaflet map (vendored in `vendor/`, OpenStreetMap tiles, lazy-loaded on first open). Precise camps use the default marker; town-level/approximate camps (geocoding fallback or the privacy list in geocode.py) use a hollow circle and say "approximate" in the popup. Overlapping town-center markers cluster via Leaflet.markercluster. Marker popup -> "View details" opens the camp modal. Camps without coordinates surface in a notice, not dropped. The map respects active filters.
+4th view toggle (map-pin icon). Plots `filteredCamps` on a Leaflet map (vendored in `vendor/`, OpenStreetMap tiles, lazy-loaded on first open). Precise camps use the default marker; town-level/approximate camps (geocoding fallback or the privacy list in geocode.py) use a hollow circle and say "approximate" in the popup. Overlapping town-center markers cluster via Leaflet.markercluster. Marker popup -> "View details" opens the camp modal. Camps without coordinates surface in a notice, not dropped. The map respects active filters. Known limitation: Leaflet circleMarkers (used for approximate camps) are not keyboard-focusable; default markers are. Switch approximate camps to a divIcon-based marker if this ever matters.
 
 ## Deployment
 

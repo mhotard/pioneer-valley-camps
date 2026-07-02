@@ -382,6 +382,23 @@ function setupEventListeners() {
         }
     });
 
+    // Trap Tab inside the open dialog
+    modal.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        const focusables = modal.querySelectorAll(
+            'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
     // View toggle
     viewGridBtn?.addEventListener('click', () => setView('grid'));
     viewListBtn?.addEventListener('click', () => setView('list'));
@@ -445,9 +462,17 @@ function setupEventListeners() {
         }
     });
 
-    // Table sort headers
+    // Table sort headers (keyboard operable: Enter/Space)
     document.querySelectorAll('th.sortable').forEach(th => {
+        th.setAttribute('tabindex', '0');
+        th.setAttribute('role', 'button');
         th.addEventListener('click', () => handleSort(th.dataset.sort));
+        th.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleSort(th.dataset.sort);
+            }
+        });
     });
 
     // Delegate click events for camp cards (star first, so it never opens the modal)
@@ -732,6 +757,9 @@ function updateSortHeaders() {
         th.classList.remove('sorted-asc', 'sorted-desc');
         if (th.dataset.sort === currentSort.column) {
             th.classList.add(currentSort.direction === 'asc' ? 'sorted-asc' : 'sorted-desc');
+            th.setAttribute('aria-sort', currentSort.direction === 'asc' ? 'ascending' : 'descending');
+        } else {
+            th.setAttribute('aria-sort', 'none');
         }
     });
 }
@@ -1160,12 +1188,17 @@ function mapPopupHtml(camp, approximate) {
         </div>`;
 }
 
+let lastFocusedBeforeModal = null;
+
 function openModal(camp) {
     const html = createModalContent(camp);
     modalBody.innerHTML = html;
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     history.replaceState(null, '', location.pathname + location.search + '#' + camp.id);
+    // Move focus into the dialog; return it on close
+    lastFocusedBeforeModal = document.activeElement;
+    modalClose.focus();
 }
 
 function closeModal() {
@@ -1174,6 +1207,10 @@ function closeModal() {
     if (location.hash) {
         history.replaceState(null, '', location.pathname + location.search);
     }
+    if (lastFocusedBeforeModal?.isConnected) {
+        lastFocusedBeforeModal.focus();
+    }
+    lastFocusedBeforeModal = null;
 }
 
 function createModalContent(camp) {
