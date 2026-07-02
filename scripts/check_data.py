@@ -100,6 +100,20 @@ def main():
             if check and check(c):
                 warnings.append(f"{c['id']}: incomplete[] lists '{field}' but the data is present")
 
+    # Field sanity: age ranges, session spans, coordinate types
+    for c in camps:
+        ages = c.get("ages") or {}
+        if ages.get("min") is not None and ages.get("max") is not None and ages["min"] > ages["max"]:
+            errors.append(f"{c['id']}: ages.min {ages['min']} > ages.max {ages['max']}")
+        span = (c.get("dates") or {}).get("weeksPerSession")
+        if span is not None and (not isinstance(span, int) or not 1 <= span <= 8):
+            errors.append(f"{c['id']}: weeksPerSession '{span}' should be an int between 1 and 8")
+        loc = c.get("location") or {}
+        for k in ("lat", "lng"):
+            v = loc.get(k)
+            if v is not None and not isinstance(v, (int, float)):
+                errors.append(f"{c['id']}: location.{k} '{v}' is not a number")
+
     # Geocoding: flag un-geocoded camps and any that landed out of region
     # (the latter catches wrong-state entries, e.g. a Northampton in another state)
     for c in camps:
@@ -109,6 +123,8 @@ def main():
             if loc.get("address"):
                 warnings.append(f"{c['id']}: has an address but no coordinates (run scripts/geocode.py)")
             continue
+        if not isinstance(lat, (int, float)) or not isinstance(lng, (int, float)):
+            continue  # already reported as a type error above
         dist = haversine_miles(CENTER, (lat, lng))
         if dist > REGION_RADIUS_MILES:
             warnings.append(f"{c['id']}: geocodes {round(dist)} mi from center, "
