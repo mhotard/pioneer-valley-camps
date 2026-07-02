@@ -25,6 +25,10 @@ Each camp in `camps.json` has:
   - `weeks` holds session START dates; `weeksPerSession` (int, default 1) says
     how many consecutive weeks each start covers. Set it to 2 for camps with
     "2-week sessions" so the week filter and planner cover both weeks.
+  - Known limitation: `weeksPerSession` is one number per camp, so a camp with
+    mixed session lengths (e.g. Camp Norwich: four 2-week sessions plus one
+    1-week) slightly overstates its last session's end date in the modal.
+    Accepted; per-session spans aren't worth the schema complexity.
 - `cost`: { perWeek, notes, financialAid }
 - `registration`: { opens (flexible format), deadline, url }
 - `category`: array of category IDs

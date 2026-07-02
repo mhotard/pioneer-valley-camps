@@ -679,7 +679,8 @@ function createCampRow(camp) {
     const cost = formatCost(camp.cost?.perWeek, '') || 'TBD';
 
     const location = camp.location?.town || 'TBD';
-    const weekCount = camp.dates?.weeks?.length || 0;
+    // Count covered weeks (multi-week sessions span more weeks than starts)
+    const weekCount = campCoveredWeeks(camp).size;
 
     return `
         <tr data-camp-id="${camp.id}">
@@ -874,7 +875,7 @@ function renderPlanner() {
     if (withDates.length > 0) {
         html += plannerGridHtml(withDates, weeks);
     } else {
-        html += `<p class="planner-note">None of your saved camps have published 2026 session
+        html += `<p class="planner-note">None of your saved camps have published ${seasonYear} session
             dates yet. Open each camp below for its website link.</p>`;
     }
     if (noDates.length > 0) {
@@ -1033,7 +1034,7 @@ function plannerNoDatesHtml(camps) {
     const items = camps.map(camp => `
         <li>
             <button class="camp-title-btn" data-camp-id="${camp.id}">${escapeHtml(camp.name)}</button>
-            <span class="planner-camp-meta">${escapeHtml(camp.location?.town || '')} &middot; Check website for 2026 dates</span>
+            <span class="planner-camp-meta">${escapeHtml(camp.location?.town || '')} &middot; Check website for ${seasonYear} dates</span>
             <button class="unstar-btn" data-star-id="${camp.id}">Remove</button>
         </li>`).join('');
     return `

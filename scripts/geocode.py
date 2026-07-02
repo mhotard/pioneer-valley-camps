@@ -103,12 +103,16 @@ def save_cache(cache):
 
 
 def town_centroid(town, cache):
-    """Town-center coordinates, cached and shared across camps in a town."""
-    key = f"{town}, Massachusetts, USA"
+    """Town-center coordinates, cached and shared across camps in a town.
+
+    Cache key is namespaced ("town::") so it can never collide with a
+    no-address camp's query key, which is the same human-readable string.
+    """
+    key = f"town::{town}"
     if key in cache:
         return cache[key]
     try:
-        hit = nominatim_lookup(key)
+        hit = nominatim_lookup(f"{town}, Massachusetts, USA")
         time.sleep(1.0)  # Nominatim policy: max 1 req/sec
     except Exception:
         hit = None
@@ -131,18 +135,24 @@ def geocode_camp(camp, cache, force):
     addr = loc.get("address")
 
     if not force and query in cache:
-        return cache[query]
+        hit = cache[query]
+        # Ignore malformed entries (e.g. bare centroids written by older runs)
+        if isinstance(hit, dict) and "precision" in hit:
+            return hit
 
     centroid = town_centroid(town, cache)
     result = None
 
     if addr:
         precise = None
+        precise_source = None
         # Numbered street address -> Census rooftop match
         if addr[0].isdigit():
             try:
                 precise = census_lookup(f"{addr}, {town}, MA")
                 time.sleep(0.2)
+                if precise:
+                    precise_source = "census"
             except Exception:
                 precise = None
         # Named venue, or Census missed -> Nominatim place lookup
@@ -157,6 +167,8 @@ def geocode_camp(camp, cache, force):
                         precise = hit
                 elif hit:
                     precise = hit
+                if precise:
+                    precise_source = "nominatim"
             except Exception:
                 precise = None
         # Accept a precise hit only if it's plausibly within the town
@@ -164,10 +176,10 @@ def geocode_camp(camp, cache, force):
             d = haversine_miles((precise[0], precise[1]), (centroid["lat"], centroid["lng"]))
             if d <= 12:
                 result = {"lat": precise[0], "lng": precise[1],
-                          "precision": "street", "source": "geocoder"}
+                          "precision": "street", "source": precise_source}
         elif precise:
             result = {"lat": precise[0], "lng": precise[1],
-                      "precision": "street", "source": "geocoder"}
+                      "precision": "street", "source": precise_source}
 
     if result is None and centroid:
         result = {"lat": centroid["lat"], "lng": centroid["lng"],
@@ -249,11 +261,12 @@ def main():
             review_far.append((camp["id"], round(dist), query))
 
     save_cache(cache)
-    data["lastUpdated"] = today
-    CAMPS.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-    (ROOT / "data" / "history").mkdir(exist_ok=True)
-    (ROOT / "data" / "history" / f"{today}.json").write_text(
-        json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    if done > 0:
+        data["lastUpdated"] = today
+        CAMPS.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+        (ROOT / "data" / "history").mkdir(exist_ok=True)
+        (ROOT / "data" / "history" / f"{today}.json").write_text(
+            json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
     print(f"Geocoded: {done} camps   (street: {counts['street']}, "
           f"town-level: {counts['town']}, failed: {counts['failed']})")
