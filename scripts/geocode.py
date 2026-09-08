@@ -15,21 +15,15 @@ Usage:
 import argparse
 import datetime
 import json
-import math
 import sys
 import time
 import urllib.parse
 import urllib.request
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-CAMPS = ROOT / "data" / "camps.json"
-CACHE_DIR = ROOT / "cache"
+from common import (CACHE_DIR, CENTER, REGION_RADIUS_MILES, haversine_miles,
+                    load_camps, save_camps)
+
 CACHE_FILE = CACHE_DIR / "geocode_cache.json"
-
-# Amherst, MA town center. Out-of-region safety net measures from here.
-CENTER = (42.3732, -72.5199)
-REGION_RADIUS_MILES = 40
 
 # Camps at private homes / personal studios: geocode but never pin precisely.
 PRIVACY_TOWN_LEVEL = {
@@ -39,13 +33,6 @@ PRIVACY_TOWN_LEVEL = {
 }
 
 UA = "PioneerValleyCamps geocoder (https://mhotard.github.io/pioneer-valley-camps)"
-
-
-def haversine_miles(a, b):
-    lat1, lon1, lat2, lon2 = map(math.radians, [a[0], a[1], b[0], b[1]])
-    dlat, dlon = lat2 - lat1, lon2 - lon1
-    h = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
-    return 3958.8 * 2 * math.asin(math.sqrt(h))
 
 
 def get_json(url):
@@ -197,7 +184,7 @@ def main():
     parser.add_argument("--ids", nargs="*")
     args = parser.parse_args()
 
-    data = json.loads(CAMPS.read_text())
+    data = load_camps()
     camps = data["camps"]
     cache = load_cache()
     today = datetime.date.today().isoformat()
@@ -263,10 +250,7 @@ def main():
     save_cache(cache)
     if done > 0:
         data["lastUpdated"] = today
-        CAMPS.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-        (ROOT / "data" / "history").mkdir(exist_ok=True)
-        (ROOT / "data" / "history" / f"{today}.json").write_text(
-            json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+        save_camps(data)
 
     print(f"Geocoded: {done} camps   (street: {counts['street']}, "
           f"town-level: {counts['town']}, failed: {counts['failed']})")

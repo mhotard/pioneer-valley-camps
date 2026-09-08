@@ -8,27 +8,9 @@ Usage:
 import argparse
 import collections
 import datetime
-import json
-import math
 import sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-
-# Amherst, MA town center; camps should sit within the coverage radius of it.
-CENTER = (42.3732, -72.5199)
-REGION_RADIUS_MILES = 40
-
-
-def haversine_miles(a, b):
-    lat1, lon1, lat2, lon2 = map(math.radians, [a[0], a[1], b[0], b[1]])
-    dlat, dlon = lat2 - lat1, lon2 - lon1
-    h = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
-    return 3958.8 * 2 * math.asin(math.sqrt(h))
-
-
-def load(name):
-    return json.loads((ROOT / "data" / name).read_text())
+from common import CENTER, REGION_RADIUS_MILES, haversine_miles, load_camps, load_json
 
 
 def main():
@@ -37,7 +19,7 @@ def main():
                         help="list camps not verified in DAYS+ days and exit")
     args = parser.parse_args()
 
-    data = load("camps.json")
+    data = load_camps()
     camps = data["camps"]
     today = datetime.date.today()
 
@@ -66,7 +48,7 @@ def main():
             errors.append(f"duplicate id: {cid}")
 
     # Categories
-    valid_cats = {c["id"] for c in load("categories.json")["categories"]}
+    valid_cats = {c["id"] for c in load_json("categories.json")["categories"]}
     for c in camps:
         for cat in c.get("category") or []:
             if cat not in valid_cats:

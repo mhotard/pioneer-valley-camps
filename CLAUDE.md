@@ -8,11 +8,17 @@ A searchable database of children's summer camps within 45 minutes of Amherst, M
 pioneer-valley-camps/
 ├── index.html          # Main page with search/filter UI
 ├── css/styles.css      # All styles
-├── js/app.js           # Client-side filtering, modal, rendering
+├── js/app.js           # Client-side filtering, modal, planner, map, rendering
 ├── data/
-│   ├── camps.json      # Main camp database (54 camps)
+│   ├── camps.json      # Main camp database (count lives in its totalCamps field)
 │   ├── categories.json # Category definitions
-│   └── regions.json    # Towns in coverage area
+│   └── regions.json    # Towns in coverage area (reference for research; not loaded by the site)
+├── scripts/
+│   ├── common.py       # Shared paths, load/save helpers, haversine (imported by the others)
+│   ├── check_data.py   # Validation + staleness (runs in CI)
+│   ├── check_sources.py# Detect changed camp web pages
+│   └── geocode.py      # Add lat/lng to camps
+└── docs/               # Design handoff specs (planner, map, geocoding, season rollover)
 ```
 
 ## Data Model
@@ -86,7 +92,7 @@ appear in a separate "Dates unknown" list. Plans can be shared two ways:
 into Excel or Google Sheets, for families comparing plans). State persists in localStorage key
 `pvcamps-planner-v1` ({ starred: [ids], assignments: { weekMonday: [ids] } });
 all access goes through `loadPlannerState`/`savePlannerState` so the backend
-could be swapped later. Full design in PLANNER_SPEC.md (local, untracked).
+could be swapped later. Full design in docs/PLANNER_SPEC.md.
 
 ## Shareable URLs
 

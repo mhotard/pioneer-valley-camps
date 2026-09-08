@@ -15,14 +15,12 @@ Each run saves fresh snapshots to cache/YYYY-MM-DD/ (gitignored).
 import argparse
 import datetime
 import gzip
-import json
 import re
 import sys
 import urllib.request
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-CACHE = ROOT / "cache"
+from common import CACHE_DIR, load_camps
+
 UA = "Mozilla/5.0 (compatible; PioneerValleyCamps data refresh; +https://mhotard.github.io/pioneer-valley-camps)"
 
 
@@ -42,7 +40,7 @@ def fetch(url: str) -> str:
 
 def latest_cached(camp_id):
     """Most recent cached snapshot for this camp."""
-    candidates = sorted(CACHE.glob(f"*/{camp_id}.html.gz"), key=lambda p: p.parent.name)
+    candidates = sorted(CACHE_DIR.glob(f"*/{camp_id}.html.gz"), key=lambda p: p.parent.name)
     return candidates[-1] if candidates else None
 
 
@@ -52,14 +50,14 @@ def main():
     parser.add_argument("--ids", nargs="*")
     args = parser.parse_args()
 
-    camps = json.loads((ROOT / "data" / "camps.json").read_text())["camps"]
+    camps = load_camps()["camps"]
     if args.ids:
         camps = [c for c in camps if c["id"] in set(args.ids)]
     if args.limit:
         camps = camps[: args.limit]
 
     today = datetime.date.today().isoformat()
-    outdir = CACHE / today
+    outdir = CACHE_DIR / today
     outdir.mkdir(parents=True, exist_ok=True)
 
     results = {"CHANGED": [], "SAME": [], "NEW": [], "ERROR": []}
