@@ -13,10 +13,7 @@ let currentSort = { column: 'name', direction: 'asc' };
 
 // DOM Elements
 const searchInput = document.getElementById('search-input');
-const viewGridBtn = document.getElementById('view-grid');
-const viewListBtn = document.getElementById('view-list');
-const viewPlannerBtn = document.getElementById('view-planner');
-const viewMapBtn = document.getElementById('view-map');
+const viewButtons = document.querySelectorAll('.view-toggle [data-view]');
 const ageMinSelect = document.getElementById('age-min');
 const ageMaxSelect = document.getElementById('age-max');
 const townSelect = document.getElementById('town-select');
@@ -30,6 +27,7 @@ const clearFiltersBtn = document.getElementById('clear-filters');
 const clearFiltersAltBtn = document.getElementById('clear-filters-alt');
 const resultsCount = document.getElementById('results-count');
 const campsGrid = document.getElementById('camps-grid');
+const campsTableBody = document.getElementById('camps-table-body');
 const noResults = document.getElementById('no-results');
 const loading = document.getElementById('loading');
 const lastUpdated = document.getElementById('last-updated');
@@ -127,8 +125,7 @@ async function init() {
         applyFiltersFromURL();
         applyFilters();
 
-        // Hide loading
-        loading.style.display = 'none';
+        loading.hidden = true;
 
         // Set up event listeners
         setupEventListeners();
@@ -296,7 +293,7 @@ function updatePlannerChip() {
     if (!chip) return;
     const count = plannerState.starred.length;
     chip.textContent = count > 0 ? count : '';
-    chip.style.display = count > 0 ? '' : 'none';
+    chip.hidden = count === 0;
 }
 
 function createStarButton(camp) {
@@ -361,15 +358,15 @@ function setupEventListeners() {
     // Suggest form toggle
     suggestBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        suggestForm.style.display = suggestForm.style.display === 'none' ? 'block' : 'none';
-        if (suggestForm.style.display === 'block') {
+        suggestForm.hidden = !suggestForm.hidden;
+        if (!suggestForm.hidden) {
             suggestForm.scrollIntoView({ behavior: 'smooth' });
         }
     });
 
     footerSuggest?.addEventListener('click', (e) => {
         e.preventDefault();
-        suggestForm.style.display = 'block';
+        suggestForm.hidden = false;
         suggestForm.scrollIntoView({ behavior: 'smooth' });
     });
 
@@ -377,7 +374,7 @@ function setupEventListeners() {
     modalClose.addEventListener('click', closeModal);
     modalBackdrop.addEventListener('click', closeModal);
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display !== 'none') {
+        if (e.key === 'Escape' && !modal.hidden) {
             closeModal();
         }
     });
@@ -399,11 +396,10 @@ function setupEventListeners() {
         }
     });
 
-    // View toggle
-    viewGridBtn?.addEventListener('click', () => setView('grid'));
-    viewListBtn?.addEventListener('click', () => setView('list'));
-    viewPlannerBtn?.addEventListener('click', () => setView('planner'));
-    viewMapBtn?.addEventListener('click', () => setView('map'));
+    // View toggle: each button's data-view names the view it opens
+    viewButtons.forEach(btn => {
+        btn.addEventListener('click', () => setView(btn.dataset.view));
+    });
 
     // Controls that appear in every view: star buttons toggle the planner;
     // camp titles, table rows and map popups open the modal. Star is checked
@@ -585,7 +581,7 @@ function applyFilters() {
     });
 
     updateURL();
-    renderCamps();
+    render();
 }
 
 function clearFilters() {
@@ -605,52 +601,40 @@ function clearFilters() {
 function setView(view) {
     if (currentView === view) return;
     currentView = view;
-
-    viewGridBtn.classList.toggle('active', view === 'grid');
-    viewListBtn.classList.toggle('active', view === 'list');
-    viewPlannerBtn?.classList.toggle('active', view === 'planner');
-    viewMapBtn?.classList.toggle('active', view === 'map');
-
-    renderCamps();
+    viewButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.view === view));
+    render();
 }
 
-function renderCamps() {
+// Route to the active view. Called after every filter change, sort, or view switch.
+// body[data-view] drives which section CSS shows.
+function render() {
+    document.body.dataset.view = currentView;
     if (currentView === 'planner') {
-        document.body.className = 'view-planner';
         renderPlanner();
-        return;
-    }
-
-    if (currentView === 'map') {
-        document.body.className = 'view-map';
+    } else if (currentView === 'map') {
         renderMap();
-        return;
+    } else {
+        renderResults();
     }
+}
 
-    // Update count
-    resultsCount.textContent = `${filteredCamps.length} camp${filteredCamps.length !== 1 ? 's' : ''} found`;
+// Grid and table views: result count, empty state, sort, then markup
+function renderResults() {
+    const count = filteredCamps.length;
+    resultsCount.textContent = `${count} camp${count !== 1 ? 's' : ''} found`;
+    noResults.hidden = count > 0;
 
-    document.body.className = currentView === 'list' ? 'view-table' : 'view-grid';
-
-    const tableBody = document.getElementById('camps-table-body');
-
-    // Show/hide no results
-    if (filteredCamps.length === 0) {
+    if (count === 0) {
         campsGrid.innerHTML = '';
-        if (tableBody) tableBody.innerHTML = '';
-        noResults.style.display = 'block';
+        campsTableBody.innerHTML = '';
         return;
     }
 
-    noResults.style.display = 'none';
-
-    // Sort before rendering
     sortCamps();
-
     if (currentView === 'grid') {
-        campsGrid.innerHTML = filteredCamps.map(camp => createCampCard(camp)).join('');
-    } else if (tableBody) {
-        tableBody.innerHTML = filteredCamps.map(camp => createCampRow(camp)).join('');
+        campsGrid.innerHTML = filteredCamps.map(createCampCard).join('');
+    } else {
+        campsTableBody.innerHTML = filteredCamps.map(createCampRow).join('');
     }
 }
 
@@ -727,7 +711,7 @@ function handleSort(column) {
         currentSort.column = column;
         currentSort.direction = 'asc';
     }
-    renderCamps();
+    render();
 }
 
 function createCampCard(camp) {
@@ -1141,8 +1125,8 @@ let lastFocusedBeforeModal = null;
 function openModal(camp) {
     const html = createModalContent(camp);
     modalBody.innerHTML = html;
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
     history.replaceState(null, '', location.pathname + location.search + '#' + camp.id);
     // Move focus into the dialog; return it on close
     lastFocusedBeforeModal = document.activeElement;
@@ -1150,8 +1134,8 @@ function openModal(camp) {
 }
 
 function closeModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
     if (location.hash) {
         history.replaceState(null, '', location.pathname + location.search);
     }

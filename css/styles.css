@@ -279,20 +279,13 @@ header .subtitle {
     background-color: var(--background);
 }
 
-/* Visibility classes */
-.view-grid .camps-grid {
-    display: grid;
-}
-
-.view-grid .camps-table-container {
+/* Which view is visible is driven by body[data-view] (set in render()).
+   Grid is the default; each other view shows its section and hides the rest. */
+body[data-view="list"] .camps-grid {
     display: none;
 }
 
-.view-table .camps-grid {
-    display: none;
-}
-
-.view-table .camps-table-container {
+body[data-view="list"] .camps-table-container {
     display: block;
 }
 
@@ -457,6 +450,10 @@ header .subtitle {
 }
 
 /* Modal */
+body.modal-open {
+    overflow: hidden;
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -753,11 +750,11 @@ footer a {
     margin: 1.5rem 0;
 }
 
-.view-planner .planner-section {
+body[data-view="planner"] .planner-section {
     display: block;
 }
 
-.view-planner .results-section {
+body[data-view="planner"] .results-section {
     display: none;
 }
 
@@ -1020,11 +1017,11 @@ footer a {
     display: none;
 }
 
-.view-map .map-section {
+body[data-view="map"] .map-section {
     display: block;
 }
 
-.view-map .results-section {
+body[data-view="map"] .results-section {
     display: none;
 }
 
