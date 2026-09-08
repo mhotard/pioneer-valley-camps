@@ -6,7 +6,8 @@
 let allCamps = [];
 let filteredCamps = [];
 let categories = [];
-let regions = {};
+let campById = new Map();      // id -> camp, built once in init()
+let categoryById = new Map();  // id -> category
 let currentView = 'grid'; // 'grid' or 'list' (table)
 let currentSort = { column: 'name', direction: 'asc' };
 
@@ -84,15 +85,15 @@ function applyFiltersFromURL() {
 async function init() {
     try {
         // Load data files in parallel
-        const [campsData, categoriesData, regionsData] = await Promise.all([
+        const [campsData, categoriesData] = await Promise.all([
             fetch('data/camps.json').then(r => r.json()),
-            fetch('data/categories.json').then(r => r.json()),
-            fetch('data/regions.json').then(r => r.json())
+            fetch('data/categories.json').then(r => r.json())
         ]);
 
         allCamps = campsData.camps || [];
         categories = categoriesData.categories || [];
-        regions = regionsData;
+        campById = new Map(allCamps.map(c => [c.id, c]));
+        categoryById = new Map(categories.map(c => [c.id, c]));
 
         // Cap multi-week session expansion at the season's last real week
         allCamps.forEach(camp => {
@@ -139,7 +140,7 @@ async function init() {
         }
 
         // Deep link: #camp-id opens that camp's modal
-        const linkedCamp = allCamps.find(c => c.id === location.hash.slice(1));
+        const linkedCamp = campById.get(location.hash.slice(1));
         if (linkedCamp) {
             openModal(linkedCamp);
         }
@@ -227,7 +228,7 @@ const PLANNER_KEY = 'pvcamps-planner-v1';
 let plannerState = { starred: [], assignments: {} };
 
 function campRunsWeek(campId, weekMonday) {
-    const camp = allCamps.find(c => c.id === campId);
+    const camp = campById.get(campId);
     return !!camp && campCoveredWeeks(camp).has(weekMonday);
 }
 
@@ -235,8 +236,7 @@ function loadPlannerState() {
     try {
         const raw = JSON.parse(localStorage.getItem(PLANNER_KEY));
         if (!raw || !Array.isArray(raw.starred)) return;
-        const validIds = new Set(allCamps.map(c => c.id));
-        plannerState.starred = raw.starred.filter(id => validIds.has(id));
+        plannerState.starred = raw.starred.filter(id => campById.has(id));
         plannerState.assignments = {};
         for (const [week, ids] of Object.entries(raw.assignments || {})) {
             const camps = (Array.isArray(ids) ? ids : [ids]).filter(id =>
@@ -405,18 +405,25 @@ function setupEventListeners() {
     viewPlannerBtn?.addEventListener('click', () => setView('planner'));
     viewMapBtn?.addEventListener('click', () => setView('map'));
 
-    // Delegate "View details" clicks from map popups
-    document.getElementById('map')?.addEventListener('click', (e) => {
-        const btn = e.target.closest('.map-details-btn');
-        if (btn) {
-            const camp = allCamps.find(c => c.id === btn.dataset.campId);
+    // Controls that appear in every view: star buttons toggle the planner;
+    // camp titles, table rows and map popups open the modal. Star is checked
+    // first so a star inside a table row never opens the row's modal.
+    document.addEventListener('click', (e) => {
+        const star = e.target.closest('.star-btn');
+        if (star) {
+            toggleStar(star.dataset.starId);
+            return;
+        }
+        const opener = e.target.closest('.camp-title-btn, .map-details-btn, tr[data-camp-id]');
+        if (opener) {
+            const camp = campById.get(opener.dataset.campId);
             if (camp) {
                 openModal(camp);
             }
         }
     });
 
-    // Planner interactions (assignment cells, unstar, camp links, actions)
+    // Planner-only interactions (assignment cells, unstar, actions)
     document.getElementById('planner-body')?.addEventListener('click', (e) => {
         const cell = e.target.closest('.cell-btn');
         if (cell) {
@@ -427,14 +434,6 @@ function setupEventListeners() {
         if (unstar) {
             toggleStar(unstar.dataset.starId);
             renderPlanner();
-            return;
-        }
-        const title = e.target.closest('.camp-title-btn');
-        if (title) {
-            const camp = allCamps.find(c => c.id === title.dataset.campId);
-            if (camp) {
-                openModal(camp);
-            }
             return;
         }
         if (e.target.closest('#planner-browse')) {
@@ -473,47 +472,6 @@ function setupEventListeners() {
                 handleSort(th.dataset.sort);
             }
         });
-    });
-
-    // Delegate click events for camp cards (star first, so it never opens the modal)
-    campsGrid.addEventListener('click', (e) => {
-        const star = e.target.closest('.star-btn');
-        if (star) {
-            toggleStar(star.dataset.starId);
-            return;
-        }
-        const btn = e.target.closest('.camp-title-btn');
-        if (btn) {
-            const campId = btn.dataset.campId;
-            const camp = allCamps.find(c => c.id === campId);
-            if (camp) {
-                openModal(camp);
-            }
-        }
-    });
-
-    // Delegate click events for table rows
-    document.getElementById('camps-table-body')?.addEventListener('click', (e) => {
-        const star = e.target.closest('.star-btn');
-        if (star) {
-            toggleStar(star.dataset.starId);
-            return;
-        }
-        const row = e.target.closest('tr[data-camp-id]');
-        if (row) {
-            const camp = allCamps.find(c => c.id === row.dataset.campId);
-            if (camp) {
-                openModal(camp);
-            }
-        }
-    });
-
-    // Star button inside the modal header
-    modalBody.addEventListener('click', (e) => {
-        const star = e.target.closest('.star-btn');
-        if (star) {
-            toggleStar(star.dataset.starId);
-        }
     });
 }
 
@@ -697,9 +655,7 @@ function renderCamps() {
 }
 
 function createCampRow(camp) {
-    const ageRange = camp.ages?.min || camp.ages?.max
-        ? `${camp.ages.min || '?'}-${camp.ages.max || '?'} yrs`
-        : 'TBD';
+    const ageRange = ageRangeText(camp) || 'TBD';
 
     const cost = formatCost(camp.cost?.perWeek, '') || 'TBD';
 
@@ -775,18 +731,10 @@ function handleSort(column) {
 }
 
 function createCampCard(camp) {
-    const ageRange = camp.ages?.min || camp.ages?.max
-        ? `${camp.ages.min || '?'}-${camp.ages.max || '?'} yrs`
-        : 'Ages TBD';
-
+    const ageRange = ageRangeText(camp) || 'Ages TBD';
     const cost = formatCost(camp.cost?.perWeek) || 'Cost TBD';
-
     const location = camp.location?.town || 'Location TBD';
-
-    const categoryTags = (camp.category || []).slice(0, 2).map(catId => {
-        const cat = categories.find(c => c.id === catId);
-        return cat ? `<span class="camp-tag category">${cat.name}</span>` : '';
-    }).join('');
+    const categoryTags = categoryTagsHtml(camp, 2);
 
     const badges = [];
     if (hasEarlyDropoff(camp)) {
@@ -879,7 +827,7 @@ function renderPlanner() {
     if (!container) return;
 
     const starredCamps = plannerState.starred
-        .map(id => allCamps.find(c => c.id === id))
+        .map(id => campById.get(id))
         .filter(Boolean)
         .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -923,7 +871,7 @@ function renderPlanner() {
 function plannerSummaryHtml(weeks) {
     const cells = weeks.map(week => {
         const names = (plannerState.assignments[week] || [])
-            .map(id => allCamps.find(c => c.id === id)?.name)
+            .map(id => campById.get(id)?.name)
             .filter(Boolean);
         let label = '<span class="summary-none">&mdash;</span>';
         if (names.length > 2) {
@@ -951,7 +899,7 @@ function planTotals() {
     let cost = 0;
     let tbd = 0;
     Object.values(plannerState.assignments).forEach(ids => ids.forEach(id => {
-        const camp = allCamps.find(c => c.id === id);
+        const camp = campById.get(id);
         if (camp?.cost?.perWeek != null) {
             cost += camp.cost.perWeek;
         } else {
@@ -979,7 +927,7 @@ function buildPlanTable() {
             return;
         }
         ids.forEach(id => {
-            const camp = allCamps.find(c => c.id === id);
+            const camp = campById.get(id);
             if (camp) {
                 lines.push([label, camp.name, camp.location?.town || ''].join('\t'));
             }
@@ -1218,10 +1166,7 @@ function createModalContent(camp) {
         ? `Ages ${camp.ages.min || '?'} to ${camp.ages.max || '?'}`
         : 'Ages not specified';
 
-    const categoryTags = (camp.category || []).map(catId => {
-        const cat = categories.find(c => c.id === catId);
-        return cat ? `<span class="camp-tag category">${cat.name}</span>` : '';
-    }).join('');
+    const categoryTags = categoryTagsHtml(camp);
 
     // Build hours section
     let hoursHtml = '';
@@ -1385,6 +1330,22 @@ function escapeAttr(text) {
 function formatCost(perWeek, suffix = '/week') {
     if (perWeek == null) return null;
     return perWeek === 0 ? 'Free' : `$${perWeek}${suffix}`;
+}
+
+// "6-12 yrs" (either bound may be "?"); null when no ages are known
+function ageRangeText(camp) {
+    const { min, max } = camp.ages || {};
+    if (!min && !max) return null;
+    return `${min || '?'}-${max || '?'} yrs`;
+}
+
+// Category tag spans for a camp; limit caps how many are shown (cards use 2)
+function categoryTagsHtml(camp, limit = Infinity) {
+    return (camp.category || []).slice(0, limit)
+        .map(id => categoryById.get(id))
+        .filter(Boolean)
+        .map(cat => `<span class="camp-tag category">${escapeHtml(cat.name)}</span>`)
+        .join('');
 }
 
 function formatDate(dateStr) {
