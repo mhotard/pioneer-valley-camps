@@ -22,6 +22,10 @@
     padding: 0;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     background-color: var(--background);
@@ -292,16 +296,6 @@ header .subtitle {
     display: block;
 }
 
-/* Mobile responsive for table */
-@media (max-width: 768px) {
-
-    .camps-table th,
-    .camps-table td {
-        padding: 0.75rem;
-        font-size: 0.9rem;
-    }
-}
-
 .view-toggle {
     display: flex;
     gap: 0.25rem;
@@ -335,32 +329,6 @@ header .subtitle {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments for List View */
-@media (max-width: 768px) {
-    .camps-list .camp-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .camps-list .camp-card-header,
-    .camps-list .camp-card-body {
-        width: 100%;
-        margin: 0;
-    }
-
-    .camps-list .camp-card-body {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .camps-list .camp-meta {
-        gap: 0.75rem;
-        flex-wrap: wrap;
-    }
-}
-
 /* Camp Card */
 .camp-card {
     background: var(--surface);
@@ -384,17 +352,13 @@ header .subtitle {
     margin-bottom: 0.25rem;
 }
 
-.camp-card-header h3 a {
-    color: var(--text-primary);
-    text-decoration: none;
-}
-
-.camp-card-header h3 a:hover {
-    color: var(--primary-color);
-}
-
 .camp-organization {
     font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.camp-row-org {
+    font-size: 0.85em;
     color: var(--text-secondary);
 }
 
@@ -452,27 +416,6 @@ header .subtitle {
     color: #1e40af;
 }
 
-.camp-card-footer {
-    padding: 0.75rem 1rem;
-    background: var(--background);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-}
-
-.camp-verified {
-    color: var(--text-secondary);
-}
-
-.camp-incomplete {
-    background: #fef3c7;
-    color: var(--warning-color);
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-}
-
 .camp-badges {
     display: flex;
     gap: 0.5rem;
@@ -485,11 +428,6 @@ header .subtitle {
     font-weight: 500;
 }
 
-.badge-extended {
-    background: #dcfce7;
-    color: var(--success-color);
-}
-
 .badge-aid {
     background: #e0e7ff;
     color: #4338ca;
@@ -498,11 +436,6 @@ header .subtitle {
 .badge-early {
     background: #fef3c7;
     color: #92400e;
-}
-
-.badge-late {
-    background: #dbeafe;
-    color: #1e40af;
 }
 
 /* Camp Card Title as Button */
@@ -637,6 +570,12 @@ header .subtitle {
     gap: 0.5rem;
 }
 
+.modal-verified {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
 .modal-link {
     display: inline-block;
     margin-top: 1rem;
@@ -738,35 +677,6 @@ footer a {
     color: #cbd5e1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .filters-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .camps-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .filter-actions {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .filters-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .filters-checkboxes {
-        flex-direction: column;
-    }
-}
 /* ----- Summer Planner: star buttons ----- */
 .sr-only {
     position: absolute;
@@ -1190,8 +1100,42 @@ footer a {
     background: var(--primary-hover);
 }
 
+/* ----- Responsive (all breakpoints in one place) ----- */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .filters-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .camps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camps-table th,
+    .camps-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
     #map {
         height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-checkboxes {
+        flex-direction: column;
     }
 }

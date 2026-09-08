@@ -710,7 +710,7 @@ function createCampRow(camp) {
     return `
         <tr data-camp-id="${camp.id}">
             <td class="star-col">${createStarButton(camp)}</td>
-            <td><strong>${escapeHtml(camp.name)}</strong><br><span style="font-size: 0.85em; color: var(--text-secondary);">${escapeHtml(camp.organization)}</span></td>
+            <td><strong>${escapeHtml(camp.name)}</strong><br><span class="camp-row-org">${escapeHtml(camp.organization)}</span></td>
             <td>${cost}</td>
             <td>${ageRange}</td>
             <td>${escapeHtml(location)}</td>
@@ -1362,7 +1362,7 @@ function createModalContent(camp) {
         </a>
 
         ${camp.source?.lastVerified ? `
-        <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary);">
+        <p class="modal-verified">
             Last verified: ${camp.source.lastVerified}
         </p>
         ` : ''}
